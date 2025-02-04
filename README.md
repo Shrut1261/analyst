@@ -1,4 +1,4 @@
-# Shrut.github.io
+# Shrut 
 
 ### Education 
 Data Analysis 
