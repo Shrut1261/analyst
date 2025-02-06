@@ -1,10 +1,5 @@
 # 🎓 Shrut - Data Scientist & Machine Learning Enthusiast  
 
-<p align="center">
-  <img src="/assets/img/shrut.png" alt="Shrut Profile Picture" width="150" height="150">
-</p>
-
-<link rel="stylesheet" href="/assets/css/style.css">
 
 ## 🚀 About Me  
 I am a **Data Scientist** with a **Master’s in Data Analytics**, specializing in **machine learning, big data, and AI-driven solutions**.  
