@@ -1,72 +1,96 @@
-# Site settings
-title: "Shrut Prajapati | Data Analyst & Developer"
-description: "Data Analyst | Developer | Python, Django | Data Visualization | Machine Learning | Computer Engineer"
-baseurl: "" # Leave empty if deploying at root, otherwise specify subdirectory
-url: "https://shrut1261.github.io/Shrut.github.io/" # Update if you rename the site
+Data Scientist | Machine Learning Engineer
 
-# Author details
-author:
-  name: "Shrut Prajapati"
-  email: "shrutd.prajapati@gmail.com"
-  location: "Providence, Rhode Island, USA"
+Technical Skills
 
-# Social Links
-social:
-  linkedin: "https://www.linkedin.com/in/shrutp/"
-  github: "https://github.com/shrut1261"
-  jovian: "https://jovian.com/pshrutdineshbhai/likes"
-  email: "mailto:shrutd.prajapati@gmail.com"
-  website: "https://shrut1261.github.io/Shrut.github.io/"
-  portfolio: "https://shrut1261.github.io/Shrut.github.io/"
-  resume: "/resume.pdf"
+Programming: Python, R, SQL, MATLAB
 
-# Theme settings
-theme: "jekyll-theme-minimal"
+Machine Learning: Logistic Regression, Gaussian Naïve Bayes, Decision Trees, ARIMA
 
-# Plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
+Data Processing: Feature Engineering, Data Cleaning, Time Series Forecasting
 
-# Navigation
-nav:
-  - title: "Home"
-    url: "/"
-  - title: "About"
-    url: "/about"
-  - title: "Projects"
-    url: "/projects"
-  - title: "Resume"
-    url: "/resume.pdf"
-  - title: "Contact"
-    url: "/contact"
+Tools & Cloud: AWS, Snowflake, Git, Tableau, Power BI
 
-# Skills and Expertise
-skills:
-  - "Programming: Python, JavaScript, R, Java, C, C++"
-  - "Data Analytics: Predictive Modeling, Machine Learning, Regression"
-  - "Visualization: Tableau, Power BI, Excel, Seaborn, Matplotlib"
-  - "Frameworks: Django, Flask, React, AngularJS"
-  - "Databases: PostgreSQL, MySQL, MongoDB"
-  - "Cloud & APIs: AWS, RESTful API Development"
+Education
 
-# Projects
-projects:
-  - name: "Credit Card Customer Attrition Prediction"
-    description: "Machine learning model predicting customer churn using Logistic Regression, Gaussian Naïve Bayes, and ARIMA."
-    link: "https://github.com/shrut1261/credit-card-attrition"
+M.S., Data Analytics | [Your University Name] (Year of Completion)
 
-  - name: "Neejanand Web Application"
-    description: "Django-based enterprise web application with PostgreSQL. Live at Neejanand."
-    link: "https://neejanand.com/"
+B.S., Computer Engineering | [Your University Name] (Year of Completion)
 
-  - name: "Interactive Data Dashboards"
-    description: "Created dynamic Tableau and Power BI dashboards to visualize business trends and customer behavior."
-    link: "https://github.com/shrut1261/data-dashboards"
+Work Experience
 
-  - name: "IT Services & Automation"
-    description: "Developed tools to automate system updates, classroom IT maintenance, and troubleshooting."
-    link: "https://github.com/shrut1261/it-services-automation"
+Data Analyst | Machine Learning Researcher (Your Current Role or Internship)
 
-# Footer settings
-footer: "© 2025 Shrut Prajapati | Built with GitHub Pages & Jekyll"
+Developed predictive models for credit card customer attrition, improving accuracy by 20% using feature engineering and logistic regression.
+
+Conducted time series forecasting with ARIMA to analyze churn trends, enabling proactive customer retention strategies.
+
+Built interactive data visualizations with Tableau & Power BI to present insights on customer demographics and transaction behaviors.
+
+Data Science Intern | [Previous Internship or Research Role]
+
+Assisted in exploratory data analysis (EDA) on large datasets, uncovering key trends in financial data.
+
+Automated data preprocessing pipelines, reducing data cleaning time by 40%.
+
+Projects
+
+Predicting Credit Card Customer Attrition Using Machine Learning
+
+Developed a classification model to predict customer churn using Logistic Regression, Naïve Bayes, and Decision Trees.
+
+Implemented data preprocessing techniques including missing value imputation, feature encoding, and scaling.
+
+Evaluated model performance using Confusion Matrix, ROC Curve, and Accuracy Metrics.
+
+GitHub Repository
+
+Data-Driven EEG Band Discovery with Decision Trees
+
+Applied decision trees to discover optimal EEG frequency bands, outperforming traditional methods by 2x.
+
+Used Python & Machine Learning to improve the characterization of EEG power spectra.
+
+Publication
+
+
+
+Decoding Physical and Cognitive Impacts of Air Pollution
+
+Built 100+ machine learning models in MATLAB to estimate particulate matter concentrations from biometric data.
+
+Achieved an r² = 0.91 accuracy, enabling real-time environmental health assessments.
+
+Publication
+
+
+
+Talks & Lectures
+
+Guest Lecture: Machine Learning for Big Data, Your University (Year)
+
+Causality in Machine Learning, Data Science Meetup (Year)
+
+Workshop on Time Series Analysis for Business Forecasting, Your University (Year)
+
+Publications
+
+Autonomic Pupillary Responses & Machine Learning - DOI: 10.26717/BJSTR.2019.20.003446
+
+Airborne Particulate Sensor Calibration using ML - Sensors 2020
+
+EEG Band Discovery via Decision Trees - Preprints 2022
+
+Machine Learning for Environmental Health Insights - Springer, 2022
+
+Online Presence
+
+Portfolio Website: shrut1261.github.io
+
+GitHub: github.com/shrut1261
+
+LinkedIn: linkedin.com/in/yourprofile
+
+Medium Blog: medium.com/@yourprofile
+
+YouTube (Data Science Channel): YouTube Link
+
