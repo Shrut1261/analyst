@@ -3,85 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrut - Data Scientist & Machine Learning Enthusiast</title>
+    <title>Shrut - Data Scientist</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f4f4f4; text-align: center; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        h2 { border-bottom: 2px solid #0077B5; padding-bottom: 5px; }
-        ul { list-style: none; padding: 0; }
-        li { padding: 5px; }
-        a { text-decoration: none; color: #0077B5; font-weight: bold; }
-        .social-links img { width: 40px; margin: 10px; }
-        .profile-pic { width: 150px; border-radius: 50%; border: 4px solid #0077B5; }
-        .project { background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 10px 0; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dynamic Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/1920x1080/?technology,ai') no-repeat center center/cover;
+            filter: blur(5px);
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        img.profile {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .featured-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .featured-images img {
+            width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .featured-images img:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <h1>🎓 Shrut - Data Scientist & Machine Learning Enthusiast</h1>
-        <img src="/assets/img/shrut.png" alt="Shrut Profile Picture" class="profile-pic">
+        <h1>🚀 Shrut - Data Scientist & ML Enthusiast</h1>
+        <img src="assets/img/shrut.png" alt="Shrut Profile Picture" class="profile">
+        <p>I am a Data Scientist with a Master’s in Data Analytics, specializing in Machine Learning, AI, and Big Data.</p>
         
-        <h2>🚀 About Me</h2>
-        <p>I am a <strong>Data Scientist</strong> with a <strong>Master’s in Data Analytics</strong>, specializing in machine learning, big data, and AI-driven solutions.</p>
-
-        <h2>🎓 Education</h2>
-        <ul>
-            <li>🎓 <strong>Master’s in Data Analytics</strong> | Johnson & Wales University</li>
-            <li>🎓 <strong>Bachelor’s in Computer Engineering</strong> | Gujarat Technological University (GTU), India</li>
-        </ul>
-
-        <h2>💡 Skills & Expertise</h2>
-        <ul>
-            <li>✔ Machine Learning & AI: Logistic Regression, Decision Trees, ARIMA, Naïve Bayes</li>
-            <li>✔ Big Data & Databases: SQL, MySQL, Snowflake, AWS</li>
-            <li>✔ Cloud Computing: AWS, Azure, Google Cloud</li>
-            <li>✔ Data Visualization: Tableau, Power BI, Seaborn, Matplotlib</li>
-            <li>✔ Programming: Python, R, MATLAB</li>
-            <li>✔ Deep Learning: TensorFlow, Keras, CNNs</li>
-        </ul>
-
-        <h2>🏆 Featured Projects</h2>
-
-        <div class="project">
-            <h3>🔹 <a href="https://github.com/shrut1261/credit-card-attrition">Predicting Credit Card Customer Attrition</a></h3>
-            <p>📊 A machine learning project to forecast customer attrition using logistic regression, Naïve Bayes, and ARIMA.</p>
-        </div>
-
-        <div class="project">
-            <h3>🔹 <a href="https://www.mdpi.com/1424-8220/22/8/3048">EEG Band Discovery with Decision Trees</a></h3>
-            <p>🧠 AI-powered model for EEG-based brain activity analysis. Achieved 2x higher accuracy than traditional methods.</p>
-        </div>
-
-        <h2>📜 Research & Publications</h2>
-        <ul>
-            <li>📖 <a href="https://doi.org/10.26717/BJSTR.2019.20.003446">Modeling Autonomic Pupillary Responses</a></li>
-            <li>📖 <a href="https://doi.org/10.3390/s21186259">Using ML for Airborne Particulate Sensors Calibration</a></li>
-            <li>📖 <a href="https://doi.org/10.20944/preprints202203.0200.v1">Unsupervised Blink Detection with Eye Aspect Ratio</a></li>
-        </ul>
-
-        <h2>🎤 Speaker & Guest Lectures</h2>
-        <ul>
-            <li>🎙️ Causality: The New Science of an Old Question - GSP Seminar</li>
-            <li>🎙️ Dimensionality Reduction & PCA - PHYS 5336</li>
-            <li>🎙️ Fourier and Wavelet Transforms - PHYS 5315</li>
-        </ul>
-
-        <h2>🌍 Connect with Me</h2>
-        <div class="social-links">
-            <a href="https://github.com/Shrut1261"><img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github" alt="GitHub"></a>
-            <a href="https://linkedin.com/in/shrut"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin" alt="LinkedIn"></a>
-            <a href="https://shrut1261.github.io"><img src="https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=githubpages" alt="Portfolio"></a>
-            <a href="https://medium.com/@shrut"><img src="https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium" alt="Medium Blog"></a>
-        </div>
-
         <h2>📸 Featured Images</h2>
-        <img src="/assets/img/eeg_band_discovery.jpeg" alt="EEG Band Discovery" width="300">
-        <img src="/assets/img/bike_study.jpeg" alt="Bike Study" width="300">
-
-        <p>© 2025 Shrut. All rights reserved.</p>
+        <div class="featured-images">
+            <img src="assets/img/eeg_band_discovery.jpeg" alt="EEG Band Discovery">
+            <img src="assets/img/bike_study.jpeg" alt="Bike Study">
+        </div>
     </div>
-
 </body>
 </html>
