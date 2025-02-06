@@ -1,6 +1,6 @@
 # Shrut - Data Scientist & Machine Learning Enthusiast
 
-#![Profile Image](/assets/WhatsApp%20Image%202024-12-27%20at%2016.39.18_729c2b58-Photoroom%20(1).png)
+![Profile Image](/assets/img/shrut.png)
 
 ## 🚀 About Me
 I am a passionate Data Scientist with expertise in predictive modeling, machine learning, and data analysis. With a strong foundation in Python, SQL, and cloud platforms, I specialize in deriving insights from complex datasets to drive business decisions. 
