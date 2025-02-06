@@ -24,8 +24,8 @@ I focus on **scalable ML models, predictive analytics, and cloud computing** to 
 ✔ **Deep Learning**: TensorFlow, Keras, CNNs  
 
 ---
-
 ## 🏆 Featured Projects  
+![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
 
 ### 🔹 [Predicting Credit Card Customer Attrition](https://github.com/shrut1261/credit-card-attrition)  
 📊 A machine learning project to **forecast customer attrition** using **logistic regression, Naïve Bayes, and ARIMA**.  
@@ -36,6 +36,8 @@ I focus on **scalable ML models, predictive analytics, and cloud computing** to 
 🧠 An AI-powered model for **EEG-based brain activity analysis**.  
 ✔ Achieved **2x higher accuracy** than traditional methods  
 ✔ Utilized **spectral analysis and machine learning**  
+
+![Bike Study](/assets/img/bike_study.jpeg)
 
 ### 🔹 [Impact of Airborne Particulate Matter on Cognitive Functions](https://www.mdpi.com/1424-8220/22/11/4240)  
 🌍 Developed **100+ ML models** in **MATLAB** to estimate air pollution’s effect on cognition.  
