@@ -25,6 +25,7 @@ I focus on **scalable ML models, predictive analytics, and cloud computing** to 
 ---
 ## 🏆 Featured Projects  
 ![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
+![Bike Study](/assets/img/bike_study.jpeg)
 
 ### 🔹 [Predicting Credit Card Customer Attrition](https://github.com/shrut1261/credit-card-attrition)  
 📊 A machine learning project to **forecast customer attrition** using **logistic regression, Naïve Bayes, and ARIMA**.  
@@ -36,8 +37,6 @@ I focus on **scalable ML models, predictive analytics, and cloud computing** to 
 ✔ Achieved **2x higher accuracy** than traditional methods  
 ✔ Utilized **spectral analysis and machine learning**  
 
-![Bike Study](/assets/img/bike_study.jpeg)
-
 ### 🔹 [Impact of Airborne Particulate Matter on Cognitive Functions](https://www.mdpi.com/1424-8220/22/11/4240)  
 🌍 Developed **100+ ML models** in **MATLAB** to estimate air pollution’s effect on cognition.  
 ✔ Achieved **R² = 0.91** for particulate matter prediction  
@@ -45,17 +44,17 @@ I focus on **scalable ML models, predictive analytics, and cloud computing** to 
 
 ---
 
-## 🐜 Research & Publications  
-📚 **Modeling Autonomic Pupillary Responses** - [DOI: 10.26717/BJSTR.2019.20.003446](https://doi.org/10.26717/BJSTR.2019.20.003446)  
-📚 **Using ML for Airborne Particulate Sensors Calibration** - [DOI: 10.3390/s21186259](https://doi.org/10.3390/s21186259)  
-📚 **Unsupervised Blink Detection with Eye Aspect Ratio Values** - [DOI: 10.20944/preprints202203.0200.v1](https://doi.org/10.20944/preprints202203.0200.v1)  
+## 📜 Research & Publications  
+📖 **Modeling Autonomic Pupillary Responses** - [DOI: 10.26717/BJSTR.2019.20.003446](https://doi.org/10.26717/BJSTR.2019.20.003446)  
+📖 **Using ML for Airborne Particulate Sensors Calibration** - [DOI: 10.3390/s21186259](https://doi.org/10.3390/s21186259)  
+📖 **Unsupervised Blink Detection with Eye Aspect Ratio Values** - [DOI: 10.20944/preprints202203.0200.v1](https://doi.org/10.20944/preprints202203.0200.v1)  
 
 ---
 
 ## 🎤 Speaker & Guest Lectures  
-🎧 **Causality: The New Science of an Old Question** - GSP Seminar  
-🎧 **Dimensionality Reduction & PCA** - PHYS 5336  
-🎧 **Fourier and Wavelet Transforms** - PHYS 5315  
+🎙️ **Causality: The New Science of an Old Question** - GSP Seminar  
+🎙️ **Dimensionality Reduction & PCA** - PHYS 5336  
+🎙️ **Fourier and Wavelet Transforms** - PHYS 5315  
 
 ---
 
@@ -66,9 +65,3 @@ I focus on **scalable ML models, predictive analytics, and cloud computing** to 
 [![Medium Blog](https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium)](https://medium.com/@shrut)  
 
 ---
-
-## 📸 Featured Images  
-<p align="center">
-  <img src="/assets/img/eeg_band_discovery.jpeg" alt="EEG Band Discovery" width="300">
-  <img src="/assets/img/bike_study.jpeg" alt="Bike Study" width="300">
-</p>
