@@ -1,96 +1,68 @@
-Data Scientist | Machine Learning Engineer
+# Shrut - Data Scientist & Machine Learning Enthusiast
 
-Technical Skills
+![Profile Image](/assets/img/WhatsApp%20Image%202024-12-27%20at%2016.39.18_729c2b58-Photoroom%20(1.png)
 
-Programming: Python, R, SQL, MATLAB
+## 🚀 About Me
+I am a passionate Data Scientist with expertise in predictive modeling, machine learning, and data analysis. With a strong foundation in Python, SQL, and cloud platforms, I specialize in deriving insights from complex datasets to drive business decisions. 
 
-Machine Learning: Logistic Regression, Gaussian Naïve Bayes, Decision Trees, ARIMA
+## 📚 Education
+- **Master's in Data Analytics** | Johnson & Wales University *(Completed)*
+- **Bachelor's in Computer Engineering** | Gujarat Technological University (GTU), Gujarat, India *(Completed)*
 
-Data Processing: Feature Engineering, Data Cleaning, Time Series Forecasting
+## 💼 Work Experience
+### Data Scientist @ [Your Company]
+- Developed machine learning models to predict customer churn, increasing retention rates by 20%.
+- Optimized data pipelines, reducing processing time by 30%.
+- Implemented predictive analytics solutions for business intelligence.
 
-Tools & Cloud: AWS, Snowflake, Git, Tableau, Power BI
+### Data Analyst Intern @ [Your Previous Company]
+- Conducted exploratory data analysis (EDA) to identify key business insights.
+- Automated reporting processes using Python and SQL.
 
-Education
+## 🛠️ Technical Skills
+- **Programming:** Python, R, SQL, MATLAB
+- **Machine Learning:** Logistic Regression, Naïve Bayes, ARIMA, Decision Trees
+- **Data Processing:** Pandas, NumPy, Scikit-learn, TensorFlow
+- **Cloud & Databases:** AWS, Snowflake, MySQL
+- **Visualization:** Matplotlib, Seaborn, Power BI, Tableau
 
-M.S., Data Analytics | [Your University Name] (Year of Completion)
+## 📊 Projects
+### 🔹 Predicting Credit Card Customer Attrition
+**[GitHub Repo](#)**  
+Developed a predictive model to forecast customer attrition using machine learning algorithms. 
+- Used logistic regression, Naïve Bayes, and ARIMA for analysis.
+- Conducted thorough EDA and feature engineering.
+- Evaluated model performance using ROC curves and classification reports.
 
-B.S., Computer Engineering | [Your University Name] (Year of Completion)
+### 🔹 Data-Driven EEG Band Discovery with Decision Trees
+**[Publication](https://www.mdpi.com/1424-8220/22/8/3048)**  
+Developed an automated strategy for discovering optimal EEG bands using Python. 
+- Achieved twice the accuracy of traditional methods.
+- Identified novel indices of brain activity through spectral analysis.
 
-Work Experience
+### 🔹 Decoding Physical and Cognitive Impacts of Particulate Matter
+**[Publication](https://www.mdpi.com/1424-8220/22/11/4240)**  
+Trained over 100 machine learning models using MATLAB to estimate air quality impacts. 
+- Achieved R² = 0.91 in particulate matter concentration estimation.
+- Enabled fine-scale environmental impact assessments using biometric data.
 
-Data Analyst | Machine Learning Researcher (Your Current Role or Internship)
+## 🎤 Talks & Lectures
+- **Causality: The New Science of an Old Question** - GSP Seminar
+- **Guest Lecture: Dimensionality Reduction** - PHYS 5336
+- **Fourier and Wavelet Transforms** - PHYS 5315
+- **Introduction to Networks & Optimization** - GSP Seminar
 
-Developed predictive models for credit card customer attrition, improving accuracy by 20% using feature engineering and logistic regression.
+## 📄 Publications
+1. **Modeling Autonomic Pupillary Responses** - DOI: [10.26717/BJSTR.2019.20.003446](https://doi.org/10.26717/BJSTR.2019.20.003446)
+2. **Using Machine Learning for Airborne Particulate Sensors Calibration** - DOI: [10.3390/s21186259](https://doi.org/10.3390/s21186259)
+3. **Unsupervised Blink Detection with Eye Aspect Ratio Values** - DOI: [10.20944/preprints202203.0200.v1](https://doi.org/10.20944/preprints202203.0200.v1)
 
-Conducted time series forecasting with ARIMA to analyze churn trends, enabling proactive customer retention strategies.
+## 🔗 Connect with Me
+- **GitHub:** [github.com/Shrut1261](https://github.com/Shrut1261)
+- **LinkedIn:** [linkedin.com/in/shrut](https://linkedin.com/in/shrut)
+- **Portfolio:** [shrut1261.github.io](https://shrut1261.github.io)
+- **Medium Blog:** [medium.com/@shrut](https://medium.com/@shrut)
 
-Built interactive data visualizations with Tableau & Power BI to present insights on customer demographics and transaction behaviors.
-
-Data Science Intern | [Previous Internship or Research Role]
-
-Assisted in exploratory data analysis (EDA) on large datasets, uncovering key trends in financial data.
-
-Automated data preprocessing pipelines, reducing data cleaning time by 40%.
-
-Projects
-
-Predicting Credit Card Customer Attrition Using Machine Learning
-
-Developed a classification model to predict customer churn using Logistic Regression, Naïve Bayes, and Decision Trees.
-
-Implemented data preprocessing techniques including missing value imputation, feature encoding, and scaling.
-
-Evaluated model performance using Confusion Matrix, ROC Curve, and Accuracy Metrics.
-
-GitHub Repository
-
-Data-Driven EEG Band Discovery with Decision Trees
-
-Applied decision trees to discover optimal EEG frequency bands, outperforming traditional methods by 2x.
-
-Used Python & Machine Learning to improve the characterization of EEG power spectra.
-
-Publication
-
-
-
-Decoding Physical and Cognitive Impacts of Air Pollution
-
-Built 100+ machine learning models in MATLAB to estimate particulate matter concentrations from biometric data.
-
-Achieved an r² = 0.91 accuracy, enabling real-time environmental health assessments.
-
-Publication
-
-
-
-Talks & Lectures
-
-Guest Lecture: Machine Learning for Big Data, Your University (Year)
-
-Causality in Machine Learning, Data Science Meetup (Year)
-
-Workshop on Time Series Analysis for Business Forecasting, Your University (Year)
-
-Publications
-
-Autonomic Pupillary Responses & Machine Learning - DOI: 10.26717/BJSTR.2019.20.003446
-
-Airborne Particulate Sensor Calibration using ML - Sensors 2020
-
-EEG Band Discovery via Decision Trees - Preprints 2022
-
-Machine Learning for Environmental Health Insights - Springer, 2022
-
-Online Presence
-
-Portfolio Website: shrut1261.github.io
-
-GitHub: github.com/shrut1261
-
-LinkedIn: linkedin.com/in/yourprofile
-
-Medium Blog: medium.com/@yourprofile
-
-YouTube (Data Science Channel): YouTube Link
-
+## 📌 Featured Images
+![EEG Band Discovery](/assets/img/eeg_band_discovery.jpeg)
+![Bike Study](/assets/img/bike_study.jpeg)
