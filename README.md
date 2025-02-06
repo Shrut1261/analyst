@@ -1,8 +1,3 @@
-# Shrut 
-
-### Education 
-Data Analysis 
-
 # Site settings
 title: "Shrut Prajapati | Data Analyst & Developer"
 description: "Data Analyst | Developer | Python, Django | Data Visualization | Machine Learning | Computer Engineer"
@@ -14,11 +9,6 @@ author:
   name: "Shrut Prajapati"
   email: "shrutd.prajapati@gmail.com"
   location: "Providence, Rhode Island, USA"
-  linkedin: "https://www.linkedin.com/in/shrutp/"
-  github: "https://github.com/shrut1261"
-  jovian: "https://jovian.com/pshrutdineshbhai/likes"
-  portfolio: "https://shrut1261.github.io/Shrut.github.io/"
-  resume: "/resume.pdf" # Upload your resume and update this path if needed
 
 # Social Links
 social:
@@ -30,8 +20,10 @@ social:
   portfolio: "https://shrut1261.github.io/Shrut.github.io/"
   resume: "/resume.pdf"
 
-# Theme settings (optional, update as per your theme)
-theme: "jekyll-theme-minimal" # Or choose another Jekyll theme
+# Theme settings
+theme: "jekyll-theme-minimal"
+
+# Plugins
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -58,7 +50,7 @@ skills:
   - "Databases: PostgreSQL, MySQL, MongoDB"
   - "Cloud & APIs: AWS, RESTful API Development"
 
-# Projects (with links)
+# Projects
 projects:
   - name: "Credit Card Customer Attrition Prediction"
     description: "Machine learning model predicting customer churn using Logistic Regression, Gaussian Naïve Bayes, and ARIMA."
