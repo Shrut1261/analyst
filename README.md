@@ -1,6 +1,5 @@
 # 🎓 Shrut - Data Scientist & Machine Learning Enthusiast  
 
-
 ## 🚀 About Me  
 I am a **Data Scientist** with a **Master’s in Data Analytics**, specializing in **machine learning, big data, and AI-driven solutions**.  
 I focus on **scalable ML models, predictive analytics, and cloud computing** to drive impactful data insights.  
@@ -46,17 +45,17 @@ I focus on **scalable ML models, predictive analytics, and cloud computing** to 
 
 ---
 
-## 📜 Research & Publications  
-📖 **Modeling Autonomic Pupillary Responses** - [DOI: 10.26717/BJSTR.2019.20.003446](https://doi.org/10.26717/BJSTR.2019.20.003446)  
-📖 **Using ML for Airborne Particulate Sensors Calibration** - [DOI: 10.3390/s21186259](https://doi.org/10.3390/s21186259)  
-📖 **Unsupervised Blink Detection with Eye Aspect Ratio Values** - [DOI: 10.20944/preprints202203.0200.v1](https://doi.org/10.20944/preprints202203.0200.v1)  
+## 🐜 Research & Publications  
+📚 **Modeling Autonomic Pupillary Responses** - [DOI: 10.26717/BJSTR.2019.20.003446](https://doi.org/10.26717/BJSTR.2019.20.003446)  
+📚 **Using ML for Airborne Particulate Sensors Calibration** - [DOI: 10.3390/s21186259](https://doi.org/10.3390/s21186259)  
+📚 **Unsupervised Blink Detection with Eye Aspect Ratio Values** - [DOI: 10.20944/preprints202203.0200.v1](https://doi.org/10.20944/preprints202203.0200.v1)  
 
 ---
 
 ## 🎤 Speaker & Guest Lectures  
-🎙️ **Causality: The New Science of an Old Question** - GSP Seminar  
-🎙️ **Dimensionality Reduction & PCA** - PHYS 5336  
-🎙️ **Fourier and Wavelet Transforms** - PHYS 5315  
+🎧 **Causality: The New Science of an Old Question** - GSP Seminar  
+🎧 **Dimensionality Reduction & PCA** - PHYS 5336  
+🎧 **Fourier and Wavelet Transforms** - PHYS 5315  
 
 ---
 
