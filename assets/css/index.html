@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrut - Data Scientist & ML Enthusiast</title>
+    
+    <!-- CSS (Embedded) -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #ffffff;
+        }
+
+        /* Profile Section */
+        header {
+            padding: 50px 0;
+        }
+        .profile-container {
+            display: flex;
+            justify-content: center;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+        }
+        h2 {
+            border-bottom: 2px solid white;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .project {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px auto;
+            width: 60%;
+        }
+
+        /* Footer */
+        footer {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="profile-container">
+            <img src="shrut.png" alt="Shrut Profile Picture" class="profile-pic">
+        </div>
+        <h1>Shrut - Data Scientist & Machine Learning Enthusiast</h1>
+        <p>Master’s in Data Analytics | AI | Machine Learning | Big Data</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate <strong>Data Scientist</strong> with expertise in machine learning, AI, and big data.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills & Expertise</h2>
+        <ul>
+            <li>Machine Learning (Logistic Regression, Decision Trees, ARIMA, Naïve Bayes)</li>
+            <li>Big Data (SQL, MySQL, AWS, Snowflake)</li>
+            <li>Cloud Computing (AWS, Azure, Google Cloud)</li>
+            <li>Data Visualization (Tableau, Power BI, Seaborn, Matplotlib)</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>🔹 Predicting Credit Card Customer Attrition</h3>
+            <p>A machine learning model for forecasting customer attrition.</p>
+        </div>
+        <div class="project">
+            <h3>🔹 EEG Band Discovery with Decision Trees</h3>
+            <p>Brain activity analysis using AI-powered EEG models.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>📧 Email: <a href="mailto:shrut@example.com">shrut@example.com</a></p>
+        <p>🌐 <a href="https://shrut1261.github.io" target="_blank">Portfolio</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Shrut. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript (Embedded) -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+</body>
+</html>
