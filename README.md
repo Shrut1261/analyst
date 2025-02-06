@@ -1,6 +1,6 @@
 # Shrut - Data Scientist & Machine Learning Enthusiast
 
-![Profile Image](/assets/WhatsApp%20Image%202024-12-27%20at%2016.39.18_729c2b58-Photoroom%20(1.png)
+![Profile Image](/assets/WhatsApp%20Image%202024-12-27%20at%2016.39.18_729c2b58-Photoroom%20(1).png)
 
 ## 🚀 About Me
 I am a passionate Data Scientist with expertise in predictive modeling, machine learning, and data analysis. With a strong foundation in Python, SQL, and cloud platforms, I specialize in deriving insights from complex datasets to drive business decisions. 
@@ -10,12 +10,12 @@ I am a passionate Data Scientist with expertise in predictive modeling, machine 
 - **Bachelor's in Computer Engineering** | Gujarat Technological University (GTU), Gujarat, India *(Completed)*
 
 ## 💼 Work Experience
-### Data Scientist @ [Your Company]
+### Data Scientist @ [Your Actual Company Name]
 - Developed machine learning models to predict customer churn, increasing retention rates by 20%.
 - Optimized data pipelines, reducing processing time by 30%.
 - Implemented predictive analytics solutions for business intelligence.
 
-### Data Analyst Intern @ [Your Previous Company]
+### Data Analyst Intern @ [Your Previous Company Name]
 - Conducted exploratory data analysis (EDA) to identify key business insights.
 - Automated reporting processes using Python and SQL.
 
@@ -28,7 +28,7 @@ I am a passionate Data Scientist with expertise in predictive modeling, machine 
 
 ## 📊 Projects
 ### 🔹 Predicting Credit Card Customer Attrition
-**[GitHub Repo](#)**  
+**[GitHub Repo](https://github.com/shrut1261/credit-card-attrition)**  
 Developed a predictive model to forecast customer attrition using machine learning algorithms. 
 - Used logistic regression, Naïve Bayes, and ARIMA for analysis.
 - Conducted thorough EDA and feature engineering.
