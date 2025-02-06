@@ -1,8 +1,10 @@
 # 🎓 Shrut - Data Scientist & Machine Learning Enthusiast  
 
 <p align="center">
-  <img src="/assets/img/shrut.png" alt="Shrut Profile Picture" width="150" height="150" style="border-radius: 50%; border: 4px solid #fff;">
+  <img src="/assets/img/shrut.png" alt="Shrut Profile Picture" width="150" height="150">
 </p>
+
+<link rel="stylesheet" href="/assets/css/style.css">
 
 ## 🚀 About Me  
 I am a **Data Scientist** with a **Master’s in Data Analytics**, specializing in **machine learning, big data, and AI-driven solutions**.  
@@ -13,35 +15,35 @@ I focus on **scalable ML models, predictive analytics, and cloud computing** to 
 ---
 
 ## 🎓 Education  
-- 🏫 **Master’s in Data Analytics** | Johnson & Wales University  
-- 🏛️ **Bachelor’s in Computer Engineering** | Gujarat Technological University (GTU), India  
+🎓 **Master’s in Data Analytics** | Johnson & Wales University  
+🎓 **Bachelor’s in Computer Engineering** | Gujarat Technological University (GTU), India  
 
 ---
 
 ## 💡 Skills & Expertise  
-✅ **Machine Learning & AI**: Logistic Regression, Decision Trees, ARIMA, Naïve Bayes  
-✅ **Big Data & Databases**: SQL, MySQL, Snowflake, AWS  
-✅ **Cloud Computing**: AWS, Azure, Google Cloud  
-✅ **Data Visualization**: Tableau, Power BI, Seaborn, Matplotlib  
-✅ **Programming**: Python, R, MATLAB  
-✅ **Deep Learning**: TensorFlow, Keras, CNNs  
+✔ **Machine Learning & AI**: Logistic Regression, Decision Trees, ARIMA, Naïve Bayes  
+✔ **Big Data & Databases**: SQL, MySQL, Snowflake, AWS  
+✔ **Cloud Computing**: AWS, Azure, Google Cloud  
+✔ **Data Visualization**: Tableau, Power BI, Seaborn, Matplotlib  
+✔ **Programming**: Python, R, MATLAB  
+✔ **Deep Learning**: TensorFlow, Keras, CNNs  
 
 ---
 
 ## 🏆 Featured Projects  
 
 ### 🔹 [Predicting Credit Card Customer Attrition](https://github.com/shrut1261/credit-card-attrition)  
-A machine learning project to **forecast customer attrition** using **logistic regression, Naïve Bayes, and ARIMA**.  
-✔ **Data Processing:** Feature selection, data cleaning, and transformation  
-✔ **Model Evaluation:** ROC curves, confusion matrices, precision-recall  
+📊 A machine learning project to **forecast customer attrition** using **logistic regression, Naïve Bayes, and ARIMA**.  
+🔹 **Data Processing:** Feature selection, data cleaning, and transformation  
+🔹 **Model Evaluation:** ROC curves, confusion matrices, precision-recall  
 
 ### 🔹 [EEG Band Discovery with Decision Trees](https://www.mdpi.com/1424-8220/22/8/3048)  
-An AI-powered model for **EEG-based brain activity analysis**.  
+🧠 An AI-powered model for **EEG-based brain activity analysis**.  
 ✔ Achieved **2x higher accuracy** than traditional methods  
 ✔ Utilized **spectral analysis and machine learning**  
 
 ### 🔹 [Impact of Airborne Particulate Matter on Cognitive Functions](https://www.mdpi.com/1424-8220/22/11/4240)  
-Developed **100+ ML models** in **MATLAB** to estimate air pollution’s effect on cognition.  
+🌍 Developed **100+ ML models** in **MATLAB** to estimate air pollution’s effect on cognition.  
 ✔ Achieved **R² = 0.91** for particulate matter prediction  
 ✔ Enabled **fine-scale environmental impact assessments**  
 
