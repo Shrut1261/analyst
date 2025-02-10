@@ -1,5 +1,5 @@
-title: Shrut Prajapti 
-logo: assets /img/shrut.png
-#description: text below image 
-show_downloads: true 
-theme: jekyll-theme-minimal
+title: "Shrut Prajapati | Data Scientist & ML Engineer"
+description: "Professional Portfolio | Machine Learning | AI | Data Analytics"
+theme: null  # Ensure this is set correctly
+baseurl: ""  # If the site is at root, keep this empty
+url: "https://your-github-username.github.io/Shrut-Portfolio"
