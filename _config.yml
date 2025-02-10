@@ -1,5 +1,5 @@
 title: "Shrut Prajapati | Data Scientist & ML Engineer"
 description: "Professional Portfolio | Machine Learning | AI | Data Analytics"
-theme: null  # Ensure this is set correctly
-baseurl: ""  # If the site is at root, keep this empty
+theme: null  
+baseurl: "" 
 url: "https://your-github-username.github.io/Shrut-Portfolio"
