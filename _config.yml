@@ -3,3 +3,4 @@ description: "Professional Portfolio | Machine Learning | AI | Data Analytics"
 theme: null  
 baseurl: "" 
 url: "https://your-github-username.github.io/Shrut-Portfolio"
+include: ["_pages"]
