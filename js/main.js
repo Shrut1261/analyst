@@ -232,6 +232,43 @@
 
 
 document.querySelector(".php-email-form").addEventListener("submit", function (e) {
-    e.preventDefault();  // ⚠️ This prevents the form from submitting
+    e.preventDefault();  // Prevent default form submission
     console.log("Form submission prevented");
+
+    let form = this;
+    let formData = new FormData(form);
+    let emailInput = form.querySelector('input[name="email"]');
+    let email = emailInput.value;
+
+    // Validate email format
+    if (!validateEmail(email)) {
+        alert("Please enter a valid email address.");
+        emailInput.focus();
+        return;
+    }
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.ok) {
+            alert("Message sent successfully!");
+            window.location.href = data.next;  // Redirect user
+        } else {
+            alert("Error submitting form. Please try again.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("An unexpected error occurred.");
+    });
 });
+
+// Function to validate email format
+function validateEmail(email) {
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
