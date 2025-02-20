@@ -227,3 +227,11 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+
+
+document.querySelector(".php-email-form").addEventListener("submit", function (e) {
+    e.preventDefault();  // ⚠️ This prevents the form from submitting
+    console.log("Form submission prevented");
+});
