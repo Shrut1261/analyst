@@ -231,49 +231,49 @@
 
 
 
+// In your main JavaScript file, replace the contact form handler with this:
 document.addEventListener("DOMContentLoaded", function () {
-    const contactForm = document.querySelector(".php-email-form");
+  const contactForm = document.querySelector(".php-email-form");
 
-    if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent default form submission
-            console.log("Form submission prevented");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const loading = this.querySelector('.loading');
+      const errorMessage = this.querySelector('.error-message');
+      const sentMessage = this.querySelector('.sent-message');
 
-            let formData = new FormData(this);
-            let emailInput = this.querySelector('input[name="email"]');
-            let email = emailInput.value;
+      loading.style.display = 'block';
+      errorMessage.style.display = 'none';
+      sentMessage.style.display = 'none';
 
-            // Validate email format
-            if (!validateEmail(email)) {
-                alert("Please enter a valid email address.");
-                emailInput.focus();
-                return;
-            }
-
-            fetch(this.action, {
-                method: this.method,
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    alert("Message sent successfully!");
-                    window.location.href = data.next; // Redirect user if needed
-                } else {
-                    alert("Error submitting form. Please try again.");
-                }
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("An unexpected error occurred.");
-            });
-        });
-    }
-
-    // Function to validate email format
-    function validateEmail(email) {
-        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailPattern.test(email);
-    }
+      fetch(this.action, {
+        method: this.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        loading.style.display = 'none';
+        if (response.ok) {
+          sentMessage.style.display = 'block';
+          this.reset();
+          setTimeout(() => {
+            window.location.href = '/thanks?language=en';
+          }, 3000); // Redirect after 3 seconds
+        } else {
+          response.json().then(data => {
+            errorMessage.style.display = 'block';
+            errorMessage.innerHTML = data.error || 'Error submitting form';
+          });
+        }
+      })
+      .catch(error => {
+        loading.style.display = 'none';
+        errorMessage.style.display = 'block';
+        errorMessage.innerHTML = 'An unexpected error occurred';
+      });
+    });
+  }
 });
