@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const errorMessage = this.querySelector('.error-message');
       const sentMessage = this.querySelector('.sent-message');
 
-      // Reset messages
+      // Reset states
       loading.style.display = 'block';
       errorMessage.style.display = 'none';
       sentMessage.style.display = 'none';
@@ -252,26 +252,27 @@ document.addEventListener("DOMContentLoaded", function () {
         body: formData,
         headers: { 'Accept': 'application/json' }
       })
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error('Form submission failed');
-      })
+      .then(response => response.json())
       .then(data => {
         loading.style.display = 'none';
-        sentMessage.style.display = 'block';
         
-        // Redirect after 2 seconds
-        setTimeout(() => {
-          window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
-        }, 2000);
+        if (data.ok) {
+          // Show success message from your layout
+          sentMessage.style.display = 'block';
+          
+          // Redirect after 2 seconds
+          setTimeout(() => {
+            window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
+          }, 2000);
+        } else {
+          errorMessage.style.display = 'block';
+          errorMessage.textContent = 'Submission failed. Please try again.';
+        }
       })
-      .catch(error => {
+      .catch(() => {
         loading.style.display = 'none';
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Message sent successfully! Redirecting...';
-        // Final fallback redirect
+        // Show success even if JSON parsing fails (Formspree special case)
+        sentMessage.style.display = 'block';
         setTimeout(() => {
           window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
         }, 2000);
