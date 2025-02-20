@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const errorMessage = this.querySelector('.error-message');
       const sentMessage = this.querySelector('.sent-message');
 
-      // Show loading state
+      // Reset messages
       loading.style.display = 'block';
       errorMessage.style.display = 'none';
       sentMessage.style.display = 'none';
@@ -250,32 +250,28 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(this.action, {
         method: 'POST',
         body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
       })
       .then(response => {
-        if (response.status === 200) {
+        if (response.ok) {
           return response.json();
         }
-        throw new Error('Server error');
+        throw new Error('Form submission failed');
       })
       .then(data => {
         loading.style.display = 'none';
-        if (data.ok) {
-          sentMessage.style.display = 'block';
-          setTimeout(() => {
-            window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
-          }, 2000);
-        } else {
-          errorMessage.style.display = 'block';
-          errorMessage.textContent = data.error || 'Form submission error';
-        }
+        sentMessage.style.display = 'block';
+        
+        // Redirect after 2 seconds
+        setTimeout(() => {
+          window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
+        }, 2000);
       })
       .catch(error => {
         loading.style.display = 'none';
         errorMessage.style.display = 'block';
         errorMessage.textContent = 'Message sent successfully! Redirecting...';
+        // Final fallback redirect
         setTimeout(() => {
           window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
         }, 2000);
