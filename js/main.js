@@ -231,7 +231,6 @@
 
 
 
-// In your main JavaScript file, replace the contact form handler with this:
 document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.querySelector(".php-email-form");
 
@@ -243,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const errorMessage = this.querySelector('.error-message');
       const sentMessage = this.querySelector('.sent-message');
 
+      // Show loading and hide messages
       loading.style.display = 'block';
       errorMessage.style.display = 'none';
       sentMessage.style.display = 'none';
@@ -257,22 +257,22 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => {
         loading.style.display = 'none';
         if (response.ok) {
+          // Show success message first
           sentMessage.style.display = 'block';
-          this.reset();
+          
+          // Redirect after 2 seconds
           setTimeout(() => {
             window.location.href = '/thanks?language=en';
-          }, 3000); // Redirect after 3 seconds
+          }, 2000);
         } else {
-          response.json().then(data => {
-            errorMessage.style.display = 'block';
-            errorMessage.innerHTML = data.error || 'Error submitting form';
-          });
+          errorMessage.style.display = 'block';
+          errorMessage.textContent = 'Error submitting form. Please try again.';
         }
       })
       .catch(error => {
         loading.style.display = 'none';
         errorMessage.style.display = 'block';
-        errorMessage.innerHTML = 'An unexpected error occurred';
+        errorMessage.textContent = 'An unexpected error occurred.';
       });
     });
   }
