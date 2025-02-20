@@ -231,44 +231,49 @@
 
 
 
-document.querySelector(".php-email-form").addEventListener("submit", function (e) {
-    e.preventDefault();  // Prevent default form submission
-    console.log("Form submission prevented");
+document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.querySelector(".php-email-form");
 
-    let form = this;
-    let formData = new FormData(form);
-    let emailInput = form.querySelector('input[name="email"]');
-    let email = emailInput.value;
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent default form submission
+            console.log("Form submission prevented");
 
-    // Validate email format
-    if (!validateEmail(email)) {
-        alert("Please enter a valid email address.");
-        emailInput.focus();
-        return;
+            let formData = new FormData(this);
+            let emailInput = this.querySelector('input[name="email"]');
+            let email = emailInput.value;
+
+            // Validate email format
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                emailInput.focus();
+                return;
+            }
+
+            fetch(this.action, {
+                method: this.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert("Message sent successfully!");
+                    window.location.href = data.next; // Redirect user if needed
+                } else {
+                    alert("Error submitting form. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An unexpected error occurred.");
+            });
+        });
     }
 
-    fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.ok) {
-            alert("Message sent successfully!");
-            window.location.href = data.next;  // Redirect user
-        } else {
-            alert("Error submitting form. Please try again.");
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("An unexpected error occurred.");
-    });
+    // Function to validate email format
+    function validateEmail(email) {
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    }
 });
-
-// Function to validate email format
-function validateEmail(email) {
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-}
