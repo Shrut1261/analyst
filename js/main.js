@@ -242,37 +242,38 @@ document.addEventListener("DOMContentLoaded", function () {
       const errorMessage = this.querySelector('.error-message');
       const sentMessage = this.querySelector('.sent-message');
 
-      // Show loading and hide messages
+      // Show loading state
       loading.style.display = 'block';
       errorMessage.style.display = 'none';
       sentMessage.style.display = 'none';
 
       fetch(this.action, {
-        method: this.method,
+        method: 'POST',
         body: formData,
         headers: {
           'Accept': 'application/json'
         }
       })
-      .then(response => {
+      .then(response => response.json())
+      .then(data => {
         loading.style.display = 'none';
-        if (response.ok) {
-          // Show success message first
+        if (data.ok) {
+          // Show success message from your layout
           sentMessage.style.display = 'block';
           
-          // Redirect after 2 seconds
+          // Redirect after 2 seconds (matches your animation timing)
           setTimeout(() => {
-            window.location.href = '/thanks?language=en';
+            window.location.href = data.next; // Use Formspree's next parameter
           }, 2000);
         } else {
           errorMessage.style.display = 'block';
-          errorMessage.textContent = 'Error submitting form. Please try again.';
+          errorMessage.textContent = data.error || 'Error submitting form';
         }
       })
       .catch(error => {
         loading.style.display = 'none';
         errorMessage.style.display = 'block';
-        errorMessage.textContent = 'An unexpected error occurred.';
+        errorMessage.textContent = 'An unexpected error occurred';
       });
     });
   }
