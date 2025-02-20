@@ -258,12 +258,12 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         loading.style.display = 'none';
         if (data.ok) {
-          // Show success message from your layout
+          // Show success message
           sentMessage.style.display = 'block';
           
-          // Redirect after 2 seconds (matches your animation timing)
+          // Redirect after 2 seconds
           setTimeout(() => {
-            window.location.href = data.next; // Use Formspree's next parameter
+            window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
           }, 2000);
         } else {
           errorMessage.style.display = 'block';
