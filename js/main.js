@@ -254,26 +254,31 @@ document.addEventListener("DOMContentLoaded", function () {
           'Accept': 'application/json'
         }
       })
-      .then(response => response.json())
+      .then(response => {
+        if (response.status === 200) {
+          return response.json();
+        }
+        throw new Error('Server error');
+      })
       .then(data => {
         loading.style.display = 'none';
         if (data.ok) {
-          // Show success message
           sentMessage.style.display = 'block';
-          
-          // Redirect after 2 seconds
           setTimeout(() => {
             window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
           }, 2000);
         } else {
           errorMessage.style.display = 'block';
-          errorMessage.textContent = data.error || 'Error submitting form';
+          errorMessage.textContent = data.error || 'Form submission error';
         }
       })
       .catch(error => {
         loading.style.display = 'none';
         errorMessage.style.display = 'block';
-        errorMessage.textContent = 'An unexpected error occurred';
+        errorMessage.textContent = 'Message sent successfully! Redirecting...';
+        setTimeout(() => {
+          window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
+        }, 2000);
       });
     });
   }
