@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         body: formData,
         headers: { 
           'Accept': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest' // Required header
+          'X-Requested-With': 'XMLHttpRequest' // Add this header
         }
       })
       .then(response => {
@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         loading.style.display = 'none';
         
-        // Handle Formspree's response format
-        if (data.ok || data.success) {
+        // Handle Formspree's success response
+        if (data.success || data.ok) {
           sentMessage.style.display = 'block';
           setTimeout(() => {
             // Use absolute URL for redirect
             window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
           }, 2000);
         } else {
-          throw new Error(data.error || 'Submission failed');
+          throw new Error(data.errors?.map(e => e.message).join(', ') || 'Submission failed');
         }
       })
       .catch(error => {
