@@ -17,7 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(this.action, {
         method: 'POST',
         body: formData,
-        headers: { 'Accept': 'application/json' }
+        headers: { 
+          'Accept': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest' // Required header
+        }
       })
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
@@ -26,12 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         loading.style.display = 'none';
         
-        if (data.ok || data.success) { // Handle both possible Formspree responses
+        // Handle Formspree's response format
+        if (data.ok || data.success) {
           sentMessage.style.display = 'block';
           setTimeout(() => {
-            // Use redirect from response or fallback URL
-            const redirectUrl = data.next || 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
-            window.location.href = redirectUrl;
+            // Use absolute URL for redirect
+            window.location.href = 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
           }, 2000);
         } else {
           throw new Error(data.error || 'Submission failed');
