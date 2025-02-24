@@ -17,25 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(this.action, {
         method: 'POST',
         body: formData,
-        headers: { 
-          'Accept': 'application/json',
-          'X-Requested-With': 'XMLHttpRequest'
-        }
+        headers: { 'Accept': 'application/json' }
       })
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.json();
       })
       .then(data => {
-        // Handle Formspree's response
-        if (data.ok || data.success) {
-          // Clean the redirect URL
-          const redirectUrl = data.next 
-            ? data.next.replace(' ', '') // Remove any accidental spaces
-            : 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
-            
-          // Client-side redirect after 2 seconds
+        loading.style.display = 'none';
+        
+        if (data.ok || data.success) { // Handle both possible Formspree responses
+          sentMessage.style.display = 'block';
           setTimeout(() => {
+            // Use redirect from response or fallback URL
+            const redirectUrl = data.next || 'https://shrut1261.github.io/shrut-analytica/thanks?language=en';
             window.location.href = redirectUrl;
           }, 2000);
         } else {
@@ -43,13 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       })
       .catch(error => {
-        console.error('Form submission error:', error);
         loading.style.display = 'none';
-        errorMessage.textContent = 'Message sending failed. Please try again.';
         errorMessage.style.display = 'block';
-      })
-      .finally(() => {
-        loading.style.display = 'none';
+        errorMessage.textContent = error.message || 'An error occurred. Please try again.';
       });
     });
   }
