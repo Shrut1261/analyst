@@ -87,56 +87,70 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
+/* Update in main.css */
+/*--------------------------------------------------------------
+# PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
+.php-email-form .loading,
+.php-email-form .error-message,
 .php-email-form .sent-message {
   display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
   padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+  margin: 15px 0;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
+  background: #f8f9fa;
+  color: #007bff;
+}
+
+.php-email-form .error-message {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.php-email-form .sent-message {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Add animation for loading spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .php-email-form .loading:before {
   content: "";
   display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007bff;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
 }
 
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
+/* Update form button styling */
+.contact .php-email-form button[type=submit] {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
-  100% {
-    transform: rotate(360deg);
-  }
+.contact .php-email-form button[type=submit]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Ensure form status messages are visible when active */
+.php-email-form .loading.active,
+.php-email-form .error-message.active,
+.php-email-form .sent-message.active {
+  display: block;
 }
 
 /*--------------------------------------------------------------
