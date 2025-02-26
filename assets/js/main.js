@@ -1,7 +1,7 @@
 /**
 * Template Name: MyResume
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
+* Updated: Feb 25 2025 with Bootstrap v5.3.3
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -223,44 +223,6 @@
     })
   }
   window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
-
-  /* 
-   * Contact Form Submission Update - DO NOT CHANGE STRUCTURE
-   * This section handles the contact form submission.
-   * It processes the JSON response from the server and redirects if successful.
-   */
-  const contactForm = document.querySelector('.contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(contactForm);
-      // Show loading message and hide others
-      document.querySelector('.loading').style.display = 'block';
-      document.querySelector('.error-message').style.display = 'none';
-      document.querySelector('.sent-message').style.display = 'none';
-      
-      fetch(contactForm.getAttribute('action'), {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        document.querySelector('.loading').style.display = 'none';
-        if(data.ok) {
-          window.location.href = data.next;
-        } else {
-          document.querySelector('.error-message').innerText = 'There was an error processing your request.';
-          document.querySelector('.error-message').style.display = 'block';
-        }
-      })
-      .catch(error => {
-        document.querySelector('.loading').style.display = 'none';
-        document.querySelector('.error-message').innerText = 'An unexpected error occurred. Please try again.';
-        document.querySelector('.error-message').style.display = 'block';
-        console.error(error);
-      });
-    });
-  }
-
-})();
+ 
+::contentReference[oaicite:0]{index=0}
+ 
