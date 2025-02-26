@@ -1,15 +1,17 @@
-/**
- * Template Name: MyResume
- * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
- * Updated: Jun 29 2024 with Bootstrap v5.3.3
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
+ /**
+* Template Name: MyResume
+* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+* Updated: Jun 29 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
 (function() {
   "use strict";
 
-  // Header toggle
+  /**
+   * Header toggle
+   */
   const headerToggleBtn = document.querySelector('.header-toggle');
 
   function headerToggle() {
@@ -19,16 +21,21 @@
   }
   headerToggleBtn.addEventListener('click', headerToggle);
 
-  // Hide mobile nav on same-page/hash links
+  /**
+   * Hide mobile nav on same-page/hash links
+   */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.header-show')) {
         headerToggle();
       }
     });
+
   });
 
-  // Toggle mobile nav dropdowns
+  /**
+   * Toggle mobile nav dropdowns
+   */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
       e.preventDefault();
@@ -38,7 +45,9 @@
     });
   });
 
-  // Preloader
+  /**
+   * Preloader
+   */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
@@ -46,7 +55,9 @@
     });
   }
 
-  // Scroll top button
+  /**
+   * Scroll top button
+   */
   let scrollTop = document.querySelector('.scroll-top');
 
   function toggleScrollTop() {
@@ -65,7 +76,9 @@
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 
-  // Animation on scroll function and init
+  /**
+   * Animation on scroll function and init
+   */
   function aosInit() {
     AOS.init({
       duration: 600,
@@ -76,7 +89,9 @@
   }
   window.addEventListener('load', aosInit);
 
-  // Init typed.js
+  /**
+   * Init typed.js
+   */
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
@@ -90,10 +105,14 @@
     });
   }
 
-  // Initiate Pure Counter
+  /**
+   * Initiate Pure Counter
+   */
   new PureCounter();
 
-  // Animate the skills items on reveal
+  /**
+   * Animate the skills items on reveal
+   */
   let skillsAnimation = document.querySelectorAll('.skills-animation');
   skillsAnimation.forEach((item) => {
     new Waypoint({
@@ -108,12 +127,16 @@
     });
   });
 
-  // Initiate glightbox
+  /**
+   * Initiate glightbox
+   */
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
-  // Init isotope layout and filters
+  /**
+   * Init isotope layout and filters
+   */
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
@@ -144,7 +167,9 @@
 
   });
 
-  // Init swiper sliders
+  /**
+   * Init swiper sliders
+   */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
@@ -161,7 +186,9 @@
 
   window.addEventListener("load", initSwiper);
 
-  // Correct scrolling position upon page load for URLs containing hash links.
+  /**
+   * Correct scrolling position upon page load for URLs containing hash links.
+   */
   window.addEventListener('load', function(e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
@@ -177,7 +204,9 @@
     }
   });
 
-  // Navmenu Scrollspy
+  /**
+   * Navmenu Scrollspy
+   */
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
@@ -197,15 +226,4 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  // Contact form submission handling
-  const form = document.querySelector('.php-email-form');
-
-  if (form) {
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const thisForm = this;
-
-      const action
-::contentReference[oaicite:0]{index=0}
- 
+})();
