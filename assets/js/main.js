@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  // Helper functions for querying elements
+  // Helper functions
   const qs = (selector, parent = document) => parent.querySelector(selector);
   const qsa = (selector, parent = document) => Array.from(parent.querySelectorAll(selector));
 
@@ -34,20 +34,19 @@
     });
   });
 
-  // PRELOADER
+  // Preloader removal
   const preloader = qs("#preloader");
   if (preloader) {
     window.addEventListener("load", () => preloader.remove());
   }
 
-  // SCROLL TOP BUTTON
+  // Scroll Top Button
   const scrollTop = qs(".scroll-top");
   const toggleScrollTop = () => {
     if (scrollTop) {
       scrollTop.classList.toggle("active", window.scrollY > 100);
     }
   };
-
   scrollTop?.addEventListener("click", e => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -55,7 +54,7 @@
   window.addEventListener("load", toggleScrollTop);
   document.addEventListener("scroll", toggleScrollTop);
 
-  // ANIMATION ON SCROLL (AOS) INIT
+  // AOS initialization
   window.addEventListener("load", () => {
     if (typeof AOS !== "undefined") {
       AOS.init({
@@ -67,7 +66,7 @@
     }
   });
 
-  // INIT TYPED.JS
+  // Typed.js initialization
   const typedEl = qs(".typed");
   if (typedEl && typeof Typed !== "undefined") {
     const typedStrings = typedEl.getAttribute("data-typed-items")?.split(",") || [];
@@ -80,12 +79,12 @@
     });
   }
 
-  // INIT PURE COUNTER
+  // PureCounter initialization
   if (typeof PureCounter !== "undefined") {
     new PureCounter();
   }
 
-  // Animate skills items on reveal using Waypoints
+  // Skills animation using Waypoints
   qsa(".skills-animation").forEach(item => {
     if (typeof Waypoint !== "undefined") {
       new Waypoint({
@@ -100,17 +99,16 @@
     }
   });
 
-  // INIT GLIGHTBOX
+  // GLightbox initialization
   if (typeof GLightbox !== "undefined") {
     GLightbox({ selector: ".glightbox" });
   }
 
-  // INIT ISOTOPE LAYOUT AND FILTERS
+  // Isotope layout initialization
   qsa(".isotope-layout").forEach(isotopeItem => {
     const layout = isotopeItem.getAttribute("data-layout") || "masonry";
     const defaultFilter = isotopeItem.getAttribute("data-default-filter") || "*";
     const sort = isotopeItem.getAttribute("data-sort") || "original-order";
-
     let isoInstance;
     const isoContainer = qs(".isotope-container", isotopeItem);
     if (isoContainer && typeof imagesLoaded !== "undefined" && typeof Isotope !== "undefined") {
@@ -123,7 +121,6 @@
         });
       });
     }
-
     qsa(".isotope-filters li", isotopeItem).forEach(filterBtn => {
       filterBtn.addEventListener("click", () => {
         const currentActive = qs(".filter-active", isotopeItem);
@@ -135,7 +132,7 @@
     });
   });
 
-  // INIT SWIPER SLIDERS
+  // Swiper sliders initialization
   const initSwiper = () => {
     qsa(".init-swiper").forEach(swiperElement => {
       const configEl = qs(".swiper-config", swiperElement);
@@ -157,7 +154,7 @@
   };
   window.addEventListener("load", initSwiper);
 
-  // CORRECT SCROLLING POSITION ON PAGE LOAD FOR HASH LINKS
+  // Correct scroll position for hash links on load
   window.addEventListener("load", () => {
     if (window.location.hash) {
       const section = qs(window.location.hash);
@@ -170,7 +167,7 @@
     }
   });
 
-  // NAVMENU SCROLLSPY
+  // Navmenu Scrollspy
   const navLinks = qsa(".navmenu a");
   const navScrollspy = () => {
     const pos = window.scrollY + 200;
@@ -196,7 +193,7 @@
       e.preventDefault();
       const formData = new FormData(emailForm);
 
-      // Optionally show a loading message
+      // Show a loading indicator
       const loadingMessage = document.createElement("p");
       loadingMessage.textContent = "Sending...";
       emailForm.appendChild(loadingMessage);
@@ -209,7 +206,7 @@
         .then(data => {
           loadingMessage.remove();
           if (data.ok) {
-            // Redirect to the thanks page if submission is successful
+            // Redirect to the thanks page on successful submission
             window.location.href = data.next || "/thanks";
           } else {
             alert("There was a problem with your submission. Please try again.");
