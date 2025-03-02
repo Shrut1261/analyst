@@ -1457,3 +1457,76 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* New Contact Section Styles */
+.contact.section {
+  background: var(--light-background, #f9f9f9);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact.section .section-title h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+}
+
+.contact.section .section-title p {
+  font-size: 16px;
+  color: var(--default-color);
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: var(--surface-color, #fff);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card i {
+  font-size: 36px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.contact-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: var(--heading-font);
+}
+
+.contact-card p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.social-links {
+  margin-top: 40px;
+}
+
+.social-links a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: var(--accent-color);
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--nav-hover-color);
+}
+
