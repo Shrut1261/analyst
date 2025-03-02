@@ -30,7 +30,6 @@
         headerToggle();
       }
     });
-
   });
 
   /**
@@ -164,7 +163,6 @@
         }
       }, false);
     });
-
   });
 
   /**
@@ -225,5 +223,51 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Form Submission Handling - NEW ADDITION
+   */
+  const contactForm = document.getElementById('contact-form'); // Change to your form's ID
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.innerHTML;
+      const formData = new FormData(contactForm);
+
+      // Show loading state
+      submitButton.innerHTML = '<i class="bi bi-arrow-repeat animate-spin"></i> Sending...';
+      submitButton.setAttribute('disabled', 'true');
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return response.json();
+      })
+      .then(data => {
+        if (data.ok && data.next) {
+          window.location.href = data.next;
+        } else {
+          throw new Error('Invalid response format');
+        }
+      })
+      .catch(error => {
+        console.error('Submission error:', error);
+        alert('Message failed to send. Please try again or contact me directly at your@email.com');
+      })
+      .finally(() => {
+        submitButton.innerHTML = originalButtonText;
+        submitButton.removeAttribute('disabled');
+      });
+    });
+  }
 
 })();
