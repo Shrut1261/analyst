@@ -188,4 +188,38 @@
   };
   window.addEventListener("load", navScrollspy);
   document.addEventListener("scroll", navScrollspy);
+
+  // CONTACT FORM SUBMISSION HANDLER
+  const emailForm = qs(".php-email-form");
+  if (emailForm) {
+    emailForm.addEventListener("submit", e => {
+      e.preventDefault();
+      const formData = new FormData(emailForm);
+
+      // Optionally show a loading message
+      const loadingMessage = document.createElement("p");
+      loadingMessage.textContent = "Sending...";
+      emailForm.appendChild(loadingMessage);
+
+      fetch(emailForm.getAttribute("action"), {
+        method: "POST",
+        body: formData,
+      })
+        .then(response => response.json())
+        .then(data => {
+          loadingMessage.remove();
+          if (data.ok) {
+            // Redirect to the thanks page if submission is successful
+            window.location.href = data.next || "/thanks";
+          } else {
+            alert("There was a problem with your submission. Please try again.");
+          }
+        })
+        .catch(error => {
+          loadingMessage.remove();
+          console.error("Submission Error:", error);
+          alert("There was an error submitting your form.");
+        });
+    });
+  }
 })();
