@@ -647,7 +647,7 @@
       data-aos="fade-up" 
       data-aos-delay="200"
       novalidate>
-     <div class="row gy-4">
+  <div class="row gy-4">
 
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
@@ -665,13 +665,10 @@
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                 </div>
 
-                 <div class="col-md-12">
-      <div class="loading">Loading</div>
-      <div class="error-message"></div>
-      <div class="sent-message">Your message has been sent. Thank you!</div>
-    </div>
-
-    <div class="col-md-12 text-center">
+                 <div class="col-md-12 text-center">
+      <div class="loading" style="display: none;">Sending...</div>
+      <div class="error-message" style="display: none;"></div>
+      <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
       <button type="submit">Send Message</button>
     </div>
   </div>
