@@ -223,54 +223,61 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
-
+  
   /**
- * Form Submission Handling
- */
-document.querySelectorAll('.php-email-form').forEach(form => {
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const loading = form.querySelector('.loading');
-    const error = form.querySelector('.error-message');
-    const sent = form.querySelector('.sent-message');
-    
-    loading.style.display = 'block';
-    error.style.display = 'none';
-    sent.style.display = 'none';
+   * Form Submission Handling
+   */
+  document.querySelectorAll('.php-email-form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const loading = form.querySelector('.loading');
+      const errorMessage = form.querySelector('.error-message');
+      const sentMessage = form.querySelector('.sent-message');
+      const submitButton = form.querySelector('button[type="submit"]');
 
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => {
-      if (response.ok) {
+      // Show loading state
+      loading.style.display = 'block';
+      errorMessage.style.display = 'none';
+      sentMessage.style.display = 'none';
+      submitButton.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         return response.json();
-      }
-      throw new Error('Network response was not OK');
-    })
-    .then(data => {
-      loading.style.display = 'none';
-      if (data.ok) {
-        sent.style.display = 'block';
-        form.reset();
+      })
+      .then(data => {
+        if (data.ok) {
+          sentMessage.style.display = 'block';
+          form.reset();
+          setTimeout(() => {
+            sentMessage.style.display = 'none';
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
+        console.error('Form error:', error);
+        errorMessage.textContent = `Error: ${error.message}`;
+        errorMessage.style.display = 'block';
         setTimeout(() => {
-          sent.style.display = 'none';
+          errorMessage.style.display = 'none';
         }, 5000);
-      } else {
-        throw new Error(data.error || 'Form submission failed');
-      }
-    })
-    .catch(error => {
-      loading.style.display = 'none';
-      error.style.display = 'block';
-      error.textContent = 'Error: ' + error.message;
-      setTimeout(() => {
-        error.style.display = 'none';
-      }, 5000);
+      })
+      .finally(() => {
+        loading.style.display = 'none';
+        submitButton.disabled = false;
+      });
     });
   });
-});
+
+
+})();
