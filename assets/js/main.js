@@ -30,6 +30,7 @@
         headerToggle();
       }
     });
+
   });
 
   /**
@@ -163,6 +164,7 @@
         }
       }, false);
     });
+
   });
 
   /**
@@ -223,7 +225,9 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
-  
+
+})();
+
  /**
  * Form Submission Handling - Final Fix
  */
