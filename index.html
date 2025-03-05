@@ -185,7 +185,7 @@
 
 
 <!-- Skills Section -->
-<!-- Skills Section with Bar Chart -->
+<!-- Skills Section with 3D Bar Chart -->
 <section id="skills" class="skills section" style="background: linear-gradient(to right, #f8fafc, #ffffff); padding: 60px 0;">
   
   <!-- Section Title -->
@@ -205,15 +205,59 @@
         box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
         padding: 20px;">
       
-      <!-- Left Column: Bar Chart -->
+      <!-- Left Column: 3D Bar Chart -->
       <div class="col-md-6 text-center" style="margin-bottom: 20px;">
-        <canvas id="skillsBarChart" width="400" height="400" style="max-width: 320px; margin: auto;"></canvas>
+        <canvas id="skillsBarChart3D" width="400" height="400" style="max-width: 320px; margin: auto;"></canvas>
       </div>
 
-      <!-- Right Column: Skills List (Multiple Skills) -->
+      <!-- Right Column: Skills List with Percentage and Progress Bars -->
       <div class="col-md-6">
         <ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem;">
-          <!-- Add your skills and their percentages here -->
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Python</strong>
+              <span>90%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 90%; background-color: #306998; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>R Programming</strong>
+              <span>95%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 95%; background-color: #276DC3; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Data Visualization</strong>
+              <span>85%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 85%; background-color: #e76f51; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Machine Learning</strong>
+              <span>80%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 80%; background-color: #f4a261; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>SQL</strong>
+              <span>75%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 75%; background-color: #2a9d8f; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -224,8 +268,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   window.onload = function() {
-    var ctx = document.getElementById('skillsBarChart').getContext('2d');
-    var skillsBarChart = new Chart(ctx, {
+    var ctx = document.getElementById('skillsBarChart3D').getContext('2d');
+    var skillsBarChart3D = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: ["Python", "R Programming", "Data Visualization", "Machine Learning", "SQL"],
@@ -239,14 +283,28 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        indexAxis: 'y', // Horizontal bars
         scales: {
           x: {
             beginAtZero: true,
-            grid: { display: false }
+            grid: { 
+              display: true,
+              color: '#e0e0e0', // Grid lines color
+              lineWidth: 1
+            },
+            ticks: {
+              callback: function(value) {
+                return value + '%';  // Append percentage symbol to x-axis
+              }
+            }
           },
           y: {
             beginAtZero: true,
-            max: 100
+            grid: { 
+              display: true,
+              color: '#e0e0e0', // Grid lines color
+              lineWidth: 1
+            },
           }
         },
         plugins: {
@@ -259,7 +317,14 @@
           }
         },
         animation: {
-          duration: 1000
+          duration: 1000,
+          easing: 'easeInOutQuart'
+        },
+        elements: {
+          bar: {
+            borderRadius: 5,
+            borderWidth: 1
+          }
         }
       }
     });
