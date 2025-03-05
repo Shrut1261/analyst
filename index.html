@@ -163,10 +163,11 @@
 <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
   <i class="bi bi-code-slash"></i>
   <div class="stats-item">
-    <span class="purecounter" data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1"></span><span>+</span>
+    <span class="purecounter" data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1"></span><span class="plus-sign">+</span>
     <p>Coding Hours</p>
   </div>
 </div>
+
 <!-- End Stats Item -->
 
       <!-- Certifications -->
@@ -186,196 +187,94 @@
 
 
 <!-- Skills Section -->
-<!-- Skills Section with 3D Bar Chart -->
-<section id="skills" class="skills section" style="background: linear-gradient(to right, #f8fafc, #ffffff); padding: 60px 0;">
-  
+<!-- Skills Section -->
+<section id="skills" class="skills section">
+
   <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up" style="text-align: center; margin-bottom: 40px;">
-    <h2 style="font-weight: 600; font-size: 2rem;">Skills</h2>
-    <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
-      Transforming raw data into actionable insights with advanced analytics, 
-      machine learning, and data visualization.
-    </p>
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills</h2>
+    <p>The ability to analyze data and derive meaningful insights is essential for making informed decisions and driving success.</p>
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <!-- White box with shadow -->
-    <div class="row align-items-center"
-      style="background: #fff; 
-        border-radius: 8px; 
-        box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
-        padding: 20px;">
-      
-      <!-- Left Column: 3D Bar Chart -->
-      <div class="col-md-6 text-center" style="margin-bottom: 20px;">
-        <canvas id="skillsBarChart3D" width="500" height="400" style="max-width: 420px; margin: auto;"></canvas>
+
+    <div class="row skills-content skills-animation">
+
+      <!-- Left Column (Skills Progress Bars) -->
+      <div class="col-lg-6">
+        <!-- Python Skill -->
+        <div class="progress">
+          <span class="skill"><span>Python</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <!-- R Programming Skill -->
+        <div class="progress">
+          <span class="skill"><span>R Programming</span> <i class="val">85%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <!-- SQL Skill -->
+        <div class="progress">
+          <span class="skill"><span>SQL</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <!-- Data Visualization (Tableau, Power BI) Skill -->
+        <div class="progress">
+          <span class="skill"><span>Data Visualization (Tableau, Power BI)</span> <i class="val">85%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
       </div>
 
-      <!-- Right Column: Skills List with Percentage and Progress Bars -->
-      <div class="col-md-6">
-        <ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem;">
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>Python</strong>
-              <span>96%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 96%; background-color: #306998; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>R Programming</strong>
-              <span>98%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 98%; background-color: #276DC3; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>Data Visualization</strong>
-              <span>90%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 90%; background-color: #e76f51; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>Machine Learning</strong>
-              <span>94%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 94%; background-color: #f4a261; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>SQL</strong>
-              <span>92%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 92%; background-color: #2a9d8f; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
-        </ul>
+      <!-- Right Column (Other Skills) -->
+      <div class="col-lg-6">
+        <!-- Machine Learning Skill -->
+        <div class="progress">
+          <span class="skill"><span>Machine Learning</span> <i class="val">75%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <!-- Statistical Analysis Skill -->
+        <div class="progress">
+          <span class="skill"><span>Statistical Analysis</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <!-- Big Data Technologies (Spark, Hadoop) Skill -->
+        <div class="progress">
+          <span class="skill"><span>Big Data Technologies (Spark, Hadoop)</span> <i class="val">70%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
+
+        <!-- Data Wrangling & Cleaning Skill -->
+        <div class="progress">
+          <span class="skill"><span>Data Wrangling & Cleaning</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div><!-- End Skills Item -->
       </div>
-    </div>
-  </div>
-</section><!-- /Skills Section -->
-
-<!-- Additional Skills Section Below -->
-<section id="otherSkills" class="other-skills section" style="background: #f7f7f7; padding: 60px 0;">
-  <div class="container" data-aos="fade-up">
-    <div class="row gy-4">
-
-      <!-- Projects Completed -->
-      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-        <i class="bi bi-folder"></i>
-        <div class="stats-item">
-          <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Projects Completed</p>
-        </div>
-      </div><!-- End Stats Item -->    
-
-      <!-- Coding Hours -->
-      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-        <i class="bi bi-code-slash"></i>
-        <div class="stats-item">
-          <span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Coding Hours</p>
-        </div>
-      </div><!-- End Stats Item -->   
-
-      <!-- Certifications -->
-      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-        <i class="bi bi-award"></i>
-        <div class="stats-item">
-          <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Certifications</p>
-        </div>
-      </div><!-- End Stats Item -->  
-
-      <!-- Research Papers -->
-      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-        <i class="bi bi-file-earmark-earbuds"></i>
-        <div class="stats-item">
-          <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Research Papers</p>
-        </div>
-      </div><!-- End Stats Item --> 
 
     </div>
-  </div>
-</section><!-- End Other Skills Section -->
 
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  window.onload = function() {
-    var ctx = document.getElementById('skillsBarChart3D').getContext('2d');
-    var skillsBarChart3D = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ["Python", "R Programming", "Data Visualization", "Machine Learning", "SQL"],
-        datasets: [{
-          data: [96, 98, 90, 94, 92],
-          backgroundColor: '#276DC3', // Bars color
-          borderColor: '#fff',
-          borderWidth: 2
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        indexAxis: 'y', // Horizontal bars
-        scales: {
-          x: {
-            beginAtZero: true,
-            grid: { 
-              display: true,
-              color: '#e0e0e0', // Grid lines color
-              lineWidth: 1
-            },
-            ticks: {
-              callback: function(value) {
-                return value + '%';  // Append percentage symbol to x-axis
-              }
-            }
-          },
-          y: {
-            beginAtZero: true,
-            grid: { 
-              display: true,
-              color: '#e0e0e0', // Grid lines color
-              lineWidth: 1
-            },
-          }
-        },
-        plugins: {
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return context.label + ': ' + context.raw + '%';
-              }
-            }
-          }
-        },
-        animation: {
-          duration: 1000,
-          easing: 'easeInOutQuart'
-        },
-        elements: {
-          bar: {
-            borderRadius: 5,
-            borderWidth: 1
-          }
-        }
-      }
-    });
-  }
-</script>
+  </div>
+
+</section><!-- End Skills Section -->
 
      <!-- Skill Section -->
 
