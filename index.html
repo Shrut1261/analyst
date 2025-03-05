@@ -184,9 +184,8 @@
 </section><!-- /Stats Section -->
 
 
-    <!-- Skills Section -->
+<!-- Skills Section -->
 <section id="skills" class="skills section">
-
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>Skills</h2>
@@ -194,25 +193,59 @@
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <canvas id="skillsChart"></canvas>
+    <div class="row align-items-center">
+      <!-- Left Column: Doughnut Chart -->
+      <div class="col-md-6 text-center">
+        <!-- Set a max-width on the canvas to reduce its size -->
+        <canvas id="skillsPieChart" style="max-width: 300px; margin: auto;"></canvas>
+      </div>
+
+      <!-- Right Column: Skills List -->
+      <div class="col-md-6">
+        <ul class="skills-list" style="list-style: none; padding: 0; font-size: 1.1rem;">
+          <li><strong>Python</strong> - 90%</li>
+          <li><strong>R Programming</strong> - 95%</li>
+          <li><strong>SQL</strong> - 90%</li>
+          <li><strong>Data Visualization</strong> - 95%</li>
+          <li><strong>Machine Learning</strong> - 95%</li>
+          <li><strong>Statistical Analysis</strong> - 90%</li>
+          <li><strong>Big Data Technologies</strong> - 90%</li>
+          <li><strong>Data Wrangling &amp; Cleaning</strong> - 90%</li>
+        </ul>
+      </div>
+    </div>
   </div>
+</section>
 
-</section><!-- /Skills Section -->
-    
+<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script>
-  var ctx = document.getElementById('skillsChart').getContext('2d');
-  var skillsChart = new Chart(ctx, {
-    type: 'bar', // Change to 'doughnut' for a pie chart
+  // Initialize the doughnut chart
+  var ctx = document.getElementById('skillsPieChart').getContext('2d');
+  var skillsPieChart = new Chart(ctx, {
+    type: 'doughnut',
     data: {
-      labels: ["Python", "R Programming", "SQL", "Data Visualization", "Machine Learning", "Statistical Analysis", "Big Data", "Data Wrangling"],
+      labels: [
+        "Python", 
+        "R Programming", 
+        "SQL", 
+        "Data Visualization", 
+        "Machine Learning", 
+        "Statistical Analysis", 
+        "Big Data Technologies", 
+        "Data Wrangling"
+      ],
       datasets: [{
-        label: 'Skill Level (%)',
-        data: [90, 85, 90, 90, 85, 85, 80, 90],
+        data: [90, 95, 90, 95, 95, 90, 90, 90],
         backgroundColor: [
-          '#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', 
-          '#9966ff', '#ff9f40', '#c9cbcf', '#ff4500'
+          '#306998', // Python
+          '#276DC3', // R Programming
+          '#F29111', // SQL
+          '#00A3E0', // Data Visualization
+          '#6A4C93', // Machine Learning
+          '#E94B3C', // Statistical Analysis
+          '#008744', // Big Data Technologies
+          '#FCEE21'  // Data Wrangling
         ],
         borderColor: '#fff',
         borderWidth: 1
@@ -221,34 +254,17 @@
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      scales: {
-        y: {
-          beginAtZero: true,
-          max: 100
+      // Adjust the doughnut thickness if needed:
+      cutout: '50%',
+      plugins: {
+        legend: {
+          display: false  // Legend hidden because the skills are listed separately
         }
       }
     }
   });
 </script>
 
-<canvas id="skillsPieChart"></canvas>
-
-<script>
-  var ctx = document.getElementById('skillsPieChart').getContext('2d');
-  var skillsPieChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ["Python", "R", "SQL", "Data Viz", "Machine Learning", "Statistics", "Big Data", "Data Wrangling"],
-      datasets: [{
-        data: [90, 85, 90, 90, 85, 85, 80, 90],
-        backgroundColor: [
-          '#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', 
-          '#9966ff', '#ff9f40', '#c9cbcf', '#ff4500'
-        ]
-      }]
-    }
-  });
-</script>
    <!-- Resume Section -->
 <section id="resume" class="resume section">
 
