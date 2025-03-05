@@ -185,42 +185,120 @@
 
 
 <!-- Skills Section -->
-<section id="skills" class="skills section">
+<section id="skills" class="skills section"
+  style="background: linear-gradient(to right, #f8fafc, #ffffff); padding: 60px 0;">
+  
   <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Skills</h2>
-    <p>Transforming raw data into actionable insights with advanced analytics, machine learning, and data visualization.</p>
+  <div class="container section-title" data-aos="fade-up" style="text-align: center; margin-bottom: 40px;">
+    <h2 style="font-weight: 600; font-size: 2rem;">Skills</h2>
+    <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+      Transforming raw data into actionable insights with advanced analytics, 
+      machine learning, and data visualization.
+    </p>
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row align-items-center">
+    <!-- White box with shadow -->
+    <div class="row align-items-center"
+      style="
+        background: #fff; 
+        border-radius: 8px; 
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
+        padding: 20px;
+      "
+    >
       <!-- Left Column: Doughnut Chart -->
-      <div class="col-md-6 text-center">
-        <!-- Set a max-width on the canvas to reduce its size -->
-        <canvas id="skillsPieChart" style="max-width: 300px; margin: auto;"></canvas>
+      <div class="col-md-6 text-center" style="margin-bottom: 20px;">
+        <canvas id="skillsPieChart" style="max-width: 320px; margin: auto;"></canvas>
       </div>
 
-      <!-- Right Column: Skills List -->
+      <!-- Right Column: Skills List with progress bars -->
       <div class="col-md-6">
-        <ul class="skills-list" style="list-style: none; padding: 0; font-size: 1.1rem;">
-          <li><strong>Python</strong> - 90%</li>
-          <li><strong>R Programming</strong> - 95%</li>
-          <li><strong>SQL</strong> - 90%</li>
-          <li><strong>Data Visualization</strong> - 95%</li>
-          <li><strong>Machine Learning</strong> - 95%</li>
-          <li><strong>Statistical Analysis</strong> - 90%</li>
-          <li><strong>Big Data Technologies</strong> - 90%</li>
-          <li><strong>Data Wrangling &amp; Cleaning</strong> - 90%</li>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem;">
+          <!-- Single skill item format -->
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Python</strong>
+              <span>90%</span>
+            </div>
+            <!-- Progress bar background -->
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <!-- Progress bar fill -->
+              <div style="width: 90%; background-color: #306998; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>R Programming</strong>
+              <span>95%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 95%; background-color: #276DC3; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>SQL</strong>
+              <span>90%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 90%; background-color: #F29111; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Data Visualization</strong>
+              <span>95%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 95%; background-color: #00A3E0; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Machine Learning</strong>
+              <span>95%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 95%; background-color: #6A4C93; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Statistical Analysis</strong>
+              <span>90%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 90%; background-color: #E94B3C; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Big Data Technologies</strong>
+              <span>90%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 90%; background-color: #008744; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Data Wrangling &amp; Cleaning</strong>
+              <span>90%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 90%; background-color: #FCEE21; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
   </div>
-</section>
+</section><!-- /Skills Section -->
 
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  // Initialize the doughnut chart
   var ctx = document.getElementById('skillsPieChart').getContext('2d');
   var skillsPieChart = new Chart(ctx, {
     type: 'doughnut',
@@ -244,7 +322,7 @@
           '#00A3E0', // Data Visualization
           '#6A4C93', // Machine Learning
           '#E94B3C', // Statistical Analysis
-          '#008744', // Big Data Technologies
+          '#008744', // Big Data
           '#FCEE21'  // Data Wrangling
         ],
         borderColor: '#fff',
@@ -254,11 +332,25 @@
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      // Adjust the doughnut thickness if needed:
-      cutout: '50%',
+      cutout: '50%', // Adjust thickness of the doughnut
+      // Make slices pop out on hover
+      hoverOffset: 8,
+      animation: {
+        animateScale: true
+      },
       plugins: {
         legend: {
-          display: false  // Legend hidden because the skills are listed separately
+          display: false // Hiding legend since we list skills on the right
+        },
+        tooltip: {
+          // Optional: Show skill + percentage in tooltip
+          callbacks: {
+            label: function(context) {
+              let label = context.label || '';
+              let value = context.formattedValue || '';
+              return label + ': ' + value + '%';
+            }
+          }
         }
       }
     }
