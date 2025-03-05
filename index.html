@@ -185,7 +185,7 @@
 
 
 <!-- Skills Section -->
-<!-- Skills Section -->
+<!-- Skills Section with Bar Chart -->
 <section id="skills" class="skills section" style="background: linear-gradient(to right, #f8fafc, #ffffff); padding: 60px 0;">
   
   <!-- Section Title -->
@@ -205,59 +205,15 @@
         box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
         padding: 20px;">
       
-      <!-- Left Column: Doughnut Chart -->
+      <!-- Left Column: Bar Chart -->
       <div class="col-md-6 text-center" style="margin-bottom: 20px;">
-        <canvas id="skillsPieChart" width="400" height="400" style="max-width: 320px; margin: auto;"></canvas>
+        <canvas id="skillsBarChart" width="400" height="400" style="max-width: 320px; margin: auto;"></canvas>
       </div>
 
       <!-- Right Column: Skills List (Multiple Skills) -->
       <div class="col-md-6">
         <ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem;">
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>Python</strong>
-              <span>90%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 90%; background-color: #306998; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>R Programming</strong>
-              <span>95%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 95%; background-color: #276DC3; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>Data Visualization</strong>
-              <span>85%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 85%; background-color: #e76f51; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>Machine Learning</strong>
-              <span>80%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 80%; background-color: #f4a261; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
-          <li style="margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong>SQL</strong>
-              <span>75%</span>
-            </div>
-            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <div style="width: 75%; background-color: #2a9d8f; height: 100%; border-radius: 3px;"></div>
-            </div>
-          </li>
+          <!-- Add your skills and their percentages here -->
         </ul>
       </div>
     </div>
@@ -268,20 +224,14 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   window.onload = function() {
-    var ctx = document.getElementById('skillsPieChart').getContext('2d');
-    var skillsPieChart = new Chart(ctx, {
-      type: 'doughnut',
+    var ctx = document.getElementById('skillsBarChart').getContext('2d');
+    var skillsBarChart = new Chart(ctx, {
+      type: 'bar',
       data: {
         labels: ["Python", "R Programming", "Data Visualization", "Machine Learning", "SQL"],
         datasets: [{
           data: [90, 95, 85, 80, 75],
-          backgroundColor: [
-            '#306998', // Python
-            '#276DC3', // R Programming
-            '#e76f51', // Data Visualization
-            '#f4a261', // Machine Learning
-            '#2a9d8f'  // SQL
-          ],
+          backgroundColor: '#276DC3', // Bars color
           borderColor: '#fff',
           borderWidth: 2
         }]
@@ -289,14 +239,17 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        cutout: '50%',  // Makes the center of the doughnut cutout
-        rotation: -0.2, // Adjust the rotation to give a perspective
-        circumference: 1.8 * Math.PI, // Control how much of the doughnut appears (creating a 3D-like effect)
-        hoverOffset: 10, // Slightly expand on hover to give the "3D" feel
-        plugins: {
-          legend: {
-            display: false  // Hiding the legend
+        scales: {
+          x: {
+            beginAtZero: true,
+            grid: { display: false }
           },
+          y: {
+            beginAtZero: true,
+            max: 100
+          }
+        },
+        plugins: {
           tooltip: {
             callbacks: {
               label: function(context) {
@@ -306,15 +259,7 @@
           }
         },
         animation: {
-          animateScale: true,
-          animateRotate: true,
           duration: 1000
-        },
-        elements: {
-          arc: {
-            borderWidth: 2,
-            borderColor: '#fff'
-          }
         }
       }
     });
