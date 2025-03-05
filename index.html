@@ -207,10 +207,10 @@
       
       <!-- Left Column: Doughnut Chart -->
       <div class="col-md-6 text-center" style="margin-bottom: 20px;">
-        <canvas id="skillsPieChart" style="max-width: 320px; margin: auto;"></canvas>
+        <canvas id="skillsPieChart" width="400" height="400" style="max-width: 320px; margin: auto;"></canvas>
       </div>
 
-      <!-- Right Column: Skills List (Only Python and R) -->
+      <!-- Right Column: Skills List (Multiple Skills) -->
       <div class="col-md-6">
         <ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem;">
           <li style="margin-bottom: 20px;">
@@ -231,6 +231,33 @@
               <div style="width: 95%; background-color: #276DC3; height: 100%; border-radius: 3px;"></div>
             </div>
           </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Data Visualization</strong>
+              <span>85%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 85%; background-color: #e76f51; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>Machine Learning</strong>
+              <span>80%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 80%; background-color: #f4a261; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
+          <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong>SQL</strong>
+              <span>75%</span>
+            </div>
+            <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
+              <div style="width: 75%; background-color: #2a9d8f; height: 100%; border-radius: 3px;"></div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -240,117 +267,61 @@
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-  var ctx = document.getElementById('skillsPieChart').getContext('2d');
-  var skillsPieChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ["Python", "R Programming"],
-      datasets: [{
-        data: [90, 95],
-        backgroundColor: [
-          '#306998', // Python
-          '#276DC3'  // R Programming
-        ],
-        borderColor: '#fff',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      cutout: '50%',  // Makes the center of the doughnut cutout
-      rotation: -0.2, // Adjust the rotation to give a perspective
-      circumference: 1.8 * Math.PI, // Control how much of the doughnut appears (creating a 3D-like effect)
-      hoverOffset: 10, // Slightly expand on hover to give the "3D" feel
-      plugins: {
-        legend: {
-          display: false  // Hiding the legend
-        },
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              return context.label + ': ' + context.raw + '%';
+  window.onload = function() {
+    var ctx = document.getElementById('skillsPieChart').getContext('2d');
+    var skillsPieChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ["Python", "R Programming", "Data Visualization", "Machine Learning", "SQL"],
+        datasets: [{
+          data: [90, 95, 85, 80, 75],
+          backgroundColor: [
+            '#306998', // Python
+            '#276DC3', // R Programming
+            '#e76f51', // Data Visualization
+            '#f4a261', // Machine Learning
+            '#2a9d8f'  // SQL
+          ],
+          borderColor: '#fff',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '50%',  // Makes the center of the doughnut cutout
+        rotation: -0.2, // Adjust the rotation to give a perspective
+        circumference: 1.8 * Math.PI, // Control how much of the doughnut appears (creating a 3D-like effect)
+        hoverOffset: 10, // Slightly expand on hover to give the "3D" feel
+        plugins: {
+          legend: {
+            display: false  // Hiding the legend
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.label + ': ' + context.raw + '%';
+              }
             }
           }
-        }
-      },
-      animation: {
-        animateScale: true,
-        animateRotate: true,
-        duration: 1000
-      },
-      elements: {
-        arc: {
-          borderWidth: 2,
-          borderColor: '#fff'
-        }
-      }
-    }
-  });
-</script>
-
-    <!-- /Skills Section -->
-
-<!-- Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  var ctx = document.getElementById('skillsPieChart').getContext('2d');
-  var skillsPieChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: [
-        "Python", 
-        "R Programming", 
-        "SQL", 
-        "Data Visualization", 
-        "Machine Learning", 
-        "Statistical Analysis", 
-        "Big Data Technologies", 
-        "Data Wrangling"
-      ],
-      datasets: [{
-        data: [90, 95, 90, 95, 95, 90, 90, 90],
-        backgroundColor: [
-          '#306998', // Python
-          '#276DC3', // R Programming
-          '#F29111', // SQL
-          '#00A3E0', // Data Visualization
-          '#6A4C93', // Machine Learning
-          '#E94B3C', // Statistical Analysis
-          '#008744', // Big Data
-          '#FCEE21'  // Data Wrangling
-        ],
-        borderColor: '#fff',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      cutout: '50%', // Adjust thickness of the doughnut
-      // Make slices pop out on hover
-      hoverOffset: 8,
-      animation: {
-        animateScale: true
-      },
-      plugins: {
-        legend: {
-          display: false // Hiding legend since we list skills on the right
         },
-        tooltip: {
-          // Optional: Show skill + percentage in tooltip
-          callbacks: {
-            label: function(context) {
-              let label = context.label || '';
-              let value = context.formattedValue || '';
-              return label + ': ' + value + '%';
-            }
+        animation: {
+          animateScale: true,
+          animateRotate: true,
+          duration: 1000
+        },
+        elements: {
+          arc: {
+            borderWidth: 2,
+            borderColor: '#fff'
           }
         }
       }
-    }
-  });
+    });
+  }
 </script>
+
+     <!-- Skill Section -->
 
    <!-- Resume Section -->
 <section id="resume" class="resume section">
