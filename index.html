@@ -187,41 +187,38 @@
 <!-- Skills Section -->
 <!-- Skills Section -->
 <section id="skills" class="skills section" style="background: linear-gradient(to right, #f8fafc, #ffffff); padding: 60px 0;">
+  
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up" style="text-align: center; margin-bottom: 40px;">
     <h2 style="font-weight: 600; font-size: 2rem;">Skills</h2>
     <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
-      Transforming raw data into actionable insights with advanced analytics, machine learning, and data visualization.
+      Transforming raw data into actionable insights with advanced analytics, 
+      machine learning, and data visualization.
     </p>
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <!-- White box with shadow -->
     <div class="row align-items-center"
-      style="
-        background: #fff; 
+      style="background: #fff; 
         border-radius: 8px; 
         box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
-        padding: 20px;
-      "
-    >
+        padding: 20px;">
+      
       <!-- Left Column: Doughnut Chart -->
       <div class="col-md-6 text-center" style="margin-bottom: 20px;">
-        <canvas id="skillsPieChart" style="max-width: 350px; margin: auto;"></canvas>
+        <canvas id="skillsPieChart" style="max-width: 320px; margin: auto;"></canvas>
       </div>
 
-      <!-- Right Column: Skills List with progress bars -->
+      <!-- Right Column: Skills List (Only Python and R) -->
       <div class="col-md-6">
         <ul style="list-style: none; padding: 0; margin: 0; font-size: 1rem;">
-          <!-- Single skill item format -->
           <li style="margin-bottom: 20px;">
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <strong>Python</strong>
               <span>90%</span>
             </div>
-            <!-- Progress bar background -->
             <div style="height: 6px; background-color: #e9ecef; border-radius: 3px; margin-top: 5px;">
-              <!-- Progress bar fill -->
               <div style="width: 90%; background-color: #306998; height: 100%; border-radius: 3px;"></div>
             </div>
           </li>
@@ -234,7 +231,6 @@
               <div style="width: 95%; background-color: #276DC3; height: 100%; border-radius: 3px;"></div>
             </div>
           </li>
-          <!-- Additional skills omitted for brevity -->
         </ul>
       </div>
     </div>
@@ -248,54 +244,45 @@
   var skillsPieChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: [
-        "Python", 
-        "R Programming", 
-        "SQL", 
-        "Data Visualization", 
-        "Machine Learning", 
-        "Statistical Analysis", 
-        "Big Data Technologies", 
-        "Data Wrangling"
-      ],
+      labels: ["Python", "R Programming"],
       datasets: [{
-        data: [90, 95, 90, 95, 95, 90, 90, 90],
+        data: [90, 95],
         backgroundColor: [
           '#306998', // Python
-          '#276DC3', // R Programming
-          '#F29111', // SQL
-          '#00A3E0', // Data Visualization
-          '#6A4C93', // Machine Learning
-          '#E94B3C', // Statistical Analysis
-          '#008744', // Big Data
-          '#FCEE21'  // Data Wrangling
+          '#276DC3'  // R Programming
         ],
         borderColor: '#fff',
-        borderWidth: 3,  // Increased border width for better visual separation
-        hoverOffset: 10 // Added hover offset for visual effect
+        borderWidth: 1
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      cutout: '50%', // Adjust thickness of the doughnut
-      rotation: Math.PI * 0.5, // Rotate to give more visual impact
-      animation: {
-        animateScale: true, // Enable scale animation
-        animateRotate: true  // Enable rotation animation
-      },
+      cutout: '50%',  // Makes the center of the doughnut cutout
+      rotation: -0.2, // Adjust the rotation to give a perspective
+      circumference: 1.8 * Math.PI, // Control how much of the doughnut appears (creating a 3D-like effect)
+      hoverOffset: 10, // Slightly expand on hover to give the "3D" feel
       plugins: {
         legend: {
-          display: false // Hide legend
+          display: false  // Hiding the legend
         },
         tooltip: {
           callbacks: {
             label: function(context) {
-              let label = context.label || '';
-              let value = context.formattedValue || '';
-              return label + ': ' + value + '%';
+              return context.label + ': ' + context.raw + '%';
             }
           }
+        }
+      },
+      animation: {
+        animateScale: true,
+        animateRotate: true,
+        duration: 1000
+      },
+      elements: {
+        arc: {
+          borderWidth: 2,
+          borderColor: '#fff'
         }
       }
     }
