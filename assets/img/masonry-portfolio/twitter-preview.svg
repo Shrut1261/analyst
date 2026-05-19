@@ -1,0 +1,19 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .wave{stroke-dasharray:720;stroke-dashoffset:720;animation:draw 2.6s ease-in-out infinite alternate}
+    .bubble{animation:pop 1.8s ease-in-out infinite alternate}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes pop{from{transform:scale(.86);opacity:.55}to{transform:scale(1);opacity:1}}
+  </style>
+  <rect width="900" height="520" rx="28" fill="#06202C"/>
+  <rect x="64" y="58" width="772" height="400" rx="24" fill="#0B3445" stroke="#17677E"/>
+  <text x="96" y="124" fill="#F3FBFF" font-family="Inter, Arial" font-size="42" font-weight="800">Twitter Data Analysis</text>
+  <text x="96" y="160" fill="#99E6FF" font-family="Inter, Arial" font-size="20">Trends, engagement, and sentiment exploration</text>
+  <path class="wave" d="M112 386 C204 296 272 370 354 276 C432 184 506 286 590 206 C654 144 704 176 782 104" stroke="#35C2FF" stroke-width="7" stroke-linecap="round"/>
+  <circle class="bubble" cx="212" cy="260" r="30" fill="#2DD4BF"/>
+  <circle class="bubble" cx="430" cy="210" r="22" fill="#35C2FF"/>
+  <circle class="bubble" cx="632" cy="292" r="26" fill="#2DD4BF"/>
+  <text x="328" y="326" fill="white" font-family="Inter, Arial" font-size="118" font-weight="900">X</text>
+  <rect x="96" y="404" width="194" height="42" rx="21" fill="#083B50"/>
+  <text x="124" y="431" fill="#C6F5FF" font-family="Inter, Arial" font-size="16" font-weight="700">Sentiment signals</text>
+</svg>

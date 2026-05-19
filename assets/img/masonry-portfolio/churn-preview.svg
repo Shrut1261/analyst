@@ -1,0 +1,23 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .risk{animation:riskPulse 1.6s ease-in-out infinite alternate}
+    .line{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 2.5s ease-in-out infinite alternate}
+    @keyframes riskPulse{from{opacity:.55}to{opacity:1}}
+    @keyframes draw{to{stroke-dashoffset:0}}
+  </style>
+  <rect width="900" height="520" rx="28" fill="#07111F"/>
+  <rect x="58" y="58" width="784" height="404" rx="24" fill="#0F1B2B" stroke="#263B55"/>
+  <text x="92" y="124" fill="#F8FAFC" font-family="Inter, Arial" font-size="40" font-weight="800">Credit Card Churn</text>
+  <text x="92" y="160" fill="#9DB8D4" font-family="Inter, Arial" font-size="20">Customer retention risk prediction</text>
+  <rect x="96" y="218" width="260" height="160" rx="18" fill="#111D2E" stroke="#2F4662"/>
+  <text x="126" y="262" fill="#94A3B8" font-family="Inter, Arial" font-size="18">Churn Risk</text>
+  <text x="126" y="324" fill="#FB7185" font-family="Inter, Arial" font-size="56" font-weight="900">32%</text>
+  <circle class="risk" cx="294" cy="298" r="34" fill="#FB7185"/>
+  <rect x="402" y="218" width="350" height="160" rx="18" fill="#111D2E" stroke="#2F4662"/>
+  <line x1="438" y1="334" x2="714" y2="334" stroke="#263B55"/>
+  <path class="line" d="M438 320 C492 282 536 306 578 262 C626 210 670 244 714 196" stroke="#35C2FF" stroke-width="7" stroke-linecap="round"/>
+  <rect x="96" y="406" width="180" height="38" rx="19" fill="#132C3F"/>
+  <text x="124" y="431" fill="#BFEFFF" font-family="Inter, Arial" font-size="15" font-weight="800">Classification</text>
+  <rect x="300" y="406" width="180" height="38" rx="19" fill="#132C3F"/>
+  <text x="328" y="431" fill="#BFEFFF" font-family="Inter, Arial" font-size="15" font-weight="800">Retention</text>
+</svg>

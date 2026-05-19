@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">DenialGuard AI dashboard preview</title>
+  <desc id="desc">Animated healthcare denial risk analytics dashboard with risk score, claim inputs, and model driver bars.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.55" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#09251d"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="900" height="520" rx="28" fill="url(#bg)"/>
+  <g opacity=".28">
+    <path d="M56 420C178 330 252 355 342 268S522 138 684 172s166-48 216-88" fill="none" stroke="#33d6a6" stroke-width="3"/>
+    <path d="M96 105h708M96 208h708M96 311h708M96 414h708" stroke="#233347"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="58" y="64" width="784" height="392" rx="22" fill="#0b1320" stroke="#26384d" stroke-width="2"/>
+    <rect x="82" y="96" width="176" height="326" rx="12" fill="#141624"/>
+    <text x="104" y="130" fill="#e7f1ff" font-family="Inter,Segoe UI,Arial" font-size="26" font-weight="800">DenialGuard AI</text>
+    <text x="104" y="158" fill="#93c5fd" font-family="Inter,Segoe UI,Arial" font-size="15">Claim denial risk predictor</text>
+    <g font-family="Inter,Segoe UI,Arial" font-size="13" fill="#cbd5e1">
+      <text x="104" y="202">Claim Amount</text><rect x="104" y="216" width="120" height="8" rx="4" fill="#ef4444"/>
+      <text x="104" y="254">Payer Type</text><rect x="104" y="268" width="128" height="28" rx="5" fill="#0b1320" stroke="#273449"/>
+      <text x="112" y="287">Commercial</text>
+      <text x="104" y="326">Network</text><rect x="104" y="340" width="128" height="28" rx="5" fill="#0b1320" stroke="#273449"/>
+      <text x="112" y="359">In Network</text>
+      <text x="104" y="398">Complexity</text><rect x="104" y="412" width="128" height="8" rx="4" fill="#38bdf8"/>
+    </g>
+    <text x="300" y="142" fill="#f8fafc" font-family="Inter,Segoe UI,Arial" font-size="34" font-weight="800">Healthcare Claim Denial Risk</text>
+    <text x="300" y="174" fill="#9fb3c8" font-family="Inter,Segoe UI,Arial" font-size="16">Model scoring, recommended actions, and explainable drivers</text>
+    <g font-family="Inter,Segoe UI,Arial">
+      <text x="300" y="222" fill="#9fb3c8" font-size="15">Denial Risk</text>
+      <text x="300" y="264" fill="#f8fafc" font-size="46" font-weight="900">30.2%</text>
+      <text x="448" y="222" fill="#9fb3c8" font-size="15">Risk Tier</text>
+      <text x="448" y="260" fill="#86efac" font-size="32" font-weight="800">Low</text>
+      <text x="568" y="222" fill="#9fb3c8" font-size="15">ROC-AUC</text>
+      <text x="568" y="260" fill="#f8fafc" font-size="32" font-weight="800">0.735</text>
+    </g>
+    <rect x="300" y="292" width="486" height="38" rx="7" fill="#14532d"/>
+    <text x="322" y="317" fill="#bbf7d0" font-family="Inter,Segoe UI,Arial" font-size="16" font-weight="700">Low denial risk. Continue with standard quality checks.</text>
+    <text x="300" y="374" fill="#f8fafc" font-family="Inter,Segoe UI,Arial" font-size="22" font-weight="800">Top Model Drivers</text>
+    <g transform="translate(520 350)">
+      <rect x="0" y="0" width="184" height="16" rx="3" fill="#60a5fa">
+        <animate attributeName="width" values="130;184;130" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="34" width="154" height="16" rx="3" fill="#38bdf8">
+        <animate attributeName="width" values="96;154;96" dur="4.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="68" width="118" height="16" rx="3" fill="#2dd4bf">
+        <animate attributeName="width" values="74;118;74" dur="5.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="102" width="92" height="16" rx="3" fill="#86efac">
+        <animate attributeName="width" values="58;92;58" dur="4.8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <g font-family="Inter,Segoe UI,Arial" fill="#9fb3c8" font-size="13">
+      <text x="300" y="418">prior authorization</text>
+      <text x="300" y="452">procedure complexity</text>
+      <text x="300" y="486">payer type</text>
+    </g>
+  </g>
+</svg>

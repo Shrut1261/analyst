@@ -1,0 +1,29 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node{animation:pulse 1.8s ease-in-out infinite alternate}
+    .flow{stroke-dasharray:24;animation:dash 1s linear infinite}
+    @keyframes pulse{from{opacity:.55}to{opacity:1}}
+    @keyframes dash{to{stroke-dashoffset:-48}}
+  </style>
+  <rect width="900" height="520" rx="28" fill="#FFF4E8"/>
+  <rect x="62" y="58" width="776" height="402" rx="24" fill="#FF7A1A" opacity=".12" stroke="#FF8A2A"/>
+  <text x="96" y="126" fill="#241204" font-family="Inter, Arial" font-size="42" font-weight="800">Orange Data Mining</text>
+  <text x="96" y="162" fill="#7A3A08" font-family="Inter, Arial" font-size="20">Visual machine learning workflow</text>
+  <path class="flow" d="M150 288 H302 H454 H606 H758" stroke="#FF7A1A" stroke-width="7" stroke-linecap="round"/>
+  <g class="node">
+    <rect x="104" y="230" width="112" height="112" rx="20" fill="#FFFFFF" stroke="#FF7A1A"/>
+    <text x="134" y="294" fill="#241204" font-family="Inter, Arial" font-size="18" font-weight="800">Data</text>
+  </g>
+  <g class="node">
+    <rect x="286" y="230" width="112" height="112" rx="20" fill="#FFFFFF" stroke="#FF7A1A"/>
+    <text x="310" y="294" fill="#241204" font-family="Inter, Arial" font-size="18" font-weight="800">Model</text>
+  </g>
+  <g class="node">
+    <rect x="468" y="230" width="112" height="112" rx="20" fill="#FFFFFF" stroke="#FF7A1A"/>
+    <text x="490" y="294" fill="#241204" font-family="Inter, Arial" font-size="18" font-weight="800">Score</text>
+  </g>
+  <g class="node">
+    <rect x="650" y="230" width="112" height="112" rx="20" fill="#FFFFFF" stroke="#FF7A1A"/>
+    <text x="668" y="294" fill="#241204" font-family="Inter, Arial" font-size="18" font-weight="800">Insight</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .line{stroke-dasharray:640;stroke-dashoffset:640;animation:draw 2.5s ease-in-out infinite alternate}
+    .coin{animation:rise 2s ease-in-out infinite alternate}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes rise{from{transform:translateY(12px);opacity:.55}to{transform:translateY(-8px);opacity:1}}
+  </style>
+  <rect width="900" height="520" rx="28" fill="#D9EAFE"/>
+  <rect x="58" y="56" width="784" height="408" rx="22" fill="#F7FBFF" stroke="#9FC4ED"/>
+  <text x="92" y="124" fill="#111827" font-family="Inter, Arial" font-size="42" font-weight="800">Predictive Analytics</text>
+  <text x="92" y="160" fill="#335475" font-family="Inter, Arial" font-size="20">Alumni giving rate regression model</text>
+  <line x1="120" y1="380" x2="748" y2="380" stroke="#BBD2EA"/>
+  <line x1="120" y1="300" x2="748" y2="300" stroke="#D6E5F5"/>
+  <line x1="120" y1="220" x2="748" y2="220" stroke="#D6E5F5"/>
+  <path class="line" d="M130 354 C210 340 224 284 296 292 C368 300 380 222 460 224 C540 226 570 176 650 154 C700 140 724 126 752 106" stroke="#0563BB" stroke-width="7" stroke-linecap="round"/>
+  <g class="coin">
+    <circle cx="690" cy="150" r="38" fill="#F5C84B"/>
+    <text x="678" y="164" fill="#4B3600" font-family="Inter, Arial" font-size="34" font-weight="800">$</text>
+  </g>
+  <rect x="116" y="404" width="170" height="36" rx="18" fill="#EAF4FF"/>
+  <text x="140" y="428" fill="#335475" font-family="Inter, Arial" font-size="15" font-weight="700">Regression</text>
+  <rect x="306" y="404" width="170" height="36" rx="18" fill="#EAF4FF"/>
+  <text x="332" y="428" fill="#335475" font-family="Inter, Arial" font-size="15" font-weight="700">Forecasting</text>
+</svg>

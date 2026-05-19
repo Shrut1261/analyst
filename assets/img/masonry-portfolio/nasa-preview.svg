@@ -1,0 +1,29 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .orbit{stroke-dasharray:720;stroke-dashoffset:720;animation:draw 3s ease-in-out infinite alternate}
+    .sat{animation:float 2.4s ease-in-out infinite alternate}
+    .star{animation:twinkle 1.8s ease-in-out infinite alternate}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes float{from{transform:translateY(0)}to{transform:translateY(-12px)}}
+    @keyframes twinkle{from{opacity:.35}to{opacity:1}}
+  </style>
+  <rect width="900" height="520" rx="28" fill="#08111F"/>
+  <circle cx="690" cy="90" r="110" fill="#16263E"/>
+  <circle cx="690" cy="90" r="72" fill="#223A5B"/>
+  <circle class="star" cx="104" cy="88" r="3" fill="#DDEBFF"/>
+  <circle class="star" cx="248" cy="72" r="2" fill="#DDEBFF"/>
+  <circle class="star" cx="798" cy="210" r="3" fill="#DDEBFF"/>
+  <circle class="star" cx="612" cy="344" r="2" fill="#DDEBFF"/>
+  <path class="orbit" d="M92 348 C212 190 412 146 638 246 C722 284 770 338 816 414" stroke="#35C2FF" stroke-width="5" stroke-linecap="round"/>
+  <g class="sat">
+    <rect x="350" y="212" width="96" height="62" rx="10" fill="#E8F3FF"/>
+    <rect x="300" y="226" width="42" height="34" rx="4" fill="#35C2FF"/>
+    <rect x="454" y="226" width="42" height="34" rx="4" fill="#35C2FF"/>
+    <circle cx="398" cy="243" r="16" fill="#0B1725"/>
+  </g>
+  <rect x="72" y="62" width="280" height="118" rx="16" fill="#101C2C" stroke="#28405D"/>
+  <text x="96" y="110" fill="#F4FAFF" font-family="Inter, Arial" font-size="34" font-weight="800">NASA Metadata</text>
+  <text x="96" y="144" fill="#9CC5EE" font-family="Inter, Arial" font-size="18">Open data profiling and catalog analysis</text>
+  <rect x="72" y="386" width="760" height="62" rx="12" fill="#101C2C" stroke="#28405D"/>
+  <text x="102" y="425" fill="#DDEBFF" font-family="Inter, Arial" font-size="21" font-weight="700">Completeness • Metadata fields • Dataset discovery</text>
+</svg>

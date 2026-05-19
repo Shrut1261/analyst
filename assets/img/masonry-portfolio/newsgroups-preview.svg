@@ -1,0 +1,27 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .token{animation:fade 1.8s ease-in-out infinite alternate}
+    .token:nth-child(2){animation-delay:.2s}.token:nth-child(3){animation-delay:.4s}
+    @keyframes fade{from{opacity:.45;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+  <rect width="900" height="520" rx="28" fill="#F8FAFC"/>
+  <rect x="62" y="58" width="776" height="402" rx="24" fill="#EEF2FF" stroke="#A5B4FC"/>
+  <text x="96" y="124" fill="#111827" font-family="Inter, Arial" font-size="42" font-weight="800">20 Newsgroups</text>
+  <text x="96" y="160" fill="#4F46E5" font-family="Inter, Arial" font-size="20">Text classification and NLP pipeline</text>
+  <rect x="116" y="216" width="300" height="190" rx="18" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <line x1="148" y1="260" x2="364" y2="260" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
+  <line x1="148" y1="304" x2="336" y2="304" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
+  <line x1="148" y1="348" x2="376" y2="348" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
+  <g class="token">
+    <rect x="486" y="220" width="220" height="46" rx="23" fill="#4F46E5"/>
+    <text x="526" y="250" fill="#FFFFFF" font-family="Inter, Arial" font-size="18" font-weight="800">Vectorize</text>
+  </g>
+  <g class="token">
+    <rect x="520" y="300" width="220" height="46" rx="23" fill="#06B6D4"/>
+    <text x="560" y="330" fill="#FFFFFF" font-family="Inter, Arial" font-size="18" font-weight="800">Classify</text>
+  </g>
+  <g class="token">
+    <rect x="486" y="380" width="220" height="46" rx="23" fill="#10B981"/>
+    <text x="526" y="410" fill="#FFFFFF" font-family="Inter, Arial" font-size="18" font-weight="800">Evaluate</text>
+  </g>
+</svg>

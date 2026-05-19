@@ -1,0 +1,21 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .path{stroke-dasharray:620;stroke-dashoffset:620;animation:draw 2.8s ease-in-out infinite alternate}
+    .dot{animation:pulse 1.4s ease-in-out infinite alternate}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes pulse{from{opacity:.4}to{opacity:1}}
+  </style>
+  <rect width="900" height="520" rx="28" fill="#F1F5F9"/>
+  <rect x="60" y="58" width="780" height="404" rx="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="94" y="124" fill="#0F172A" font-family="Inter, Arial" font-size="42" font-weight="800">Behavior Analysis</text>
+  <text x="94" y="160" fill="#475569" font-family="Inter, Arial" font-size="20">User patterns, segments, and analytical insights</text>
+  <path class="path" d="M130 382 C206 300 270 380 342 280 C410 186 488 270 556 210 C638 140 706 188 780 116" stroke="#16A34A" stroke-width="7" stroke-linecap="round"/>
+  <circle class="dot" cx="130" cy="382" r="15" fill="#16A34A"/>
+  <circle class="dot" cx="342" cy="280" r="15" fill="#06B6D4"/>
+  <circle class="dot" cx="556" cy="210" r="15" fill="#F59E0B"/>
+  <circle class="dot" cx="780" cy="116" r="15" fill="#EF4444"/>
+  <rect x="116" y="408" width="168" height="36" rx="18" fill="#DCFCE7"/>
+  <text x="142" y="431" fill="#14532D" font-family="Inter, Arial" font-size="15" font-weight="800">Segments</text>
+  <rect x="306" y="408" width="168" height="36" rx="18" fill="#E0F2FE"/>
+  <text x="332" y="431" fill="#075985" font-family="Inter, Arial" font-size="15" font-weight="800">Patterns</text>
+</svg>
