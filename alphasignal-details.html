@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>AlphaSignal - Project Details</title>
+  <meta content="AlphaSignal algorithmic trading intelligence platform project details" name="description">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">AlphaSignal</li>
+          </ol>
+        </nav>
+        <h1>AlphaSignal</h1>
+      </div>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-between gy-4 align-items-start">
+          <div class="col-lg-8" data-aos="fade-up">
+            <img src="assets/img/masonry-portfolio/alphasignal-preview.svg" class="img-fluid rounded shadow-sm mb-4" alt="AlphaSignal animated dashboard preview">
+            <div class="portfolio-description">
+              <h2>Algorithmic Trading Intelligence Platform</h2>
+              <p>
+                AlphaSignal is a full-stack portfolio MVP that combines market data ingestion, feature engineering,
+                sentiment scoring, ML signal baselines, portfolio optimization, and backtesting behind a FastAPI
+                service and Next.js dashboard.
+              </p>
+              <p>
+                The project is designed for finance-tech interviews: it demonstrates quant concepts such as Sharpe
+                ratio, drawdown, transaction costs, look-ahead bias controls, directional accuracy, and benchmark-aware
+                backtesting while still showing production engineering habits like typed schemas, tests, CI, and clean
+                service boundaries.
+              </p>
+
+              <div class="row gy-3 mt-3">
+                <div class="col-md-6">
+                  <div class="p-3 border rounded h-100">
+                    <h4>Platform Scope</h4>
+                    <p class="mb-0">FastAPI, Next.js, TimescaleDB-ready schema, Yahoo/FRED adapters, sentiment, ML baseline, and backtesting.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 border rounded h-100">
+                    <h4>Quality Gate</h4>
+                    <p class="mb-0">37 Python tests, ruff, black, mypy, Next.js typecheck/build, and zero npm audit vulnerabilities.</p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="mt-4">What I Built</h3>
+              <ul>
+                <li>Async ingestion adapters for market and macro data.</li>
+                <li>Technical indicators including RSI, MACD, Bollinger Bands, ATR, OBV, and returns.</li>
+                <li>Sentiment scoring facade that is ready for FinBERT with a deterministic baseline fallback.</li>
+                <li>Backtesting engine with lagged weights, transaction costs, fills, and portfolio state.</li>
+                <li>Portfolio optimizer using inverse-volatility allocation.</li>
+                <li>Dashboard-ready API endpoints and a modern Next.js dashboard.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Quant Analytics / Full Stack</li>
+                <li><strong>Stack</strong> Python, FastAPI, Next.js, TypeScript, SQL</li>
+                <li><strong>Testing</strong> Pytest, mypy, ruff, black, npm audit</li>
+                <li><strong>Repository</strong> <a href="https://github.com/Shrut1261/alphasignal-market-intelligence">GitHub</a></li>
+                <li><a href="https://github.com/Shrut1261/alphasignal-market-intelligence" class="btn-visit align-self-start">View Repository</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Shrut Prajapati</h3>
+      <p>Data Analytics, BI, and finance-tech project portfolio.</p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
