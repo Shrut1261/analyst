@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">FinShield fraud detection dashboard preview</title>
+  <desc id="desc">Animated financial fraud detection dashboard with risk score, transaction stream, model performance, and loss prevention metrics.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06111f"/>
+      <stop offset=".55" stop-color="#081827"/>
+      <stop offset="1" stop-color="#062b25"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset=".52" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#a3e635"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity=".38"/>
+    </filter>
+  </defs>
+  <rect width="900" height="520" rx="30" fill="url(#bg)"/>
+  <g opacity=".24">
+    <path d="M44 402C152 298 246 342 354 242s232-116 366-62 120-18 180-88" fill="none" stroke="#38bdf8" stroke-width="3"/>
+    <path d="M72 98h756M72 188h756M72 278h756M72 368h756" stroke="#20364d"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="54" y="58" width="792" height="404" rx="24" fill="#08111f" stroke="#29415e" stroke-width="2"/>
+    <text x="94" y="116" fill="#f8fafc" font-family="Inter,Segoe UI,Arial" font-size="48" font-weight="950">FinShield</text>
+    <text x="94" y="152" fill="#93c5fd" font-family="Inter,Segoe UI,Arial" font-size="21" font-weight="700">Real-time fraud detection and risk analytics</text>
+    <rect x="660" y="92" width="130" height="46" rx="23" fill="#12351f" stroke="#22c55e"/>
+    <circle cx="688" cy="115" r="8" fill="#22c55e">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="708" y="122" fill="#dcfce7" font-family="Inter,Segoe UI,Arial" font-size="16" font-weight="900">Live Risk</text>
+
+    <g font-family="Inter,Segoe UI,Arial">
+      <rect x="94" y="194" width="154" height="80" rx="14" fill="#0b1626" stroke="#263d59"/>
+      <text x="116" y="226" fill="#9fd3ff" font-size="15">AUC-ROC</text>
+      <text x="116" y="260" fill="#fff" font-size="32" font-weight="950">0.978</text>
+      <rect x="270" y="194" width="154" height="80" rx="14" fill="#0b1626" stroke="#263d59"/>
+      <text x="292" y="226" fill="#9fd3ff" font-size="15">Recall</text>
+      <text x="292" y="260" fill="#fff" font-size="32" font-weight="950">94.2%</text>
+      <rect x="446" y="194" width="154" height="80" rx="14" fill="#0b1626" stroke="#263d59"/>
+      <text x="468" y="226" fill="#9fd3ff" font-size="15">Latency p95</text>
+      <text x="468" y="260" fill="#fff" font-size="32" font-weight="950">&lt;87ms</text>
+      <rect x="622" y="194" width="168" height="80" rx="14" fill="#0b1626" stroke="#263d59"/>
+      <text x="644" y="226" fill="#9fd3ff" font-size="15">Loss Prevented</text>
+      <text x="644" y="260" fill="#fff" font-size="32" font-weight="950">$23.7M</text>
+    </g>
+
+    <rect x="94" y="318" width="430" height="104" rx="16" fill="#07111c" stroke="#263d59"/>
+    <text x="118" y="350" fill="#f8fafc" font-family="Inter,Segoe UI,Arial" font-size="22" font-weight="900">Fraud Signal Stream</text>
+    <path d="M122 394C174 378 202 386 246 360s76-10 118-34 70-8 96-34" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round">
+      <animate attributeName="d" dur="4s" repeatCount="indefinite" values="M122 394C174 378 202 386 246 360s76-10 118-34 70-8 96-34;M122 386C172 360 205 376 248 344s78-2 118-26 66 0 96-42;M122 394C174 378 202 386 246 360s76-10 118-34 70-8 96-34"/>
+    </path>
+    <path d="M120 402H486M120 374H486M120 346H486" stroke="#1d2d41"/>
+
+    <rect x="558" y="318" width="232" height="104" rx="16" fill="#07111c" stroke="#263d59"/>
+    <text x="582" y="350" fill="#f8fafc" font-family="Inter,Segoe UI,Arial" font-size="22" font-weight="900">Risk Triage</text>
+    <rect x="582" y="374" width="150" height="14" rx="7" fill="#ef4444">
+      <animate attributeName="width" values="98;150;98" dur="3.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="582" y="400" width="112" height="14" rx="7" fill="#f59e0b">
+      <animate attributeName="width" values="72;112;72" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

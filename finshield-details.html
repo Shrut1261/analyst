@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>FinShield - Project Details</title>
+  <meta content="FinShield real-time financial fraud detection and risk analytics platform project details" name="description">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current">FinShield</li>
+          </ol>
+        </nav>
+        <h1>FinShield</h1>
+      </div>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-between gy-4 align-items-start">
+          <div class="col-lg-8" data-aos="fade-up">
+            <img src="assets/img/masonry-portfolio/finshield-preview.svg" class="img-fluid rounded shadow-sm mb-4" alt="FinShield animated fraud detection dashboard preview">
+            <div class="portfolio-description">
+              <h2>Real-Time Financial Fraud Detection & Risk Analytics Platform</h2>
+              <p>
+                FinShield is a finance-grade fraud analytics platform that combines transaction ingestion,
+                SQL warehouse modeling, behavioral and velocity features, ML risk scoring, SHAP explainability,
+                monitoring, and an executive dashboard for fraud operations.
+              </p>
+              <p>
+                The project is built for banking and fintech interviews because it connects machine learning with
+                measurable risk outcomes: 1.2M+ transactions, 97.8% AUC-ROC, 94.2% recall, p95 scoring latency under
+                87ms, and an estimated $23.7M in annual fraud loss prevention.
+              </p>
+
+              <div class="row gy-3 mt-3">
+                <div class="col-md-6">
+                  <div class="p-3 border rounded h-100">
+                    <h4>Business Problem</h4>
+                    <p class="mb-0">Fraud teams need fast, explainable alerts that reduce loss while keeping false positives low enough for operations teams to trust.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 border rounded h-100">
+                    <h4>Platform Scope</h4>
+                    <p class="mb-0">FastAPI scoring, Streamlit dashboard, MLflow model registry, PostgreSQL warehouse, Prometheus metrics, and Dockerized services.</p>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="mt-4">What I Built</h3>
+              <ul>
+                <li>Fraud data pipeline with raw ingestion, warehouse modeling, feature generation, and reproducible pipeline scripts.</li>
+                <li>Feature modules for velocity, behavioral, graph, and time-based fraud signals.</li>
+                <li>Modeling workflow covering logistic regression, XGBoost-style boosted models, Isolation Forest, autoencoder, and ensemble framing.</li>
+                <li>SHAP explainability components so analysts can understand why an alert was scored as risky.</li>
+                <li>FastAPI endpoints for health, metrics, and transaction scoring.</li>
+                <li>Streamlit dashboard pages for executive summary, fraud patterns, model performance, alert triage, and drift monitoring.</li>
+              </ul>
+
+              <h3 class="mt-4">Interview Talking Points</h3>
+              <ul>
+                <li>How to evaluate fraud models with imbalanced data using AUC-PR, recall at fixed FPR, precision, and cost-weighted impact.</li>
+                <li>How to reduce false positives with explainability, threshold tuning, and operational triage queues.</li>
+                <li>How to monitor drift and scoring latency for a model that would run in a banking environment.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-info">
+              <h3>Project Information</h3>
+              <ul>
+                <li><strong>Category</strong> Financial Fraud ML / Risk Analytics</li>
+                <li><strong>Stack</strong> Python, FastAPI, Streamlit, PostgreSQL, MLflow</li>
+                <li><strong>Metrics</strong> 0.978 AUC-ROC, 94.2% recall, &lt;87ms p95</li>
+                <li><strong>Repository</strong> <a href="https://github.com/Shrut1261/finshield">GitHub</a></li>
+                <li><a href="https://github.com/Shrut1261/finshield" class="btn-visit align-self-start">View Repository</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Shrut Prajapati</h3>
+      <p>Data Analytics, BI, machine learning, and finance-tech project portfolio.</p>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
