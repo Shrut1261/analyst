@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Retail Demand Forecasting Dashboard</title>
+  <desc id="desc">Supply chain analytics preview with demand forecast, stockout risk, and reorder queue.</desc>
+  <rect width="900" height="560" rx="28" fill="#0f172a"/>
+  <path d="M0 0h900v560H0z" fill="url(#bg)"/>
+  <rect x="64" y="58" width="772" height="444" rx="26" fill="#111827" stroke="#314155" stroke-width="2"/>
+  <text x="96" y="114" fill="#ffffff" font-family="Segoe UI, Arial" font-size="42" font-weight="800">Retail Demand Intelligence</text>
+  <text x="98" y="148" fill="#93c5fd" font-family="Segoe UI, Arial" font-size="18">Forecast demand, stockout risk, and inventory replenishment</text>
+  <g transform="translate(96 190)">
+    <rect width="182" height="74" rx="14" fill="#17233a" stroke="#334155"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="15">Forecasted Units</text>
+    <text x="20" y="58" fill="#38bdf8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">184K</text>
+  </g>
+  <g transform="translate(300 190)">
+    <rect width="182" height="74" rx="14" fill="#17233a" stroke="#334155"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="15">Reorder Value</text>
+    <text x="20" y="58" fill="#22c55e" font-family="Segoe UI, Arial" font-size="30" font-weight="800">$133K</text>
+  </g>
+  <g transform="translate(504 190)">
+    <rect width="182" height="74" rx="14" fill="#17233a" stroke="#334155"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="15">Urgent SKUs</text>
+    <text x="20" y="58" fill="#f59e0b" font-family="Segoe UI, Arial" font-size="30" font-weight="800">14</text>
+  </g>
+  <g transform="translate(96 300)">
+    <rect width="420" height="154" rx="18" fill="#0b1220" stroke="#334155"/>
+    <path d="M28 111 C72 78 111 93 152 68 S234 72 278 41 S349 40 389 22" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M28 122 C75 100 116 108 158 87 S235 90 278 66 S348 61 389 48" fill="none" stroke="#a3e635" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+    <line x1="28" y1="123" x2="392" y2="123" stroke="#263244"/>
+    <text x="26" y="32" fill="#ffffff" font-family="Segoe UI, Arial" font-size="20" font-weight="700">Actual vs Forecast Demand</text>
+  </g>
+  <g transform="translate(548 300)">
+    <rect width="244" height="154" rx="18" fill="#0b1220" stroke="#334155"/>
+    <rect x="34" y="88" width="34" height="42" fill="#38bdf8" rx="4"/>
+    <rect x="84" y="58" width="34" height="72" fill="#22c55e" rx="4"/>
+    <rect x="134" y="36" width="34" height="94" fill="#f59e0b" rx="4"/>
+    <rect x="184" y="74" width="34" height="56" fill="#fb7185" rx="4"/>
+    <text x="28" y="32" fill="#ffffff" font-family="Segoe UI, Arial" font-size="20" font-weight="700">Stockout Risk</text>
+  </g>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#0f172a"/>
+      <stop offset=".55" stop-color="#0b2a33"/>
+      <stop offset="1" stop-color="#052e2b"/>
+    </linearGradient>
+  </defs>
+</svg>
