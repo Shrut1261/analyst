@@ -59,6 +59,7 @@ You can also open `index.html` directly in a browser, but a local server more cl
 - **Banking Customer Churn Prediction:** Builds a financial-services ML workflow for churn-risk prioritization.
 - **Crypto Price Forecasting and Portfolio Risk:** Compares crypto time series, volatility, correlations, and portfolio metrics.
 - **Instagram Engagement Power Analysis:** Uses statistical power analysis to plan social-media engagement studies.
+- **Modern Data Pipeline Analytics Warehouse:** Builds an ETL pipeline with data quality checks, SQLite warehouse tables, KPI marts, charts, tests, and CI.
 
 ## Upgrade Roadmap
 

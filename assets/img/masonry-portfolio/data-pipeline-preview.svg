@@ -1,0 +1,23 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="28" fill="#08111F"/>
+  <rect x="54" y="54" width="792" height="512" rx="24" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="88" y="122" fill="#F8FAFC" font-family="Inter, Arial" font-size="38" font-weight="800">Analytics Warehouse</text>
+  <text x="88" y="162" fill="#93C5FD" font-family="Inter, Arial" font-size="22" font-weight="700">ETL • Quality • KPI Marts</text>
+  <g font-family="Inter, Arial" font-size="18" font-weight="800">
+    <rect x="92" y="250" width="132" height="86" rx="14" fill="#1E293B" stroke="#38BDF8" stroke-width="3"/>
+    <text x="124" y="302" fill="#E0F2FE">Raw</text>
+    <rect x="284" y="250" width="132" height="86" rx="14" fill="#1E293B" stroke="#22C55E" stroke-width="3"/>
+    <text x="311" y="302" fill="#DCFCE7">Checks</text>
+    <rect x="476" y="250" width="132" height="86" rx="14" fill="#1E293B" stroke="#A78BFA" stroke-width="3"/>
+    <text x="503" y="302" fill="#EDE9FE">SQLite</text>
+    <rect x="668" y="250" width="132" height="86" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="3"/>
+    <text x="703" y="302" fill="#FEF3C7">Marts</text>
+  </g>
+  <g stroke="#64748B" stroke-width="5" stroke-linecap="round">
+    <path d="M232 293H276"/>
+    <path d="M424 293H468"/>
+    <path d="M616 293H660"/>
+  </g>
+  <polyline points="112,458 208,428 304,442 400,390 496,410 592,336 688,358 790,306" stroke="#38BDF8" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="92" y="514" fill="#CBD5E1" font-family="Inter, Arial" font-size="20" font-weight="700">Warehouse-ready reporting pipeline with tests and CI</text>
+</svg>
