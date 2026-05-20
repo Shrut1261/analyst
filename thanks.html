@@ -1,23 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Thank You - Shrut Prajapati</title>
-  <meta http-equiv="refresh" content="3; url=index.html#contact">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Message Sent - Shrut Prajapati</title>
+  <meta content="Thank you for contacting Shrut Prajapati." name="description">
+
+  <link href="assets/img/icon13.png" rel="icon">
+  <link href="assets/img/icon10.jpeg" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
   <style>
-    body { 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    :root {
+      --accent: #0563bb;
+      --ink: #0f172a;
+      --muted: #526173;
+      --line: rgba(15, 23, 42, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
       min-height: 100vh;
-      text-align: center;
-      font-family: Arial, sans-serif;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow-x: hidden;
+      color: var(--ink);
+      font-family: "Poppins", Arial, sans-serif;
+      background:
+        linear-gradient(115deg, rgba(255, 255, 255, 0.92) 0%, rgba(245, 250, 255, 0.8) 42%, rgba(255, 255, 255, 0.56) 100%),
+        url("assets/img/Shrut.jpg") center center / cover no-repeat;
+    }
+
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 28% 46%, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.62) 30%, rgba(255, 255, 255, 0) 64%),
+        linear-gradient(rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.24));
+      pointer-events: none;
+    }
+
+    main {
+      position: relative;
+      width: min(920px, calc(100% - 32px));
+      padding: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 28px 90px rgba(15, 23, 42, 0.14);
+      backdrop-filter: blur(18px);
+    }
+
+    .status {
+      width: 58px;
+      height: 58px;
+      display: inline-grid;
+      place-items: center;
+      margin-bottom: 24px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--accent);
+      box-shadow: 0 14px 32px rgba(5, 99, 187, 0.25);
+      font-size: 28px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-family: "Raleway", Arial, sans-serif;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    p {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    a:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      color: #fff;
+      background: var(--accent);
+      box-shadow: 0 12px 28px rgba(5, 99, 187, 0.24);
+    }
+
+    .secondary {
+      color: var(--ink);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .note {
+      display: block;
+      margin-top: 24px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 30px 24px;
+      }
+
+      .actions {
+        display: grid;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="thank-you-message">
-    <h1>Thank you for your message! 🎉</h1>
-    <p>You'll be redirected back to the contact section in 3 seconds...</p>
-  </div>
+  <main>
+    <div class="status" aria-hidden="true">
+      <i class="bi bi-check-lg"></i>
+    </div>
+    <h1>Message sent.</h1>
+    <p>Thank you for reaching out. I received your message and will get back to you soon.</p>
+    <div class="actions">
+      <a class="primary" href="index.html#contact"><i class="bi bi-arrow-left"></i>Back to contact</a>
+      <a class="secondary" href="index.html#portfolio"><i class="bi bi-grid"></i>View portfolio</a>
+    </div>
+    <span class="note">You can safely close this page after your message is sent.</span>
+  </main>
 </body>
+
 </html>

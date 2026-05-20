@@ -75,7 +75,7 @@
             thisForm.reset();
 
             if (response.next) {
-              window.location.href = response.next;
+              window.location.href = normalizeThankYouUrl(response.next);
             }
 
             return;
@@ -96,6 +96,24 @@
     thisForm.querySelector('.loading').classList.remove('d-block');
     thisForm.querySelector('.error-message').innerHTML = error;
     thisForm.querySelector('.error-message').classList.add('d-block');
+  }
+
+  function normalizeThankYouUrl(nextUrl) {
+    const configuredNext = document.querySelector('input[name="_next"]')?.value;
+    const fallback = new URL(configuredNext || 'thanks.html', window.location.href);
+
+    try {
+      const url = new URL(nextUrl, window.location.href);
+      const isRootThanks = url.pathname.replace(/\/+$/, '') === '/thanks';
+
+      if (isRootThanks) {
+        return fallback.href;
+      }
+
+      return url.href;
+    } catch (error) {
+      return fallback.href;
+    }
   }
 
 })();
