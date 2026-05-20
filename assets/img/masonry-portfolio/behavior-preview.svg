@@ -7,7 +7,7 @@
   </style>
   <rect width="900" height="520" rx="28" fill="#F1F5F9"/>
   <rect x="60" y="58" width="780" height="404" rx="24" fill="#FFFFFF" stroke="#CBD5E1"/>
-  <text x="94" y="124" fill="#0F172A" font-family="Inter, Arial" font-size="42" font-weight="800">Behavior Analysis</text>
+  <text x="94" y="124" fill="#0F172A" font-family="Inter, Arial" font-size="38" font-weight="800">E-commerce Behavior</text>
   <text x="94" y="160" fill="#475569" font-family="Inter, Arial" font-size="20">User patterns, segments, and analytical insights</text>
   <path class="path" d="M130 382 C206 300 270 380 342 280 C410 186 488 270 556 210 C638 140 706 188 780 116" stroke="#16A34A" stroke-width="7" stroke-linecap="round"/>
   <circle class="dot" cx="130" cy="382" r="15" fill="#16A34A"/>

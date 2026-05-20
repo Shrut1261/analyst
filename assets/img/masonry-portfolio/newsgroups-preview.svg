@@ -6,7 +6,7 @@
   </style>
   <rect width="900" height="520" rx="28" fill="#F8FAFC"/>
   <rect x="62" y="58" width="776" height="402" rx="24" fill="#EEF2FF" stroke="#A5B4FC"/>
-  <text x="96" y="124" fill="#111827" font-family="Inter, Arial" font-size="42" font-weight="800">20 Newsgroups</text>
+  <text x="96" y="124" fill="#111827" font-family="Inter, Arial" font-size="40" font-weight="800">Text Classification</text>
   <text x="96" y="160" fill="#4F46E5" font-family="Inter, Arial" font-size="20">Text classification and NLP pipeline</text>
   <rect x="116" y="216" width="300" height="190" rx="18" fill="#FFFFFF" stroke="#CBD5E1"/>
   <line x1="148" y1="260" x2="364" y2="260" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>

@@ -7,7 +7,7 @@
   </style>
   <rect width="900" height="520" rx="28" fill="#FFF4E8"/>
   <rect x="62" y="58" width="776" height="402" rx="24" fill="#FF7A1A" opacity=".12" stroke="#FF8A2A"/>
-  <text x="96" y="126" fill="#241204" font-family="Inter, Arial" font-size="42" font-weight="800">Orange Data Mining</text>
+  <text x="96" y="126" fill="#241204" font-family="Inter, Arial" font-size="40" font-weight="800">Orange Text Mining</text>
   <text x="96" y="162" fill="#7A3A08" font-family="Inter, Arial" font-size="20">Visual machine learning workflow</text>
   <path class="flow" d="M150 288 H302 H454 H606 H758" stroke="#FF7A1A" stroke-width="7" stroke-linecap="round"/>
   <g class="node">

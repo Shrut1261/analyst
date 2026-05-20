@@ -49,14 +49,16 @@ You can also open `index.html` directly in a browser, but a local server more cl
 
 ## Featured Projects
 
-- **NASA Metadata Analysis:** Explores NASA metadata to identify structure, patterns, and useful signals for analysis.
-- **Predicting Alumni Giving Rates:** Uses machine learning to model alumni giving behavior and support higher education fundraising insights.
-- **Twitter Data Analysis:** Examines social media trends and sentiment patterns from Twitter data.
-- **Orange Data Analysis:** Demonstrates data mining workflows with Orange for exploratory and predictive analysis.
-- **Tableau Dashboard:** Presents interactive dashboarding and visual storytelling work.
-- **20 Newsgroups NLP:** Applies text classification and natural language processing techniques to the 20 Newsgroups dataset.
-- **Behavior Analysis:** Analyzes user behavior data to uncover patterns and decision-making insights.
-- **Credit Card Churn Prediction:** Builds a machine learning workflow for identifying customers at risk of churn.
+- **NASA Metadata Text Mining:** Mines NASA Mars metadata with TF-IDF, topic modeling, and keyword-network analysis.
+- **Alumni Giving Rate Regression Analysis:** Models higher-education giving rates with interpretable regression.
+- **Twitter Engagement Text Analytics:** Examines tweet language, engagement, and group-level communication patterns.
+- **Orange Text Mining Workflows:** Demonstrates visual NLP workflows for preprocessing, classification, and topic modeling.
+- **ICPC World Finals Tableau Dashboard:** Presents interactive BI analysis of ICPC ranking and medal trends.
+- **Newsgroups Text Classification NLP:** Applies reproducible NLP, topic modeling, and classification benchmarks to 20 Newsgroups.
+- **E-commerce Customer Behavior Analysis:** Analyzes browsing behavior, page depth, and spending patterns.
+- **Banking Customer Churn Prediction:** Builds a financial-services ML workflow for churn-risk prioritization.
+- **Crypto Price Forecasting and Portfolio Risk:** Compares crypto time series, volatility, correlations, and portfolio metrics.
+- **Instagram Engagement Power Analysis:** Uses statistical power analysis to plan social-media engagement studies.
 
 ## Upgrade Roadmap
 

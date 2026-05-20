@@ -6,7 +6,7 @@
   </style>
   <rect width="900" height="520" rx="28" fill="#111827"/>
   <rect x="58" y="56" width="784" height="408" rx="24" fill="#1F2937" stroke="#334155"/>
-  <text x="92" y="122" fill="#F8FAFC" font-family="Inter, Arial" font-size="42" font-weight="800">Tableau Dashboard</text>
+  <text x="92" y="122" fill="#F8FAFC" font-family="Inter, Arial" font-size="38" font-weight="800">ICPC Tableau BI</text>
   <text x="92" y="158" fill="#CBD5E1" font-family="Inter, Arial" font-size="20">Interactive KPI reporting and visual analytics</text>
   <rect x="96" y="210" width="180" height="92" rx="16" fill="#0F172A" stroke="#475569"/>
   <text x="124" y="246" fill="#94A3B8" font-family="Inter, Arial" font-size="17">Revenue</text>

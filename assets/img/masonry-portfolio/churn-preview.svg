@@ -7,7 +7,7 @@
   </style>
   <rect width="900" height="520" rx="28" fill="#07111F"/>
   <rect x="58" y="58" width="784" height="404" rx="24" fill="#0F1B2B" stroke="#263B55"/>
-  <text x="92" y="124" fill="#F8FAFC" font-family="Inter, Arial" font-size="40" font-weight="800">Credit Card Churn</text>
+  <text x="92" y="124" fill="#F8FAFC" font-family="Inter, Arial" font-size="40" font-weight="800">Banking Churn ML</text>
   <text x="92" y="160" fill="#9DB8D4" font-family="Inter, Arial" font-size="20">Customer retention risk prediction</text>
   <rect x="96" y="218" width="260" height="160" rx="18" fill="#111D2E" stroke="#2F4662"/>
   <text x="126" y="262" fill="#94A3B8" font-family="Inter, Arial" font-size="18">Churn Risk</text>
