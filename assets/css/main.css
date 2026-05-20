@@ -547,9 +547,8 @@ section,
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  filter: blur(22px) saturate(1.05) brightness(1.08);
-  opacity: 0.42;
-  transform: scale(1.08);
+  filter: saturate(1.02) brightness(1.05);
+  opacity: 1;
 }
 
 .hero-slide {
@@ -572,7 +571,7 @@ section,
 }
 
 .hero-slide-static {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   opacity: 1;
   transform: none;
