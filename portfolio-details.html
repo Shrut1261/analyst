@@ -106,6 +106,24 @@
 
   <script>
     const projects = {
+      "jobpilot-agent": {
+        title: "JobPilot",
+        image: "assets/img/masonry-portfolio/jobpilot-preview.svg",
+        heading: "Autonomous Job-Application Agent",
+        summary: "JobPilot takes one goal — a job posting and a candidate profile — and plans and executes the entire application workflow itself, with no follow-up prompts.",
+        impact: "Built for Google's All Things Agentic Hackathon, the project demonstrates a real agentic workflow: autonomous multi-step planning and execution backed by persisted, inspectable side effects, not just a chat transcript.",
+        problem: "Tailoring an application well takes real per-posting effort — reading the requirements, honestly assessing fit, and writing specific (not generic) materials — so most people either skip the tailoring or don't scale past a handful of applications.",
+        technical: "Built with Google ADK (Agent, Runner, session service) orchestrating Gemini 3.7 Flash, FastAPI for the hosted UI, and Firestore for persisted application records, deployed on Cloud Run.",
+        category: "Agentic AI",
+        stack: "Python, Google ADK, Gemini API, FastAPI, Firestore, Cloud Run",
+        focus: "Autonomous multi-step agent workflows",
+        repo: "https://github.com/Shrut1261/jobpilot-agent",
+        highlights: [
+          "Single-goal input triggers a full autonomous plan: parse, score, draft, persist, follow up.",
+          "Real tool-calling for side effects (Firestore writes) rather than the LLM just describing actions.",
+          "Deployed end-to-end on Google Cloud Run with Firestore-backed state."
+        ]
+      },
       "denialguard-ai": {
         title: "DenialGuard AI",
         image: "assets/img/masonry-portfolio/denialguard-preview.svg",

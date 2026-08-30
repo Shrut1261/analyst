@@ -1,0 +1,40 @@
+<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .pulse{animation:pulse 1.6s ease-in-out infinite alternate}
+    .line{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 2.5s ease-in-out infinite alternate}
+    .node{animation:nodeFade 2s ease-in-out infinite alternate}
+    .node2{animation:nodeFade 2s ease-in-out infinite alternate;animation-delay:.4s}
+    .node3{animation:nodeFade 2s ease-in-out infinite alternate;animation-delay:.8s}
+    @keyframes pulse{from{opacity:.55}to{opacity:1}}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes nodeFade{from{opacity:.4}to{opacity:1}}
+  </style>
+  <rect width="900" height="520" rx="28" fill="#07111F"/>
+  <rect x="58" y="58" width="784" height="404" rx="24" fill="#0F1B2B" stroke="#263B55"/>
+  <text x="92" y="124" fill="#F8FAFC" font-family="Inter, Arial" font-size="40" font-weight="800">JobPilot Agent</text>
+  <text x="92" y="160" fill="#9DB8D4" font-family="Inter, Arial" font-size="20">Autonomous job-application agent</text>
+
+  <rect x="96" y="218" width="230" height="160" rx="18" fill="#111D2E" stroke="#2F4662"/>
+  <text x="126" y="262" fill="#94A3B8" font-family="Inter, Arial" font-size="18">Fit Score</text>
+  <text x="126" y="324" fill="#34D399" font-family="Inter, Arial" font-size="56" font-weight="900">87%</text>
+  <circle class="pulse" cx="264" cy="298" r="30" fill="#34D399"/>
+
+  <rect x="352" y="218" width="400" height="160" rx="18" fill="#111D2E" stroke="#2F4662"/>
+  <circle class="node" cx="392" cy="298" r="10" fill="#35C2FF"/>
+  <circle class="node2" cx="472" cy="298" r="10" fill="#35C2FF"/>
+  <circle class="node3" cx="552" cy="298" r="10" fill="#35C2FF"/>
+  <circle class="node" cx="632" cy="298" r="10" fill="#35C2FF"/>
+  <path class="line" d="M392 298 L472 298 L552 298 L632 298" stroke="#35C2FF" stroke-width="4" stroke-linecap="round"/>
+  <text x="374" y="264" fill="#94A3B8" font-family="Inter, Arial" font-size="15">Parse</text>
+  <text x="450" y="264" fill="#94A3B8" font-family="Inter, Arial" font-size="15">Score</text>
+  <text x="534" y="264" fill="#94A3B8" font-family="Inter, Arial" font-size="15">Draft</text>
+  <text x="608" y="264" fill="#94A3B8" font-family="Inter, Arial" font-size="15">Save</text>
+  <text x="392" y="352" fill="#BFEFFF" font-family="Inter, Arial" font-size="14">plan &#8594; execute, one goal in</text>
+
+  <rect x="96" y="406" width="150" height="38" rx="19" fill="#132C3F"/>
+  <text x="118" y="431" fill="#BFEFFF" font-family="Inter, Arial" font-size="15" font-weight="800">Agentic AI</text>
+  <rect x="258" y="406" width="150" height="38" rx="19" fill="#132C3F"/>
+  <text x="280" y="431" fill="#BFEFFF" font-family="Inter, Arial" font-size="15" font-weight="800">Gemini + ADK</text>
+  <rect x="420" y="406" width="160" height="38" rx="19" fill="#132C3F"/>
+  <text x="442" y="431" fill="#BFEFFF" font-family="Inter, Arial" font-size="15" font-weight="800">Cloud Run</text>
+</svg>
