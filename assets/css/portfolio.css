@@ -174,7 +174,6 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
   font-size: clamp(1.13rem, 2.5vw, 1.55rem);
   font-weight: 400;
 }
-.toolkit-group h3 span { color: var(--green); }
 .toolkit-group ul { margin: 0; padding: 0; list-style: none; }
 .toolkit-group li { border-top: 1px solid var(--line); }
 .toolkit-group a {
@@ -211,13 +210,10 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
 .project-body > p:not(.eyebrow) { font-size: .95rem; }
 .project-links { margin-top: auto; padding-top: .55rem; font-size: .84rem; font-weight: 700; }
 .project-links a, .text-link { color: var(--green); }
-.archive { margin-top: 1.6rem; border: 1px solid var(--line); border-radius: .65rem; background: var(--white); }
-.archive > summary, .timeline-item > summary { list-style: none; cursor: pointer; }
+.timeline-item > summary { list-style: none; cursor: pointer; }
 summary::-webkit-details-marker { display: none; }
-.archive > summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; font-weight: 750; }
-.archive > summary::after, .timeline-item > summary::after { content: ""; width: .48rem; height: .48rem; flex: none; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; color: var(--green); transform: rotate(45deg); }
-.archive[open] > summary::after, .timeline-item[open] > summary::after { transform: rotate(225deg); }
-.archive-body { border-top: 1px solid var(--line); padding: 1.15rem; }
+.timeline-item > summary::after { content: ""; width: .48rem; height: .48rem; flex: none; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; color: var(--green); transform: rotate(45deg); }
+.timeline-item[open] > summary::after { transform: rotate(225deg); }
 .filters { display: flex; flex-wrap: wrap; gap: .45rem; }
 .filters button { color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 2rem; padding: .4rem .75rem; font-size: .83rem; }
 .filters button:hover { border-color: var(--green); }
@@ -243,8 +239,6 @@ summary::-webkit-details-marker { display: none; }
 .capability-grid article { padding: 1.3rem .8rem .6rem 0; }
 .capability-grid h3 { margin-block: .55rem; }
 .capability-grid .eyebrow { color: var(--green); }
-.credentials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.5rem; list-style: none; margin: 0 0 1.1rem; padding: 0; }
-.credentials p { color: var(--muted); font-size: .92rem; }
 
 .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); align-items: start; gap: 2rem clamp(2rem, 7vw, 6rem); }
 .contact h2 { margin-block: .65rem .9rem; }
@@ -277,7 +271,7 @@ summary::-webkit-details-marker { display: none; }
 }
 @media (max-width: 370px) {
   .hero h1 { font-size: 3.65rem; }
-  .form-pair, .credentials { grid-template-columns: minmax(0, 1fr); }
+  .form-pair { grid-template-columns: minmax(0, 1fr); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -524,3 +518,33 @@ summary::-webkit-details-marker { display: none; }
 @media (max-width: 640px) {
   .finance-focus { grid-template-columns: minmax(0, 1fr); }
 }
+
+.certifications { border-top: 1px solid var(--line); }
+.credential-grid { margin: 0; padding: 0; list-style: none; }
+.credential-cover {
+  display: flex;
+  align-items: center;
+  gap: .95rem;
+  min-height: 6.8rem;
+  padding: 1rem clamp(1rem, 3vw, 1.6rem);
+  color: var(--issuer-ink);
+  background: radial-gradient(ellipse at 85% 0%, #ffffff85, transparent 63%), var(--issuer-wash);
+  border-bottom: 1px solid var(--line);
+  font-size: .95rem;
+  font-weight: 700;
+}
+.credential-mark {
+  display: grid;
+  place-items: center;
+  flex: 0 0 3rem;
+  height: 3rem;
+  border-radius: .55rem;
+  background: var(--issuer-ink);
+  color: #fff;
+  font: 650 1.3rem/1 var(--body);
+}
+.credential-mckinsey { --issuer-wash: #e5e5ef; --issuer-ink: #323852; }
+.credential-google { --issuer-wash: #e3edf9; --issuer-ink: #234c84; }
+.credential-hackerrank { --issuer-wash: #e0eee5; --issuer-ink: #245c47; }
+.credential-linkedin { --issuer-wash: #e2edf2; --issuer-ink: #1c5473; }
+.credential-excel { --issuer-wash: #e7eee2; --issuer-ink: #375c3f; }
