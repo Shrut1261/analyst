@@ -74,7 +74,6 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
 .hero-stage :focus-visible { outline-color: #e2d8ff; }
 .hero-actions, .project-links, .contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem 1rem; }
 .hero-actions { margin-top: 1.5rem; }
-.copy-status { color: #d1c4f4; min-height: 1.6rem; margin-top: .3rem; font-size: .82rem; overflow-wrap: anywhere; }
 .button { display: inline-flex; justify-content: space-between; align-items: center; gap: .7rem; min-height: 2.85rem; padding: .5rem .95rem; border: 1px solid transparent; border-radius: 2rem; font-size: .88rem; font-weight: 650; text-decoration: none; transition: background-color .22s ease, border-color .22s ease; }
 .primary { background: #332741; color: #fff; }
 .primary:hover { background: #553f66; }

@@ -71,23 +71,6 @@ filters.hidden = false;
 search.hidden = false;
 count.hidden = false;
 
-const copyLink = document.querySelector('[data-copy-link]');
-const copyStatus = document.querySelector('.copy-status');
-const publicUrl = document.querySelector('link[rel="canonical"]').href;
-
-copyLink.hidden = false;
-copyLink.addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText(publicUrl);
-    copyStatus.textContent = 'Portfolio link copied.';
-  } catch {
-    const link = document.createElement('a');
-    link.href = publicUrl;
-    link.textContent = publicUrl;
-    copyStatus.replaceChildren('Share this link: ', link);
-  }
-});
-
 const meetingCalendar = document.querySelector('.meeting-calendar');
 const monthTitle = document.querySelector('#meeting-month');
 const meetingDays = document.querySelector('.meeting-days');
@@ -104,7 +87,11 @@ const easternDate = new Intl.DateTimeFormat('en-US', {
 const todayParts = Object.fromEntries(easternDate.formatToParts(new Date()).map(part => [part.type, part.value]));
 const today = Date.UTC(Number(todayParts.year), Number(todayParts.month) - 1, Number(todayParts.day));
 const firstMonth = Date.UTC(Number(todayParts.year), Number(todayParts.month) - 1);
-const meetingAddress = meetingEmail.href.split('?')[0];
+function setMeetingBody(link, body) {
+  const composeUrl = new URL(link.href);
+  composeUrl.searchParams.set('body', body);
+  link.href = composeUrl.href;
+}
 let visibleMonth = new Date(firstMonth);
 let selectedDate;
 
@@ -158,12 +145,12 @@ meetingDays.addEventListener('click', event => {
     'Hi Shrut,', '', 'I’d like to set up a meeting about:', '',
     'Preferred date: ' + label, 'Preferred time and time zone:', '', 'Thanks!'
   ].join('\r\n');
-  meetingEmail.href = meetingAddress + '?subject=Meeting%20request&body=' + encodeURIComponent(body);
+  setMeetingBody(meetingEmail, body);
   const phoneBody = [
     'Hi Shrut,', '', 'I’d like to set up a phone call about:', '',
     'Preferred date: ' + label, 'Preferred time and time zone:', 'Best number to reach me:', '', 'Thanks!'
   ].join('\r\n');
-  meetingPhone.href = meetingAddress + '?subject=Phone%20call%20request&body=' + encodeURIComponent(phoneBody);
+  setMeetingBody(meetingPhone, phoneBody);
 });
 
 renderMeetingMonth();
