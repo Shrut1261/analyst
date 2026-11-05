@@ -548,3 +548,25 @@ summary::-webkit-details-marker { display: none; }
 .credential-hackerrank { --issuer-wash: #e0eee5; --issuer-ink: #245c47; }
 .credential-linkedin { --issuer-wash: #e2edf2; --issuer-ink: #1c5473; }
 .credential-excel { --issuer-wash: #e7eee2; --issuer-ink: #375c3f; }
+
+/* Keep the interaction cue visible for touch, keyboard, and selected states. */
+:where(a, button, summary):focus-visible {
+  box-shadow: 0 0 .8rem #9475b063;
+}
+:where(a, button, summary):active {
+  box-shadow: 0 0 .8rem #9475b063;
+}
+button[aria-pressed="true"]:not(:disabled) {
+  box-shadow: 0 0 .65rem #a185ba6b;
+}
+.credential-card:focus-within,
+.credential-card:has(a:active) {
+  border-color: #ac89ba;
+  box-shadow: 0 0 1rem #9475b045;
+}
+@media (hover: hover) {
+  .credential-card:hover {
+    border-color: #ac89ba;
+    box-shadow: 0 0 1rem #9475b045;
+  }
+}
