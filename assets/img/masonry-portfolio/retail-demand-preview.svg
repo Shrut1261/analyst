@@ -1,46 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
-  <title id="title">Retail Demand Forecasting Dashboard</title>
-  <desc id="desc">Supply chain analytics preview with demand forecast, stockout risk, and reorder queue.</desc>
-  <rect width="900" height="560" rx="28" fill="#0f172a"/>
-  <path d="M0 0h900v560H0z" fill="url(#bg)"/>
-  <rect x="64" y="58" width="772" height="444" rx="26" fill="#111827" stroke="#314155" stroke-width="2"/>
-  <text x="96" y="114" fill="#ffffff" font-family="Segoe UI, Arial" font-size="42" font-weight="800">Retail Demand Intelligence</text>
-  <text x="98" y="148" fill="#93c5fd" font-family="Segoe UI, Arial" font-size="18">Forecast demand, stockout risk, and inventory replenishment</text>
-  <g transform="translate(96 190)">
-    <rect width="182" height="74" rx="14" fill="#17233a" stroke="#334155"/>
-    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="15">Forecasted Units</text>
-    <text x="20" y="58" fill="#38bdf8" font-family="Segoe UI, Arial" font-size="30" font-weight="800">184K</text>
-  </g>
-  <g transform="translate(300 190)">
-    <rect width="182" height="74" rx="14" fill="#17233a" stroke="#334155"/>
-    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="15">Reorder Value</text>
-    <text x="20" y="58" fill="#22c55e" font-family="Segoe UI, Arial" font-size="30" font-weight="800">$133K</text>
-  </g>
-  <g transform="translate(504 190)">
-    <rect width="182" height="74" rx="14" fill="#17233a" stroke="#334155"/>
-    <text x="20" y="30" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="15">Urgent SKUs</text>
-    <text x="20" y="58" fill="#f59e0b" font-family="Segoe UI, Arial" font-size="30" font-weight="800">14</text>
-  </g>
-  <g transform="translate(96 300)">
-    <rect width="420" height="154" rx="18" fill="#0b1220" stroke="#334155"/>
-    <path d="M28 111 C72 78 111 93 152 68 S234 72 278 41 S349 40 389 22" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
-    <path d="M28 122 C75 100 116 108 158 87 S235 90 278 66 S348 61 389 48" fill="none" stroke="#a3e635" stroke-width="5" stroke-linecap="round" opacity=".85"/>
-    <line x1="28" y1="123" x2="392" y2="123" stroke="#263244"/>
-    <text x="26" y="32" fill="#ffffff" font-family="Segoe UI, Arial" font-size="20" font-weight="700">Actual vs Forecast Demand</text>
-  </g>
-  <g transform="translate(548 300)">
-    <rect width="244" height="154" rx="18" fill="#0b1220" stroke="#334155"/>
-    <rect x="34" y="88" width="34" height="42" fill="#38bdf8" rx="4"/>
-    <rect x="84" y="58" width="34" height="72" fill="#22c55e" rx="4"/>
-    <rect x="134" y="36" width="34" height="94" fill="#f59e0b" rx="4"/>
-    <rect x="184" y="74" width="34" height="56" fill="#fb7185" rx="4"/>
-    <text x="28" y="32" fill="#ffffff" font-family="Segoe UI, Arial" font-size="20" font-weight="700">Stockout Risk</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title description">
+  <title id="title">Retail demand forecasting</title>
+  <desc id="description">Project illustration for plan stock and replenishment. Demand, Forecast, Reorder.</desc>
+  <style>
+    svg { --accent: #e9c986; }
+    @media (prefers-reduced-motion: no-preference) {
+      .trace { stroke-dasharray: 1; animation: draw 1.1s ease-out both; }
+      .signal { transform-box: fill-box; transform-origin: center; animation: arrive .8s ease-out both; }
+      .signal.late { animation-delay: .28s; }
+      .columns { transform-box: fill-box; transform-origin: bottom; animation: rise .95s ease-out both; }
+      @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+      @keyframes arrive { from { opacity: .34; transform: scale(.92); } to { opacity: 1; transform: scale(1); } }
+      @keyframes rise { from { opacity: .55; transform: scaleY(.4); } to { opacity: 1; transform: scaleY(1); } }
+    }
+  </style>
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop stop-color="#0f172a"/>
-      <stop offset=".55" stop-color="#0b2a33"/>
-      <stop offset="1" stop-color="#052e2b"/>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#141121"/><stop offset="1" stop-color="#262039"/>
     </linearGradient>
+    <linearGradient id="area" x2="0" y2="1">
+      <stop stop-color="#e9c986" stop-opacity=".36"/><stop offset="1" stop-color="#e9c986" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="27" height="27" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#cab9eb" fill-opacity=".2"/>
+    </pattern>
   </defs>
+  <rect width="960" height="560" fill="url(#background)"/>
+  <rect x="423" y="56" width="486" height="391" rx="26" fill="#171425" stroke="#55476e"/>
+  <rect x="424" y="57" width="484" height="389" rx="25" fill="url(#grid)"/>
+  <path d="M423 103h486M423 401h486" stroke="#463b5c"/>
+  <circle cx="451" cy="81" r="4" fill="#e9c986"/>
+  <text x="465" y="86" fill="#d9c9ee" font-family="Consolas, monospace" font-size="13" letter-spacing="1.2">PROJECT ILLUSTRATION</text>
+  <text x="50" y="113" fill="#e9c986" font-family="Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.4">FORECASTING</text>
+  <text x="47" y="204" fill="#f7f3ff" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="700" letter-spacing="-1.5"><tspan x="47" dy="0">Retail demand</tspan><tspan x="47" dy="51">forecasting</tspan></text>
+  <path d="M51 314h55" stroke="#e9c986" stroke-width="4" stroke-linecap="round"/>
+  <text x="50" y="357" fill="#d1c6df" font-family="Segoe UI, Arial, sans-serif" font-size="20">Plan stock and replenishment</text>
+  <path d="M467 147v225h414M468 205h413M468 261h413M468 317h413" fill="none" stroke="#8880a9" stroke-opacity=".36"/><path d="m468 332 66-37 50 14 69-73 55 23 54-64 44 12 75-53v218H468z" fill="url(#area)"/><path class="trace" pathLength="1" d="m468 332 66-37 50 14 69-73 55 23 54-64 44 12 75-53" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle class="signal late" cx="881" cy="154" r="9" fill="var(--accent)"/>
+  <g fill="#e0d3ef" font-family="Segoe UI, Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="505" y="430">Demand</text>
+    <text x="665" y="430">Forecast</text>
+    <text x="825" y="430">Reorder</text>
+  </g>
+  <path d="M51 496h858" stroke="#574a6b"/>
+  <text x="50" y="523" fill="#c5b5d9" font-family="Consolas, monospace" font-size="14" letter-spacing="1.25">SHRUT D. PRAJAPATI</text>
+  <text x="908" y="523" text-anchor="end" fill="#c5b5d9" font-family="Consolas, monospace" font-size="14" letter-spacing="1.25">SELECTED WORK</text>
 </svg>

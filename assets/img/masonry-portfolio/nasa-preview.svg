@@ -1,29 +1,46 @@
-<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title description">
+  <title id="title">NASA metadata text mining</title>
+  <desc id="description">Project illustration for explore mars-related records. Metadata, Topics, Keywords.</desc>
   <style>
-    .orbit{stroke-dasharray:720;stroke-dashoffset:720;animation:draw 3s ease-in-out infinite alternate}
-    .sat{animation:float 2.4s ease-in-out infinite alternate}
-    .star{animation:twinkle 1.8s ease-in-out infinite alternate}
-    @keyframes draw{to{stroke-dashoffset:0}}
-    @keyframes float{from{transform:translateY(0)}to{transform:translateY(-12px)}}
-    @keyframes twinkle{from{opacity:.35}to{opacity:1}}
+    svg { --accent: #f1a991; }
+    @media (prefers-reduced-motion: no-preference) {
+      .trace { stroke-dasharray: 1; animation: draw 1.1s ease-out both; }
+      .signal { transform-box: fill-box; transform-origin: center; animation: arrive .8s ease-out both; }
+      .signal.late { animation-delay: .28s; }
+      .columns { transform-box: fill-box; transform-origin: bottom; animation: rise .95s ease-out both; }
+      @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+      @keyframes arrive { from { opacity: .34; transform: scale(.92); } to { opacity: 1; transform: scale(1); } }
+      @keyframes rise { from { opacity: .55; transform: scaleY(.4); } to { opacity: 1; transform: scaleY(1); } }
+    }
   </style>
-  <rect width="900" height="520" rx="28" fill="#08111F"/>
-  <circle cx="690" cy="90" r="110" fill="#16263E"/>
-  <circle cx="690" cy="90" r="72" fill="#223A5B"/>
-  <circle class="star" cx="104" cy="88" r="3" fill="#DDEBFF"/>
-  <circle class="star" cx="248" cy="72" r="2" fill="#DDEBFF"/>
-  <circle class="star" cx="798" cy="210" r="3" fill="#DDEBFF"/>
-  <circle class="star" cx="612" cy="344" r="2" fill="#DDEBFF"/>
-  <path class="orbit" d="M92 348 C212 190 412 146 638 246 C722 284 770 338 816 414" stroke="#35C2FF" stroke-width="5" stroke-linecap="round"/>
-  <g class="sat">
-    <rect x="350" y="212" width="96" height="62" rx="10" fill="#E8F3FF"/>
-    <rect x="300" y="226" width="42" height="34" rx="4" fill="#35C2FF"/>
-    <rect x="454" y="226" width="42" height="34" rx="4" fill="#35C2FF"/>
-    <circle cx="398" cy="243" r="16" fill="#0B1725"/>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#141121"/><stop offset="1" stop-color="#262039"/>
+    </linearGradient>
+    <linearGradient id="area" x2="0" y2="1">
+      <stop stop-color="#f1a991" stop-opacity=".36"/><stop offset="1" stop-color="#f1a991" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="27" height="27" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#cab9eb" fill-opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="560" fill="url(#background)"/>
+  <rect x="423" y="56" width="486" height="391" rx="26" fill="#171425" stroke="#55476e"/>
+  <rect x="424" y="57" width="484" height="389" rx="25" fill="url(#grid)"/>
+  <path d="M423 103h486M423 401h486" stroke="#463b5c"/>
+  <circle cx="451" cy="81" r="4" fill="#f1a991"/>
+  <text x="465" y="86" fill="#d9c9ee" font-family="Consolas, monospace" font-size="13" letter-spacing="1.2">PROJECT ILLUSTRATION</text>
+  <text x="50" y="113" fill="#f1a991" font-family="Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.4">TEXT MINING</text>
+  <text x="47" y="204" fill="#f7f3ff" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="700" letter-spacing="-1.5"><tspan x="47" dy="0">NASA metadata</tspan><tspan x="47" dy="51">text mining</tspan></text>
+  <path d="M51 314h55" stroke="#f1a991" stroke-width="4" stroke-linecap="round"/>
+  <text x="50" y="357" fill="#d1c6df" font-family="Segoe UI, Arial, sans-serif" font-size="20">Explore Mars-related records</text>
+  <g fill="none" stroke="var(--accent)" stroke-opacity=".6" stroke-width="2"><ellipse cx="672" cy="245" rx="186" ry="75" transform="rotate(-26 672 245)"/><ellipse cx="672" cy="245" rx="178" ry="78" transform="rotate(27 672 245)"/></g><circle class="signal" cx="672" cy="245" r="71" fill="var(--accent)" fill-opacity=".2" stroke="var(--accent)" stroke-width="2"/><circle class="signal late" cx="804" cy="161" r="10" fill="var(--accent)"/><circle class="signal late" cx="527" cy="178" r="6" fill="var(--accent)"/>
+  <g fill="#e0d3ef" font-family="Segoe UI, Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="505" y="430">Metadata</text>
+    <text x="665" y="430">Topics</text>
+    <text x="825" y="430">Keywords</text>
   </g>
-  <rect x="72" y="62" width="280" height="118" rx="16" fill="#101C2C" stroke="#28405D"/>
-  <text x="96" y="110" fill="#F4FAFF" font-family="Inter, Arial" font-size="34" font-weight="800">NASA Metadata</text>
-  <text x="96" y="144" fill="#9CC5EE" font-family="Inter, Arial" font-size="18">Open data profiling and catalog analysis</text>
-  <rect x="72" y="386" width="760" height="62" rx="12" fill="#101C2C" stroke="#28405D"/>
-  <text x="102" y="425" fill="#DDEBFF" font-family="Inter, Arial" font-size="21" font-weight="700">Completeness • Metadata fields • Dataset discovery</text>
+  <path d="M51 496h858" stroke="#574a6b"/>
+  <text x="50" y="523" fill="#c5b5d9" font-family="Consolas, monospace" font-size="14" letter-spacing="1.25">SHRUT D. PRAJAPATI</text>
+  <text x="908" y="523" text-anchor="end" fill="#c5b5d9" font-family="Consolas, monospace" font-size="14" letter-spacing="1.25">SELECTED WORK</text>
 </svg>

@@ -1,29 +1,46 @@
-<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title description">
+  <title id="title">Orange text mining</title>
+  <desc id="description">Project illustration for build a visual nlp pipeline. Prepare, Classify, Model topics.</desc>
   <style>
-    .node{animation:pulse 1.8s ease-in-out infinite alternate}
-    .flow{stroke-dasharray:24;animation:dash 1s linear infinite}
-    @keyframes pulse{from{opacity:.55}to{opacity:1}}
-    @keyframes dash{to{stroke-dashoffset:-48}}
+    svg { --accent: #f2b07e; }
+    @media (prefers-reduced-motion: no-preference) {
+      .trace { stroke-dasharray: 1; animation: draw 1.1s ease-out both; }
+      .signal { transform-box: fill-box; transform-origin: center; animation: arrive .8s ease-out both; }
+      .signal.late { animation-delay: .28s; }
+      .columns { transform-box: fill-box; transform-origin: bottom; animation: rise .95s ease-out both; }
+      @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+      @keyframes arrive { from { opacity: .34; transform: scale(.92); } to { opacity: 1; transform: scale(1); } }
+      @keyframes rise { from { opacity: .55; transform: scaleY(.4); } to { opacity: 1; transform: scaleY(1); } }
+    }
   </style>
-  <rect width="900" height="520" rx="28" fill="#FFF4E8"/>
-  <rect x="62" y="58" width="776" height="402" rx="24" fill="#FF7A1A" opacity=".12" stroke="#FF8A2A"/>
-  <text x="96" y="126" fill="#241204" font-family="Inter, Arial" font-size="40" font-weight="800">Orange Text Mining</text>
-  <text x="96" y="162" fill="#7A3A08" font-family="Inter, Arial" font-size="20">Visual machine learning workflow</text>
-  <path class="flow" d="M150 288 H302 H454 H606 H758" stroke="#FF7A1A" stroke-width="7" stroke-linecap="round"/>
-  <g class="node">
-    <rect x="104" y="230" width="112" height="112" rx="20" fill="#FFFFFF" stroke="#FF7A1A"/>
-    <text x="134" y="294" fill="#241204" font-family="Inter, Arial" font-size="18" font-weight="800">Data</text>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#141121"/><stop offset="1" stop-color="#262039"/>
+    </linearGradient>
+    <linearGradient id="area" x2="0" y2="1">
+      <stop stop-color="#f2b07e" stop-opacity=".36"/><stop offset="1" stop-color="#f2b07e" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="27" height="27" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#cab9eb" fill-opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="560" fill="url(#background)"/>
+  <rect x="423" y="56" width="486" height="391" rx="26" fill="#171425" stroke="#55476e"/>
+  <rect x="424" y="57" width="484" height="389" rx="25" fill="url(#grid)"/>
+  <path d="M423 103h486M423 401h486" stroke="#463b5c"/>
+  <circle cx="451" cy="81" r="4" fill="#f2b07e"/>
+  <text x="465" y="86" fill="#d9c9ee" font-family="Consolas, monospace" font-size="13" letter-spacing="1.2">PROJECT ILLUSTRATION</text>
+  <text x="50" y="113" fill="#f2b07e" font-family="Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.4">VISUAL WORKFLOWS</text>
+  <text x="47" y="204" fill="#f7f3ff" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="700" letter-spacing="-1.5"><tspan x="47" dy="0">Orange</tspan><tspan x="47" dy="51">text mining</tspan></text>
+  <path d="M51 314h55" stroke="#f2b07e" stroke-width="4" stroke-linecap="round"/>
+  <text x="50" y="357" fill="#d1c6df" font-family="Segoe UI, Arial, sans-serif" font-size="20">Build a visual NLP pipeline</text>
+  <path class="trace" pathLength="1" d="M504 238h106l58-67 58 67h104M668 171v137" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><g class="signal" fill="#242036" stroke="var(--accent)" stroke-width="2.5"><rect x="472" y="208" width="64" height="60" rx="13"/><rect x="636" y="141" width="64" height="60" rx="13"/><rect x="798" y="208" width="64" height="60" rx="13"/><rect x="636" y="290" width="64" height="60" rx="13"/></g><g fill="var(--accent)"><circle cx="504" cy="238" r="6"/><circle cx="668" cy="171" r="6"/><circle cx="830" cy="238" r="6"/><circle cx="668" cy="320" r="6"/></g>
+  <g fill="#e0d3ef" font-family="Segoe UI, Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="505" y="430">Prepare</text>
+    <text x="665" y="430">Classify</text>
+    <text x="825" y="430">Model topics</text>
   </g>
-  <g class="node">
-    <rect x="286" y="230" width="112" height="112" rx="20" fill="#FFFFFF" stroke="#FF7A1A"/>
-    <text x="310" y="294" fill="#241204" font-family="Inter, Arial" font-size="18" font-weight="800">Model</text>
-  </g>
-  <g class="node">
-    <rect x="468" y="230" width="112" height="112" rx="20" fill="#FFFFFF" stroke="#FF7A1A"/>
-    <text x="490" y="294" fill="#241204" font-family="Inter, Arial" font-size="18" font-weight="800">Score</text>
-  </g>
-  <g class="node">
-    <rect x="650" y="230" width="112" height="112" rx="20" fill="#FFFFFF" stroke="#FF7A1A"/>
-    <text x="668" y="294" fill="#241204" font-family="Inter, Arial" font-size="18" font-weight="800">Insight</text>
-  </g>
+  <path d="M51 496h858" stroke="#574a6b"/>
+  <text x="50" y="523" fill="#c5b5d9" font-family="Consolas, monospace" font-size="14" letter-spacing="1.25">SHRUT D. PRAJAPATI</text>
+  <text x="908" y="523" text-anchor="end" fill="#c5b5d9" font-family="Consolas, monospace" font-size="14" letter-spacing="1.25">SELECTED WORK</text>
 </svg>

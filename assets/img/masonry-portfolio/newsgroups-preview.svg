@@ -1,27 +1,46 @@
-<svg width="900" height="520" viewBox="0 0 900 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title description">
+  <title id="title">Newsgroups classification</title>
+  <desc id="description">Project illustration for classify discussion topics. Documents, TF-IDF, Topics.</desc>
   <style>
-    .token{animation:fade 1.8s ease-in-out infinite alternate}
-    .token:nth-child(2){animation-delay:.2s}.token:nth-child(3){animation-delay:.4s}
-    @keyframes fade{from{opacity:.45;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    svg { --accent: #baa6f9; }
+    @media (prefers-reduced-motion: no-preference) {
+      .trace { stroke-dasharray: 1; animation: draw 1.1s ease-out both; }
+      .signal { transform-box: fill-box; transform-origin: center; animation: arrive .8s ease-out both; }
+      .signal.late { animation-delay: .28s; }
+      .columns { transform-box: fill-box; transform-origin: bottom; animation: rise .95s ease-out both; }
+      @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+      @keyframes arrive { from { opacity: .34; transform: scale(.92); } to { opacity: 1; transform: scale(1); } }
+      @keyframes rise { from { opacity: .55; transform: scaleY(.4); } to { opacity: 1; transform: scaleY(1); } }
+    }
   </style>
-  <rect width="900" height="520" rx="28" fill="#F8FAFC"/>
-  <rect x="62" y="58" width="776" height="402" rx="24" fill="#EEF2FF" stroke="#A5B4FC"/>
-  <text x="96" y="124" fill="#111827" font-family="Inter, Arial" font-size="40" font-weight="800">Text Classification</text>
-  <text x="96" y="160" fill="#4F46E5" font-family="Inter, Arial" font-size="20">Text classification and NLP pipeline</text>
-  <rect x="116" y="216" width="300" height="190" rx="18" fill="#FFFFFF" stroke="#CBD5E1"/>
-  <line x1="148" y1="260" x2="364" y2="260" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
-  <line x1="148" y1="304" x2="336" y2="304" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
-  <line x1="148" y1="348" x2="376" y2="348" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
-  <g class="token">
-    <rect x="486" y="220" width="220" height="46" rx="23" fill="#4F46E5"/>
-    <text x="526" y="250" fill="#FFFFFF" font-family="Inter, Arial" font-size="18" font-weight="800">Vectorize</text>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#141121"/><stop offset="1" stop-color="#262039"/>
+    </linearGradient>
+    <linearGradient id="area" x2="0" y2="1">
+      <stop stop-color="#baa6f9" stop-opacity=".36"/><stop offset="1" stop-color="#baa6f9" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="27" height="27" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#cab9eb" fill-opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="560" fill="url(#background)"/>
+  <rect x="423" y="56" width="486" height="391" rx="26" fill="#171425" stroke="#55476e"/>
+  <rect x="424" y="57" width="484" height="389" rx="25" fill="url(#grid)"/>
+  <path d="M423 103h486M423 401h486" stroke="#463b5c"/>
+  <circle cx="451" cy="81" r="4" fill="#baa6f9"/>
+  <text x="465" y="86" fill="#d9c9ee" font-family="Consolas, monospace" font-size="13" letter-spacing="1.2">PROJECT ILLUSTRATION</text>
+  <text x="50" y="113" fill="#baa6f9" font-family="Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.4">CLASSIFICATION</text>
+  <text x="47" y="204" fill="#f7f3ff" font-family="Segoe UI, Arial, sans-serif" font-size="43" font-weight="700" letter-spacing="-1.5"><tspan x="47" dy="0">Newsgroups</tspan><tspan x="47" dy="51">classification</tspan></text>
+  <path d="M51 314h55" stroke="#baa6f9" stroke-width="4" stroke-linecap="round"/>
+  <text x="50" y="357" fill="#d1c6df" font-family="Segoe UI, Arial, sans-serif" font-size="20">Classify discussion topics</text>
+  <path class="trace" pathLength="1" d="m539 187 128 61 121-83m-121 83 118 72m-118-72-122 70" fill="none" stroke="var(--accent)" stroke-opacity=".62" stroke-width="2.5"/><g class="signal" fill="#211a30" stroke="var(--accent)" stroke-width="2"><rect x="486" y="167" width="108" height="41" rx="12"/><rect x="739" y="144" width="102" height="41" rx="12"/><rect x="497" y="296" width="96" height="41" rx="12"/><rect x="735" y="299" width="102" height="41" rx="12"/><circle cx="667" cy="248" r="38"/></g><path d="M506 187h64m191-22h58m-302 151h52m187 4h59m-166-72h36" fill="none" stroke="var(--accent)" stroke-linecap="round" stroke-width="4"/>
+  <g fill="#e0d3ef" font-family="Segoe UI, Arial, sans-serif" font-size="16" text-anchor="middle">
+    <text x="505" y="430">Documents</text>
+    <text x="665" y="430">TF-IDF</text>
+    <text x="825" y="430">Topics</text>
   </g>
-  <g class="token">
-    <rect x="520" y="300" width="220" height="46" rx="23" fill="#06B6D4"/>
-    <text x="560" y="330" fill="#FFFFFF" font-family="Inter, Arial" font-size="18" font-weight="800">Classify</text>
-  </g>
-  <g class="token">
-    <rect x="486" y="380" width="220" height="46" rx="23" fill="#10B981"/>
-    <text x="526" y="410" fill="#FFFFFF" font-family="Inter, Arial" font-size="18" font-weight="800">Evaluate</text>
-  </g>
+  <path d="M51 496h858" stroke="#574a6b"/>
+  <text x="50" y="523" fill="#c5b5d9" font-family="Consolas, monospace" font-size="14" letter-spacing="1.25">SHRUT D. PRAJAPATI</text>
+  <text x="908" y="523" text-anchor="end" fill="#c5b5d9" font-family="Consolas, monospace" font-size="14" letter-spacing="1.25">SELECTED WORK</text>
 </svg>
