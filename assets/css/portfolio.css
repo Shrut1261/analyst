@@ -140,7 +140,7 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
   margin: 1.25rem 0 0;
   list-style: none;
 }
-.hero-profiles a, .profile-pending {
+.hero-profiles a, .discord-copy {
   display: inline-flex;
   align-items: center;
   gap: .45rem;
@@ -155,9 +155,11 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
   line-height: 1.15;
   text-decoration: none;
 }
-.hero-profiles a:hover { background: #352b48; border-color: #9e8eb8; }
-.profile-pending { color: #cbc2d8; background: transparent; }
-.profile-pending small { display: block; margin-top: .12rem; font-size: .65rem; font-weight: 400; }
+.hero-profiles a:hover, .discord-copy:hover { background: #352b48; border-color: #9e8eb8; }
+.discord-copy { cursor: pointer; font-family: inherit; text-align: left; }
+.discord-copy small { display: block; margin-top: .12rem; font-size: .68rem; font-weight: 400; }
+.discord-status { color: #e3d9f1; font-size: .8rem; }
+.discord-status:not(:empty) { margin-top: .6rem; }
 .profile-icon { font: 400 1rem/1 "Portfolio icons"; }
 .profile-icon.kaggle-mark { font: 700 1rem/1 var(--body); }
 .toolkit {
