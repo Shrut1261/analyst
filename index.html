@@ -27,7 +27,7 @@
         <a href="#resume">Experience</a>
         <a href="#about">About</a>
         <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
-        <a class="nav-contact nav-meeting" href="mailto:shrutd.prajapati@gmail.com?subject=Meeting%20request&amp;body=Hi%20Shrut%2C%0A%0AI%E2%80%99d%20like%20to%20set%20up%20a%20meeting%20about%3A%0A%0AHere%20are%20a%20few%20times%20that%20work%20for%20me%20(including%20my%20time%20zone)%3A%0A%0AThanks!">Request a meeting <span aria-hidden="true">↗</span></a>
+        <a class="nav-contact nav-meeting" href="#meeting">Request a meeting <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -372,7 +372,7 @@
           <div class="contact-links">
             <a href="mailto:shrutd.prajapati@gmail.com">shrutd.prajapati@gmail.com</a>
             <a href="https://www.linkedin.com/in/shrutp/">LinkedIn <span aria-hidden="true">↗</span></a>
-            <a href="mailto:shrutd.prajapati@gmail.com?subject=Meeting%20request&amp;body=Hi%20Shrut%2C%0A%0AI%E2%80%99d%20like%20to%20set%20up%20a%20meeting%20about%3A%0A%0AHere%20are%20a%20few%20times%20that%20work%20for%20me%20(including%20my%20time%20zone)%3A%0A%0AThanks!">Request a meeting by email <span aria-hidden="true">↗</span></a>
+            <a href="#meeting">Request a meeting <span aria-hidden="true">↓</span></a>
           </div>
         </div>
         <form action="https://formspree.io/f/xrbejprr" method="post">
@@ -385,6 +385,34 @@
           <label>Message<textarea name="message" rows="4" required></textarea></label>
           <button class="button primary" type="submit">Send message <span aria-hidden="true">↗</span></button>
         </form>
+      </div>
+    </section>
+    <section id="meeting" class="meeting" aria-labelledby="meeting-title">
+      <div class="shell meeting-layout">
+        <div class="meeting-copy">
+          <p class="eyebrow"><span>05 /</span> Meetings</p>
+          <h2 id="meeting-title">Make time<br><em>to connect.</em></h2>
+          <p>Pick a date that works for you, then email me your preferred time and time zone. I’ll reply to confirm.</p>
+        </div>
+
+        <div class="meeting-card">
+          <p class="eyebrow">Intro call with Shrut</p>
+          <div class="meeting-calendar" hidden>
+            <div class="meeting-month">
+              <h3 id="meeting-month" aria-live="polite"></h3>
+              <div class="meeting-month-controls">
+                <button type="button" data-month-step="-1" aria-label="Previous month">‹</button>
+                <button type="button" data-month-step="1" aria-label="Next month">›</button>
+              </div>
+            </div>
+            <div class="meeting-weekdays" aria-hidden="true">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div class="meeting-days" role="group" aria-labelledby="meeting-month"></div>
+            <p class="meeting-selection" role="status">Choose a preferred date.</p>
+          </div>
+          <a class="button primary meeting-email" href="mailto:shrutd.prajapati@gmail.com?subject=Meeting%20request&amp;body=Hi%20Shrut%2C%0A%0AI%E2%80%99d%20like%20to%20set%20up%20a%20meeting%20about%3A%0A%0AHere%20are%20a%20few%20times%20that%20work%20for%20me%20(including%20my%20time%20zone)%3A%0A%0AThanks!">Email meeting request <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </section>
   </main>

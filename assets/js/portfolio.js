@@ -76,3 +76,78 @@ copyLink.addEventListener('click', async () => {
     copyStatus.replaceChildren('Share this link: ', link);
   }
 });
+
+const meetingCalendar = document.querySelector('.meeting-calendar');
+const monthTitle = document.querySelector('#meeting-month');
+const meetingDays = document.querySelector('.meeting-days');
+const selection = document.querySelector('.meeting-selection');
+const meetingEmail = document.querySelector('.meeting-email');
+const previousMonth = meetingCalendar.querySelector('[data-month-step="-1"]');
+const nextMonth = meetingCalendar.querySelector('[data-month-step="1"]');
+const monthFormat = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const dateFormat = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeZone: 'UTC' });
+const easternDate = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric', month: 'numeric', day: 'numeric', timeZone: 'America/New_York'
+});
+const todayParts = Object.fromEntries(easternDate.formatToParts(new Date()).map(part => [part.type, part.value]));
+const today = Date.UTC(Number(todayParts.year), Number(todayParts.month) - 1, Number(todayParts.day));
+const firstMonth = Date.UTC(Number(todayParts.year), Number(todayParts.month) - 1);
+const meetingAddress = meetingEmail.href.split('?')[0];
+let visibleMonth = new Date(firstMonth);
+let selectedDate;
+
+function renderMeetingMonth() {
+  monthTitle.textContent = monthFormat.format(visibleMonth);
+  previousMonth.disabled = visibleMonth.getTime() <= firstMonth;
+  meetingDays.replaceChildren();
+
+  const year = visibleMonth.getUTCFullYear();
+  const month = visibleMonth.getUTCMonth();
+  const lastDay = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+  for (let offset = 0; offset < visibleMonth.getUTCDay(); offset += 1) {
+    meetingDays.append(document.createElement('span'));
+  }
+
+  for (let day = 1; day <= lastDay; day += 1) {
+    const date = Date.UTC(year, month, day);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = day;
+    button.dataset.date = String(date);
+    button.setAttribute('aria-label', dateFormat.format(date));
+    button.setAttribute('aria-pressed', String(date === selectedDate));
+    button.disabled = date < today;
+    meetingDays.append(button);
+  }
+}
+
+previousMonth.addEventListener('click', () => {
+  visibleMonth.setUTCMonth(visibleMonth.getUTCMonth() - 1);
+  renderMeetingMonth();
+  if (previousMonth.disabled) nextMonth.focus();
+});
+
+nextMonth.addEventListener('click', () => {
+  visibleMonth.setUTCMonth(visibleMonth.getUTCMonth() + 1);
+  renderMeetingMonth();
+});
+
+meetingDays.addEventListener('click', event => {
+  const button = event.target.closest('button[data-date]');
+  if (!button) return;
+
+  selectedDate = Number(button.dataset.date);
+  const label = dateFormat.format(selectedDate);
+  for (const day of meetingDays.querySelectorAll('button')) {
+    day.setAttribute('aria-pressed', String(day === button));
+  }
+  selection.textContent = 'Preferred date: ' + label;
+  const body = [
+    'Hi Shrut,', '', 'I’d like to set up a meeting about:', '',
+    'Preferred date: ' + label, 'Preferred time and time zone:', '', 'Thanks!'
+  ].join('\r\n');
+  meetingEmail.href = meetingAddress + '?subject=Meeting%20request&body=' + encodeURIComponent(body);
+});
+
+renderMeetingMonth();
+meetingCalendar.hidden = false;
