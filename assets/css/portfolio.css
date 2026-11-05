@@ -110,9 +110,12 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
   text-transform: uppercase;
 }
 .portrait img {
-  position: relative;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
   mix-blend-mode: multiply;
 }
 @font-face {
@@ -266,7 +269,7 @@ summary::-webkit-details-marker { display: none; }
   .header-inner { flex-wrap: wrap; gap: .4rem 1rem; padding-block: .8rem; }
   .header-inner nav { width: 100%; }
   .hero-grid, .section-intro, .timeline-grid, .capability-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); }
-  .portrait { min-height: 0; padding-top: 1rem; }
+  .portrait { min-height: 0; aspect-ratio: 1.08; }
   .project-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 370px) {
@@ -309,13 +312,39 @@ summary::-webkit-details-marker { display: none; }
 .work-intro { color: var(--muted); }
 .work-intro a { display: inline-block; margin-top: .5rem; color: var(--green); font-weight: 650; }
 .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.featured-card.flagship { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr); border-color: #3e304d; background: #2a2036; color: #fffaf8; }
-.flagship .flagship-image { display: grid; align-items: center; padding: clamp(1rem, 4vw, 3.5rem); background: radial-gradient(ellipse at 26% 15%, #d6bde0, transparent 65%), linear-gradient(145deg, #9380ac, #59456d); }
-.flagship-image img { border-radius: .5rem; box-shadow: 0 .85rem 1.9rem #28173b65; }
+.featured-card.flagship { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr); border-color: #453955; background: #201a2c; color: #fffaf8; }
+.flagship .flagship-image {
+  display: grid;
+  align-items: center;
+  text-decoration: none;
+  padding: clamp(1rem, 4vw, 3rem);
+  background-color: #a992be;
+  background-image: radial-gradient(ellipse at 25% 10%, #e4d7f0, transparent 73%), radial-gradient(#32264a40 1px, transparent 1px);
+  background-size: auto, 20px 20px;
+}
+.project-window {
+  overflow: hidden;
+  border: 1px solid #5b5170;
+  border-radius: .75rem;
+  background: #12101b;
+  box-shadow: 0 .85rem 1.9rem #28173b65;
+}
+.project-window-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .35rem .6rem;
+  padding: .65rem .8rem;
+  border-bottom: 1px solid #504660;
+  color: #e2d7f6;
+  font: 600 .68rem/1.3 var(--mono);
+  letter-spacing: .04em;
+}
+.project-window img { aspect-ratio: auto; }
 .flagship .project-body { justify-content: center; padding: clamp(1.3rem, 4vw, 3.5rem); }
 .flagship .project-body h3 { font-size: clamp(2.25rem, 5vw, 4.4rem); }
 .flagship .project-body > p:not(.eyebrow) { color: #ebdeef; }
-.flagship .eyebrow span, .flagship .project-links a { color: #ead1f4; }
+.flagship .eyebrow, .flagship .project-links a { color: #ead1f4; }
 .flagship .project-links { margin-top: .35rem; }
 .flagship :focus-visible { outline-color: #ead1f4; }
 .featured-card .project-image { overflow: hidden; }
@@ -323,10 +352,49 @@ summary::-webkit-details-marker { display: none; }
   .featured-grid, .featured-card.flagship { grid-template-columns: minmax(0, 1fr); }
   .hero h1 { font-size: clamp(3rem, 11vw, 4.8rem); }
 }
-.featured-card .project-image svg { display: block; width: 100%; height: auto; transition: transform .45s ease; }
-.featured-card:hover .project-image svg { transform: scale(1.045); }
-.cover-2 { background: radial-gradient(circle at 35% 17%, #eef1dd, transparent 70%), #bfdbd3; }
-.cover-3 { background: radial-gradient(circle at 65% 30%, #fff4e4, transparent 65%), #e9c5af; }
+.featured-card .project-image svg { display: block; width: 100%; height: auto; }
+.project-illustration {
+  background-image: radial-gradient(ellipse at 24% 12%, #fff9, transparent 68%), radial-gradient(#3a2a5327 1px, transparent 1px);
+  background-size: auto, 20px 20px;
+}
+.featured-card:not(.flagship) .eyebrow { color: var(--green); }
+#portfolio .project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  min-height: 2.4rem;
+  padding: .3rem .65rem;
+  border: 1px solid currentColor;
+  border-radius: .5rem;
+  text-decoration: none;
+}
+#portfolio .project-links a:hover { background: #a58eb91f; text-decoration: underline; }
+@media (prefers-reduced-motion: no-preference) {
+  #portfolio .project-card { transition: box-shadow .2s ease, border-color .2s ease, translate .24s ease; }
+  #portfolio .project-card:focus-within { translate: 0 -.2rem; }
+  #portfolio .project-card:active { translate: 0 .1rem; }
+  .project-window, .project-illustration svg, .project-orbit-dot, .warehouse-layers { transition: transform .45s ease; }
+  .featured-card:focus-within :is(.project-window, .project-illustration svg) { transform: scale(1.035); }
+  .featured-card:focus-within :is(.project-orbit-dot, .warehouse-layers) { transform: translateY(-8px); }
+  @media (hover: hover) {
+    #portfolio .project-card:hover { translate: 0 -.25rem; }
+    .featured-card:hover :is(.project-window, .project-illustration svg) { transform: scale(1.035); }
+    .featured-card:hover :is(.project-orbit-dot, .warehouse-layers) { transform: translateY(-8px); }
+  }
+  @supports (animation-timeline: view()) {
+    .featured-card .project-image {
+      animation: project-art-entry linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 85%;
+    }
+    @keyframes project-art-entry {
+      from { opacity: .66; clip-path: inset(0 0 9% 0); }
+      to { opacity: 1; clip-path: inset(0); }
+    }
+  }
+}
+.cover-2 { background-color: #c8ddd7; }
+.cover-3 { background-color: #ead4c6; }
 .featured-card:not(.flagship) .project-body h3 { font-size: clamp(1.65rem, 3vw, 2.4rem); font-weight: 450; }
 
 .project-index {
@@ -368,10 +436,6 @@ summary::-webkit-details-marker { display: none; }
 
 @media (max-width: 640px) {
   .index-heading { grid-template-columns: minmax(0, 1fr); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .featured-card .project-image svg { transition: none; }
-  .featured-card:hover .project-image svg { transform: none; }
 }
 
 .meeting {
