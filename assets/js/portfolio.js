@@ -6,6 +6,8 @@ const query = search.querySelector('input');
 const count = document.querySelector('.project-count');
 const empty = document.querySelector('.empty-state');
 const more = document.querySelector('.more-projects');
+const resetProjects = document.querySelector('[data-reset-projects]');
+const topicNames = new Map(buttons.map(button => [button.dataset.filter, button.textContent.trim()]));
 const pageSize = 6;
 
 let category = 'all';
@@ -16,8 +18,10 @@ function renderProjects() {
   let matches = 0;
 
   for (const project of projects) {
-    const topicMatches = category === 'all' || project.dataset.tags.split(' ').includes(category);
-    const text = project.textContent.toLowerCase();
+    const tags = project.dataset.tags.split(' ');
+    const topicMatches = category === 'all' || tags.includes(category);
+    const topics = tags.map(tag => topicNames.get(tag) ?? tag).join(' ');
+    const text = (project.textContent + ' ' + topics).toLowerCase();
     const textMatches = words.every(word => text.includes(word));
     const match = topicMatches && textMatches;
 
@@ -26,7 +30,8 @@ function renderProjects() {
   }
 
   const visible = Math.min(matches, limit);
-  count.textContent = matches ? `Showing ${visible} of ${matches} matching projects` : '0 matching projects';
+  const noun = matches === 1 ? 'project' : 'projects';
+  count.textContent = matches ? `Showing ${visible} of ${matches} matching ${noun}` : '0 matching projects';
   empty.hidden = matches > 0;
   more.hidden = matches <= limit;
 }
@@ -41,6 +46,12 @@ for (const activeButton of buttons) {
     renderProjects();
   });
 }
+
+resetProjects.addEventListener('click', () => {
+  query.value = '';
+  buttons.find(button => button.dataset.filter === 'all').click();
+  query.focus();
+});
 
 query.addEventListener('input', () => {
   limit = pageSize;

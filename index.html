@@ -14,8 +14,8 @@
   <link rel="canonical" href="https://shrut1261.github.io/analyst/">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="assets/img/icon13.png">
-  <link rel="stylesheet" href="assets/css/portfolio.css">
-  <script src="assets/js/portfolio.js" defer></script>
+  <link rel="stylesheet" href="assets/css/portfolio.css?v=2">
+  <script src="assets/js/portfolio.js?v=2" defer></script>
 </head>
 <body class="portfolio-home">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,6 +24,7 @@
       <a class="brand" href="https://github.com/Shrut1261" aria-label="Shrut Prajapati on GitHub">Shrut Prajapati<span class="brand-dot" aria-hidden="true">.</span></a>
       <nav aria-label="Main navigation">
         <a href="#portfolio">Work</a>
+        <a href="#toolkit">Toolkit</a>
         <a href="#resume">Experience</a>
         <a href="#about">About</a>
         <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
@@ -160,7 +161,7 @@
       <section class="project-index" id="project-index" aria-labelledby="index-title">
         <div class="index-heading">
           <div><p class="eyebrow"><span>INDEX /</span> 16 projects</p><h3 id="index-title">Explore the collection</h3></div>
-          <label class="project-search" hidden><span>Search projects</span><input type="search" placeholder="Title, tool, or topic"></label>
+          <label class="project-search" hidden><span>Search projects</span><input type="search" placeholder="Try Python, Tableau, or forecasting"></label>
         </div>
         <div class="index-body">
           <div class="filters" role="group" aria-label="Filter projects by topic" hidden>
@@ -175,13 +176,17 @@
             <button type="button" data-filter="eda" aria-pressed="false">Statistical analysis</button>
           </div>
           <p class="project-count" aria-live="polite" hidden></p>
-          <p class="empty-state" hidden>No projects match. Try another search or topic.</p>
+          <div class="empty-state" hidden>
+            <p>No projects match this search and topic.</p>
+            <button type="button" class="button secondary" data-reset-projects>Clear search and filters</button>
+          </div>
           <div class="project-grid index-grid">
             <article class="project-card" data-tags="agentic ml">
           <a class="project-image" href="portfolio-details.html?project=jobpilot-agent" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/jobpilot-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=jobpilot-agent">JobPilot</a></h4>
             <p>Autonomous job-application agent built on Google ADK and Gemini: parses a posting, scores fit, drafts tailored materials, and persists the application end-to-end from one goal.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Python, Google ADK, Gemini API, FastAPI, Firestore, Cloud Run</p>
             <div class="project-links"><a href="portfolio-details.html?project=jobpilot-agent" aria-label="Case study for JobPilot">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/jobpilot-agent" aria-label="JobPilot on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -190,6 +195,7 @@
           <div class="project-body">
             <h4><a href="alphasignal-details.html">AlphaSignal</a></h4>
             <p>Algorithmic trading intelligence platform with market data, sentiment, ML signals, portfolio optimization, and backtesting.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Python, FastAPI, Next.js, TypeScript, SQL</p>
             <div class="project-links"><a href="alphasignal-details.html" aria-label="Case study for AlphaSignal">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/alphasignal-market-intelligence" aria-label="AlphaSignal on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -198,6 +204,7 @@
           <div class="project-body">
             <h4><a href="finshield-details.html">FinShield</a></h4>
             <p>Real-time financial fraud detection platform with ML scoring, SHAP explanations, drift monitoring, and risk analytics.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Python, FastAPI, Streamlit, PostgreSQL, MLflow</p>
             <div class="project-links"><a href="finshield-details.html" aria-label="Case study for FinShield">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/finshield" aria-label="FinShield on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -206,6 +213,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=denialguard-ai">DenialGuard AI</a></h4>
             <p>Healthcare claim denial risk predictor with ML scoring, model drivers, and Streamlit dashboard.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Python, Streamlit, ML, Pandas</p>
             <div class="project-links"><a href="portfolio-details.html?project=denialguard-ai" aria-label="Case study for DenialGuard AI">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/healthcare-denial-risk-ai" aria-label="DenialGuard AI on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -214,6 +222,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=retail-demand">Retail Demand Forecasting</a></h4>
             <p>Supply-chain analytics platform for SKU demand forecasting, stockout risk, and reorder optimization.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Python, Pandas, scikit-learn, Streamlit</p>
             <div class="project-links"><a href="portfolio-details.html?project=retail-demand" aria-label="Case study for Retail Demand Forecasting">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/retail-demand-forecasting-inventory-optimization" aria-label="Retail Demand Forecasting on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -222,6 +231,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=modern-data-pipeline">Modern Data Pipeline Analytics Warehouse</a></h4>
             <p>ETL, data quality checks, SQLite warehouse, KPI marts, reports, charts, tests, and CI.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Python, Pandas, SQLite, Pytest, CI</p>
             <div class="project-links"><a href="portfolio-details.html?project=modern-data-pipeline" aria-label="Case study for Modern Data Pipeline Analytics Warehouse">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/modern-data-pipeline-analytics-warehouse" aria-label="Modern Data Pipeline Analytics Warehouse on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -230,6 +240,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=nasa-metadata">NASA Metadata Text Mining</a></h4>
             <p>Mars-focused public metadata mining with TF-IDF, topics, and keyword networks.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> R, Tidytext, Topic Modeling</p>
             <div class="project-links"><a href="portfolio-details.html?project=nasa-metadata" aria-label="Case study for NASA Metadata Text Mining">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/nasa-metadata-text-mining" aria-label="NASA Metadata Text Mining on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -238,6 +249,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=alumni-giving">Alumni Giving Rate Regression Analysis</a></h4>
             <p>Regression analysis in R to identify university factors that influence alumni donation rates.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> R, Regression, Statistics</p>
             <div class="project-links"><a href="portfolio-details.html?project=alumni-giving" aria-label="Case study for Alumni Giving Rate Regression Analysis">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/alumni-giving-rate-regression-analysis" aria-label="Alumni Giving Rate Regression Analysis on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -246,6 +258,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=twitter-analysis">Twitter Engagement Text Analytics</a></h4>
             <p>Gender-based language, engagement, and tweet trend analytics.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> R, Tidytext, Visualization</p>
             <div class="project-links"><a href="portfolio-details.html?project=twitter-analysis" aria-label="Case study for Twitter Engagement Text Analytics">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/twitter-engagement-text-analytics" aria-label="Twitter Engagement Text Analytics on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -254,6 +267,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=orange-analysis">Orange Text Mining Workflows</a></h4>
             <p>Visual NLP workflows for preprocessing, classification, and topic modeling.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Orange, Data Mining, ML</p>
             <div class="project-links"><a href="portfolio-details.html?project=orange-analysis" aria-label="Case study for Orange Text Mining Workflows">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/orange-text-mining-workflows" aria-label="Orange Text Mining Workflows on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -262,6 +276,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=tableau-dashboard">ICPC World Finals Tableau Dashboard</a></h4>
             <p>Interactive BI analysis of global programming contest performance.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Tableau, BI, Dashboarding</p>
             <div class="project-links"><a href="portfolio-details.html?project=tableau-dashboard" aria-label="Case study for ICPC World Finals Tableau Dashboard">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/icpc-world-finals-tableau-dashboard" aria-label="ICPC World Finals Tableau Dashboard on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -270,6 +285,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=newsgroups">Newsgroups Text Classification NLP</a></h4>
             <p>Reproducible NLP pipeline with TF-IDF, topics, sentiment, and model benchmarks.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Python, NLP, Classification</p>
             <div class="project-links"><a href="portfolio-details.html?project=newsgroups" aria-label="Case study for Newsgroups Text Classification NLP">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/newsgroups-text-classification-nlp" aria-label="Newsgroups Text Classification NLP on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -278,6 +294,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=behavior-analysis">E-commerce Customer Behavior Analysis</a></h4>
             <p>Customer browsing, page-depth, day-of-week, and spending analysis.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Python, Statistics, Visualization</p>
             <div class="project-links"><a href="portfolio-details.html?project=behavior-analysis" aria-label="Case study for E-commerce Customer Behavior Analysis">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/ecommerce-customer-behavior-analysis" aria-label="E-commerce Customer Behavior Analysis on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -286,6 +303,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=credit-card-churn">Banking Customer Churn Prediction</a></h4>
             <p>Financial-services ML workflow for churn risk and retention prioritization.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> Python, ML, Classification</p>
             <div class="project-links"><a href="portfolio-details.html?project=credit-card-churn" aria-label="Case study for Banking Customer Churn Prediction">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/banking-customer-churn-prediction" aria-label="Banking Customer Churn Prediction on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -294,6 +312,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=crypto-forecasting">Crypto Price Forecasting and Portfolio Risk</a></h4>
             <p>Time-series forecasting, volatility, correlations, and portfolio risk analytics.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> R, Forecasting, Portfolio Analytics</p>
             <div class="project-links"><a href="portfolio-details.html?project=crypto-forecasting" aria-label="Case study for Crypto Price Forecasting and Portfolio Risk">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/crypto-price-forecasting-portfolio-risk" aria-label="Crypto Price Forecasting and Portfolio Risk on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
@@ -302,6 +321,7 @@
           <div class="project-body">
             <h4><a href="portfolio-details.html?project=instagram-power-analysis">Instagram Engagement Power Analysis</a></h4>
             <p>Sample-size planning for social-media engagement studies.</p>
+            <p class="project-stack"><span class="eyebrow">Stack</span> R, Power Analysis, Social Analytics</p>
             <div class="project-links"><a href="portfolio-details.html?project=instagram-power-analysis" aria-label="Case study for Instagram Engagement Power Analysis">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/instagram-engagement-power-analysis" aria-label="Instagram Engagement Power Analysis on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
