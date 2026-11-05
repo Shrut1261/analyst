@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="assets/css/portfolio.css">
   <script src="assets/js/portfolio.js" defer></script>
 </head>
-<body>
+<body class="portfolio-home">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="hero">
     <div class="shell header-inner">
@@ -27,7 +27,7 @@
         <a href="#resume">Experience</a>
         <a href="#about">About</a>
         <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
-        <a class="nav-contact" href="mailto:shrutd.prajapati@gmail.com?subject=Meeting%20request&amp;body=Hi%20Shrut%2C%0A%0AI%E2%80%99d%20like%20to%20set%20up%20a%20meeting%20about%3A%0A%0AHere%20are%20a%20few%20times%20that%20work%20for%20me%20(including%20my%20time%20zone)%3A%0A%0AThanks!">Request a meeting <span aria-hidden="true">↗</span></a>
+        <a class="nav-contact nav-meeting" href="mailto:shrutd.prajapati@gmail.com?subject=Meeting%20request&amp;body=Hi%20Shrut%2C%0A%0AI%E2%80%99d%20like%20to%20set%20up%20a%20meeting%20about%3A%0A%0AHere%20are%20a%20few%20times%20that%20work%20for%20me%20(including%20my%20time%20zone)%3A%0A%0AThanks!">Request a meeting <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -35,9 +35,9 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="shell hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow hero-kicker">Personal portfolio <span aria-hidden="true">/</span> Data analytics</p>
-          <h1 id="hero-title">Shrut<br><em>Prajapati.</em></h1>
-          <p class="hero-description">I’m a data analyst who enjoys making complicated things clear. My work spans business intelligence, predictive modeling, and the data pipelines behind them.</p>
+          <p class="eyebrow hero-kicker">Shrut Prajapati <span aria-hidden="true">/</span> Data analyst</p>
+          <h1 id="hero-title">Data made<br><em>useful.</em></h1>
+          <p class="hero-description">I build dashboards, predictive models, and data pipelines that help teams see what’s happening and decide what to do next.</p>
           <div class="hero-actions">
             <a class="button primary" href="#portfolio">Explore my work <span aria-hidden="true">↓</span></a>
             <button class="button secondary" type="button" data-copy-link hidden>Copy portfolio link <span aria-hidden="true">↗</span></button>
@@ -64,7 +64,7 @@
             </svg>
             <div class="portrait-frame"><img src="assets/img/SHRUT12.png" alt="Shrut Prajapati" fetchpriority="high"></div>
           </div>
-          <figcaption><span>Portrait / Shrut Prajapati</span><span>Based in the United States</span></figcaption>
+          <figcaption><span>Shrut Prajapati</span><span>Analytics &amp; business intelligence</span></figcaption>
         </figure>
       </div>
       <div class="shell toolkit"><span>Core toolkit</span><ul><li>SQL</li><li>Python</li><li>Power BI</li><li>Microsoft Fabric</li><li>Tableau</li><li>Snowflake</li></ul></div>
@@ -73,20 +73,22 @@
     <section id="portfolio" class="section shell" aria-labelledby="work-title">
       <div class="section-intro">
         <div><p class="eyebrow"><span>01 /</span> Portfolio</p><h2 id="work-title">Selected work</h2></div>
-        <p>Three projects that show how I approach questions in healthcare, finance, and data engineering.</p>
+        <div class="work-intro"><p>Explore my work in healthcare analytics, financial risk, and data engineering.</p><a href="#project-index">Browse all 16 projects <span aria-hidden="true">↘</span></a></div>
       </div>
       <div class="project-grid featured-grid">
-        <article class="project-card featured-card" data-tags="ml viz">
-          <a class="project-image" cover-1" href="portfolio-details.html?project=denialguard-ai" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 700 410" width="700" height="410" aria-hidden="true"><path d="M-40 290Q150 55 330 215T750 55M-40 315Q150 80 330 240T750 80M-40 340Q150 105 330 265T750 105M-40 365Q150 130 330 290T750 130" fill="none" stroke="#734c82" stroke-opacity=".31"/><circle cx="339" cy="201" r="88" fill="#fbf0e9" fill-opacity=".66"/><path d="M280 205h32l18-40 23 75 15-35h35" fill="none" stroke="#5d3868" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <article class="project-card featured-card flagship" data-tags="ml viz">
+          <a class="project-image flagship-image" href="portfolio-details.html?project=denialguard-ai" tabindex="-1" aria-hidden="true">
+            <img src="assets/img/masonry-portfolio/denialguard-preview.svg" width="700" height="410" alt="" loading="lazy" decoding="async">
+          </a>
           <div class="project-body">
-            <p class="eyebrow"><span>01</span> Healthcare analytics</p>
+            <p class="eyebrow"><span>01 /</span> Healthcare analytics</p>
             <h3><a href="portfolio-details.html?project=denialguard-ai">DenialGuard AI</a></h3>
-            <p>Healthcare claim denial risk predictor with ML scoring, model drivers, and Streamlit dashboard.</p>
-            <div class="project-links"><a href="portfolio-details.html?project=denialguard-ai" aria-label="Case study for DenialGuard AI">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/healthcare-denial-risk-ai" aria-label="DenialGuard AI on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+            <p>I built a model and dashboard to help revenue cycle teams identify claims at risk of denial and understand what drives each score.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=denialguard-ai" aria-label="Case study for DenialGuard AI">Read case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/healthcare-denial-risk-ai" aria-label="DenialGuard AI on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
         <article class="project-card featured-card" data-tags="ml viz quant">
-          <a class="project-image" cover-2" href="finshield-details.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 700 410" width="700" height="410" aria-hidden="true"><ellipse cx="365" cy="208" rx="171" ry="82" transform="rotate(-27 365 208)" fill="none" stroke="#4e6559" stroke-opacity=".49"/><ellipse cx="365" cy="208" rx="171" ry="82" transform="rotate(27 365 208)" fill="none" stroke="#4e6559" stroke-opacity=".49"/><circle cx="365" cy="208" r="73" fill="#f1f5eb" fill-opacity=".74"/><path d="M365 162l40 17v30c0 24-20 39-40 50-20-11-40-26-40-50v-30z" fill="none" stroke="#385b4d" stroke-width="3"/><path d="m350 210 10 10 21-24" fill="none" stroke="#385b4d" stroke-width="3" stroke-linecap="round"/><circle cx="496" cy="144" r="6" fill="#66887b"/><circle cx="231" cy="141" r="5" fill="#66887b"/></svg></a>
+          <a class="project-image cover-2" href="finshield-details.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 700 410" width="700" height="410" aria-hidden="true"><ellipse cx="365" cy="208" rx="171" ry="82" transform="rotate(-27 365 208)" fill="none" stroke="#4e6559" stroke-opacity=".49"/><ellipse cx="365" cy="208" rx="171" ry="82" transform="rotate(27 365 208)" fill="none" stroke="#4e6559" stroke-opacity=".49"/><circle cx="365" cy="208" r="73" fill="#f1f5eb" fill-opacity=".74"/><path d="M365 162l40 17v30c0 24-20 39-40 50-20-11-40-26-40-50v-30z" fill="none" stroke="#385b4d" stroke-width="3"/><path d="m350 210 10 10 21-24" fill="none" stroke="#385b4d" stroke-width="3" stroke-linecap="round"/><circle cx="496" cy="144" r="6" fill="#66887b"/><circle cx="231" cy="141" r="5" fill="#66887b"/></svg></a>
           <div class="project-body">
             <p class="eyebrow"><span>02</span> Financial risk</p>
             <h3><a href="finshield-details.html">FinShield</a></h3>
@@ -95,7 +97,7 @@
           </div>
         </article>
         <article class="project-card featured-card" data-tags="app viz">
-          <a class="project-image" cover-3" href="portfolio-details.html?project=modern-data-pipeline" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 700 410" width="700" height="410" aria-hidden="true"><g stroke="#856048" stroke-width="2" stroke-linejoin="round"><path d="m204 253 146 74 146-74-146-74z" fill="#e7bba0"/><path d="m204 207 146 74 146-74-146-74z" fill="#f0cfba"/><path d="m204 161 146 74 146-74-146-74z" fill="#fff1e5"/></g><path d="m265 161 85-43 85 43-85 43z" fill="none" stroke="#856048" stroke-opacity=".6"/><circle cx="350" cy="161" r="8" fill="#b17760"/></svg></a>
+          <a class="project-image cover-3" href="portfolio-details.html?project=modern-data-pipeline" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 700 410" width="700" height="410" aria-hidden="true"><g stroke="#856048" stroke-width="2" stroke-linejoin="round"><path d="m204 253 146 74 146-74-146-74z" fill="#e7bba0"/><path d="m204 207 146 74 146-74-146-74z" fill="#f0cfba"/><path d="m204 161 146 74 146-74-146-74z" fill="#fff1e5"/></g><path d="m265 161 85-43 85 43-85 43z" fill="none" stroke="#856048" stroke-opacity=".6"/><circle cx="350" cy="161" r="8" fill="#b17760"/></svg></a>
           <div class="project-body">
             <p class="eyebrow"><span>03</span> Data engineering</p>
             <h3><a href="portfolio-details.html?project=modern-data-pipeline">Analytics Warehouse</a></h3>
@@ -104,7 +106,7 @@
           </div>
         </article>
       </div>
-      <section class="project-index" aria-labelledby="index-title">
+      <section class="project-index" id="project-index" aria-labelledby="index-title">
         <div class="index-heading">
           <div><p class="eyebrow"><span>INDEX /</span> 16 projects</p><h3 id="index-title">Explore the collection</h3></div>
           <label class="project-search" hidden><span>Search projects</span><input type="search" placeholder="Title, tool, or topic"></label>

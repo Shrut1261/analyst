@@ -42,11 +42,11 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
 .site-header nav a:hover { color: var(--green); text-decoration: underline; }
 .site-header nav .nav-contact { color: var(--green); }
 
-.hero { background: radial-gradient(ellipse at 78% 25%, #ebd8ef9c, transparent 55%), radial-gradient(ellipse at 52% 78%, #f8ded09c, transparent 56%); }
-.hero-grid { display: grid; grid-template-columns: minmax(0, .98fr) minmax(0, 1fr); align-items: center; gap: clamp(1.5rem, 5vw, 5.5rem); padding-block: clamp(3rem, 6vw, 6rem); }
+.hero { background: linear-gradient(180deg, #fffaf5, var(--paper)); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); align-items: center; gap: clamp(1.5rem, 5vw, 5rem); padding-block: clamp(2.75rem, 6vw, 6rem); }
 .eyebrow { font: 650 .73rem/1.4 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
 .eyebrow span, .hero-kicker { color: var(--green); }
-.hero h1 { margin-block: .8rem 1.2rem; font-size: clamp(4.1rem, 9.2vw, 9.4rem); font-weight: 400; letter-spacing: -.085em; line-height: .87; }
+.hero h1 { margin-block: .8rem 1.2rem; font-size: clamp(3.65rem, 8.5vw, 8.55rem); font-weight: 400; letter-spacing: -.085em; line-height: .87; }
 .hero h1 em { color: #674c73; font-weight: 400; }
 .hero-description { max-width: 30rem; color: var(--muted); font-size: clamp(1rem, 1.8vw, 1.18rem); }
 .hero-actions, .project-links, .contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem 1rem; }
@@ -58,10 +58,10 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
 .secondary { color: var(--ink); background: transparent; border-color: #ae9bb3; }
 .secondary:hover { background: #eadfee; border-color: #846099; }
 .portrait { width: 100%; justify-self: end; }
-.portrait-art { position: relative; display: grid; place-items: center; min-height: clamp(20rem, 42vw, 33rem); isolation: isolate; overflow: hidden; border-radius: 49% 49% .7rem .7rem / 25% 25% .7rem .7rem; background: radial-gradient(ellipse at 20% 25%, #fff8e3 0, transparent 43%), radial-gradient(ellipse at 82% 76%, #c6afe3 0, transparent 52%), linear-gradient(145deg, #edcfc4, #eee5f5 64%, #e3c9de); }
+.portrait-art { position: relative; display: grid; place-items: center; min-height: clamp(20rem, 42vw, 33rem); isolation: isolate; overflow: hidden; border-radius: .65rem; background: radial-gradient(ellipse at 20% 25%, #fff8e3 0, transparent 43%), radial-gradient(ellipse at 82% 76%, #c6afe3 0, transparent 52%), linear-gradient(145deg, #edcfc4, #eee5f5 64%, #e3c9de); }
 .ribbons { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; color: #81648b; opacity: .47; animation: drift 11s ease-in-out infinite alternate; }
 @keyframes drift { to { transform: translateY(.75rem) scale(1.06); } }
-.portrait-frame { width: min(61%, 19rem); aspect-ratio: 4 / 5; overflow: hidden; border-radius: 48% 48% .4rem .4rem / 29% 29% .4rem .4rem; box-shadow: 0 1.15rem 2.5rem #4b354947; border: 4px solid #fff9f2c9; }
+.portrait-frame { width: min(66%, 19rem); aspect-ratio: 4 / 5; overflow: hidden; border-radius: 47% 47% .3rem .3rem / 32% 32% .3rem .3rem; box-shadow: 0 1.15rem 2.5rem #4b354947; border: 4px solid #fff9f2c9; }
 .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .portrait figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .35rem .7rem; padding-block: .65rem; color: var(--muted); font: .64rem var(--mono); text-transform: uppercase; letter-spacing: .08em; }
 .toolkit { display: flex; flex-wrap: wrap; align-items: baseline; gap: .65rem 1.6rem; padding-block: 1.05rem 1.2rem; border-top: 1px solid var(--line); color: var(--muted); }
@@ -182,13 +182,31 @@ summary::-webkit-details-marker { display: none; }
   .case-grid, .case-facets { grid-template-columns: minmax(0, 1fr); }
 }
 
+.portfolio-home .site-header { background: #fffcf8; }
+.portfolio-home .site-header nav .nav-meeting { border: 1px solid var(--line); border-radius: 999px; padding: .45rem .85rem; font-weight: 650; }
+.portfolio-home .site-header nav .nav-meeting:hover { background: #eee3f2; text-decoration: none; }
+.work-intro { color: var(--muted); }
+.work-intro a { display: inline-block; margin-top: .5rem; color: var(--green); font-weight: 650; }
+.featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.featured-card.flagship { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr); border-color: #3e304d; background: #2a2036; color: #fffaf8; }
+.flagship .flagship-image { display: grid; align-items: center; padding: clamp(1rem, 4vw, 3.5rem); background: radial-gradient(ellipse at 26% 15%, #d6bde0, transparent 65%), linear-gradient(145deg, #9380ac, #59456d); }
+.flagship-image img { border-radius: .5rem; box-shadow: 0 .85rem 1.9rem #28173b65; }
+.flagship .project-body { justify-content: center; padding: clamp(1.3rem, 4vw, 3.5rem); }
+.flagship .project-body h3 { font-size: clamp(2.25rem, 5vw, 4.4rem); }
+.flagship .project-body > p:not(.eyebrow) { color: #ebdeef; }
+.flagship .eyebrow span, .flagship .project-links a { color: #ead1f4; }
+.flagship .project-links { margin-top: .35rem; }
+.flagship :focus-visible { outline-color: #ead1f4; }
 .featured-card .project-image { overflow: hidden; }
+@media (max-width: 640px) {
+  .featured-grid, .featured-card.flagship { grid-template-columns: minmax(0, 1fr); }
+  .hero h1 { font-size: clamp(3rem, 11vw, 4.8rem); }
+}
 .featured-card .project-image svg { display: block; width: 100%; height: auto; transition: transform .45s ease; }
 .featured-card:hover .project-image svg { transform: scale(1.045); }
-.cover-1 { background: radial-gradient(circle at 35% 15%, #f9ded1, transparent 65%), #decde9; }
 .cover-2 { background: radial-gradient(circle at 35% 17%, #eef1dd, transparent 70%), #bfdbd3; }
 .cover-3 { background: radial-gradient(circle at 65% 30%, #fff4e4, transparent 65%), #e9c5af; }
-.featured-card .project-body h3 { font-size: clamp(1.65rem, 3vw, 2.4rem); font-weight: 450; }
+.featured-card:not(.flagship) .project-body h3 { font-size: clamp(1.65rem, 3vw, 2.4rem); font-weight: 450; }
 
 .project-index {
   margin-top: clamp(2.5rem, 6vw, 5rem);
