@@ -689,6 +689,11 @@ summary::-webkit-details-marker { display: none; }
 .credential-hackerrank { --issuer-wash: #e0eee5; --issuer-ink: #245c47; }
 .credential-linkedin { --issuer-wash: #e2edf2; --issuer-ink: #1c5473; }
 .credential-excel { --issuer-wash: #e7eee2; --issuer-ink: #375c3f; }
+.credential-jovian { --issuer-wash: #e8e5f5; --issuer-ink: #49417c; }
+.credential-icpc { --issuer-wash: #f1e7dd; --issuer-ink: #73431f; }
+.credential-internshala { --issuer-wash: #e0eef4; --issuer-ink: #27556e; }
+.credential-icpc .credential-mark { font-size: .8rem; }
+.credential-date { color: var(--green); }
 
 /* Keep the interaction cue visible for touch, keyboard, and selected states. */
 :where(a, button, summary):focus-visible {
