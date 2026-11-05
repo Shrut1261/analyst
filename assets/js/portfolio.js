@@ -1,49 +1,78 @@
 const filters = document.querySelector('.filters');
 const buttons = [...filters.querySelectorAll('button')];
-const projects = [...document.querySelectorAll('.archive-body .project-card')];
+const projects = [...document.querySelectorAll('.index-grid .project-card')];
+const search = document.querySelector('.project-search');
+const query = search.querySelector('input');
 const count = document.querySelector('.project-count');
+const empty = document.querySelector('.empty-state');
+const more = document.querySelector('.more-projects');
+const pageSize = 6;
 
-function filterProjects(activeButton) {
-  const category = activeButton.dataset.filter;
-  let visible = 0;
+let category = 'all';
+let limit = pageSize;
 
-  for (const button of buttons) {
-    button.setAttribute('aria-pressed', String(button === activeButton));
-  }
+function renderProjects() {
+  const words = query.value.toLowerCase().trim().split(/\s+/);
+  let matches = 0;
 
   for (const project of projects) {
-    const matches = category === 'all' || project.dataset.tags.split(' ').includes(category);
-    project.hidden = !matches;
-    visible += Number(matches);
+    const topicMatches = category === 'all' || project.dataset.tags.split(' ').includes(category);
+    const text = project.textContent.toLowerCase();
+    const textMatches = words.every(word => text.includes(word));
+    const match = topicMatches && textMatches;
+
+    if (match) matches += 1;
+    project.hidden = !match || matches > limit;
   }
 
-  count.textContent = `Showing ${visible} of ${projects.length} projects`;
+  const visible = Math.min(matches, limit);
+  count.textContent = matches ? `Showing ${visible} of ${matches} matching projects` : '0 matching projects';
+  empty.hidden = matches > 0;
+  more.hidden = matches <= limit;
 }
 
-for (const button of buttons) {
-  button.addEventListener('click', () => filterProjects(button));
-}
-
-filterProjects(buttons[0]);
-filters.hidden = false;
-count.hidden = false;
-
-const workflow = document.querySelector('.workflow-controls');
-const workflowButtons = [...workflow.querySelectorAll('button')];
-const workflowSummary = document.querySelector('.workflow-summary');
-const stageDescriptions = {
-  prepare: workflowSummary.textContent,
-  model: 'Use forecasting, classification, and text analysis to surface patterns and score risk.',
-  deliver: 'Publish dashboards and reports that help teams monitor performance and prioritize next steps.',
-};
-
-for (const activeButton of workflowButtons) {
+for (const activeButton of buttons) {
   activeButton.addEventListener('click', () => {
-    for (const button of workflowButtons) {
+    category = activeButton.dataset.filter;
+    limit = pageSize;
+    for (const button of buttons) {
       button.setAttribute('aria-pressed', String(button === activeButton));
     }
-    workflowSummary.textContent = stageDescriptions[activeButton.dataset.stage];
+    renderProjects();
   });
 }
 
-workflow.hidden = false;
+query.addEventListener('input', () => {
+  limit = pageSize;
+  renderProjects();
+});
+
+more.addEventListener('click', () => {
+  const firstHiddenMatch = limit;
+  limit += pageSize;
+  renderProjects();
+  const visibleProjects = projects.filter(project => !project.hidden);
+  visibleProjects[firstHiddenMatch]?.querySelector('h4 a').focus();
+});
+
+renderProjects();
+filters.hidden = false;
+search.hidden = false;
+count.hidden = false;
+
+const copyLink = document.querySelector('[data-copy-link]');
+const copyStatus = document.querySelector('.copy-status');
+const publicUrl = document.querySelector('link[rel="canonical"]').href;
+
+copyLink.hidden = false;
+copyLink.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(publicUrl);
+    copyStatus.textContent = 'Portfolio link copied.';
+  } catch {
+    const link = document.createElement('a');
+    link.href = publicUrl;
+    link.textContent = publicUrl;
+    copyStatus.replaceChildren('Share this link: ', link);
+  }
+});
