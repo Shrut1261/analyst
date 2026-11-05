@@ -1,944 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title> Portfolio </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/icon13.png" rel="icon">
-  <link href="assets/img/icon10.jpeg" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shrut Prajapati | Data Analytics &amp; Business Intelligence</title>
+  <meta name="description" content="Explore Shrut Prajapati’s work in data analytics, business intelligence, machine learning, and data engineering.">
+  <meta name="theme-color" content="#080b16">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shrut Prajapati | Analytics Portfolio">
+  <meta property="og:description" content="Explore Shrut Prajapati’s work in data analytics, business intelligence, machine learning, and data engineering.">
+  <meta property="og:url" content="https://shrut1261.github.io/analyst/">
+  <meta property="og:image" content="https://shrut1261.github.io/analyst/assets/img/SHRUT12.png">
+  <link rel="canonical" href="https://shrut1261.github.io/analyst/">
+  <link rel="icon" href="assets/img/icon13.png">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
+  <script src="assets/js/portfolio.js" defer></script>
 </head>
-
-<body class="index-page">
-
-  <header id="header" class="header d-flex flex-column justify-content-center">
-
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bi bi-award navicon"></i><span>Certifications</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
-
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="hero">
+    <div class="shell header-inner">
+      <a class="brand" href="#hero"><span class="monogram" aria-hidden="true">SP</span><span>Shrut Prajapati</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#portfolio">Work</a>
+        <a href="#resume">Experience</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
   </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
-
-      <div class="hero-slideshow" aria-hidden="true">
-        <img src="assets/img/Shrut.jpg" alt="" class="hero-slide hero-slide-static">
-      </div>
-
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h2>Shrut Prajapati</h2>
-            <p><span class="typed" data-typed-items=" Master's in Data Analytics, Computer Engineer, Software Developer, Freelancer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links">
-              <a href="https://github.com/Shrut1261"><i class="bi bi-git hub-x"></i></a>
-              <a href="https://www.linkedin.com/in/shrutp/"><i class="bi bi-linkedin"></i></a>
-              <a href="https://leetcode.com/u/Shrut_Prajapati/"><i class="bi bi-leetcode"></i></a>
-              <a href="https://www.kaggle.com/shrutprajapati"><i class="bi bi-kaggle"></i></a>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-kicker"><span aria-hidden="true"></span> Analytics · BI · Machine learning</p>
+          <h1 id="hero-title">Shrut<br><span>Prajapati.</span></h1>
+          <p class="hero-description">I build dashboards, data pipelines, and predictive models that help teams understand performance, spot risk, and decide what to do next.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#portfolio">Explore my work <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="https://github.com/Shrut1261">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-console">
+          <div class="console-top"><span><i aria-hidden="true"></i> Portfolio / SP</span><span>ANALYTICS SYSTEMS</span></div>
+          <figure class="portrait">
+            <div class="portrait-frame"><img src="assets/img/SHRUT12.png" alt="Shrut Prajapati" fetchpriority="high"></div>
+            <figcaption><span>PROFILE / 01</span><span>UNITED STATES</span></figcaption>
+          </figure>
+          <div class="console-body">
+            <p class="eyebrow">01—03 / Analytics workflow</p>
+            <svg class="workflow-line" viewBox="0 0 360 74" width="360" height="74" aria-hidden="true">
+              <defs>
+                <linearGradient id="signal"><stop stop-color="#a298ff"/><stop offset="1" stop-color="#59efff"/></linearGradient>
+              </defs>
+              <path d="M1 17H72L96 37H264L288 57H359M1 57H72L96 37M264 37L288 17H359" fill="none" stroke="#334871"/>
+              <path class="signal-path" d="M17 57H72L96 37H264L288 17H344" fill="none" stroke="url(#signal)" stroke-width="2"/>
+              <circle cx="96" cy="37" r="6" fill="#0c152a" stroke="#a298ff" stroke-width="2"/>
+              <circle cx="180" cy="37" r="6" fill="#0c152a" stroke="#77bbff" stroke-width="2"/>
+              <circle cx="264" cy="37" r="6" fill="#0c152a" stroke="#59efff" stroke-width="2"/>
+            </svg>
+            <div class="workflow-controls" role="group" aria-label="Explore the analytics workflow" hidden>
+              <button type="button" data-stage="prepare" aria-pressed="true">01 Prepare</button>
+              <button type="button" data-stage="model" aria-pressed="false">02 Model</button>
+              <button type="button" data-stage="deliver" aria-pressed="false">03 Deliver</button>
             </div>
+            <p class="workflow-summary" aria-live="polite">Validate and organize raw data with SQL, Python, and Microsoft Fabric.</p>
           </div>
         </div>
       </div>
+      <div class="shell toolkit"><span>Core toolkit</span><ul><li>SQL</li><li>Python</li><li>Power BI</li><li>Microsoft Fabric</li><li>Tableau</li><li>Snowflake</li></ul></div>
+    </section>
 
-    </section><!-- /Hero Section -->
-    
-<!-- About Section -->
-<section id="about" class="about section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>About</h2>
-    <p>I turn complex data into clear insights, dashboards, and predictive solutions that support smarter business decisions across analytics, visualization, and machine learning.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row gy-4 justify-content-center">
-      <div class="col-lg-4 d-flex justify-content-center">
-        <div class="about-profile-card">
-          <img src="assets/img/SHRUT12.png" class="img-fluid about-profile-photo" alt="Shrut Prajapati professional headshot">
-        </div>
+    <section id="portfolio" class="section shell" aria-labelledby="work-title">
+      <div class="section-intro">
+        <div><p class="eyebrow"><span>01 /</span> Portfolio</p><h2 id="work-title">Selected work</h2></div>
+        <p>Explore how I’ve approached claims risk, fraud detection, and building a warehouse for reliable reporting.</p>
       </div>
-      <div class="col-lg-8 content about-content">
-        <h2>Data Scientist &amp; Analytics Professional</h2>
-        <p class="py-3">
-          I specialize in Python, SQL, R, Power BI, Tableau, and machine learning, combining technical analysis with visual storytelling to make data easier to understand and act on.
-        </p>
-        <div class="row">
-          <div class="col-lg-6">
-            <ul>
-              <li><i class="bi bi-calendar3"></i> <strong>Age:</strong> <span>24</span></li>
-              <li><i class="bi bi-linkedin"></i> <strong>LinkedIn:</strong> <span>linkedin.com/in/shrutp</span></li>
-              <li><i class="bi bi-geo-alt"></i> <strong>Location:</strong> <span>United States</span></li>
-            </ul>
+      <div class="project-grid featured-grid">
+        <article class="project-card featured-card" data-tags="ml viz">
+          <a class="project-image" href="portfolio-details.html?project=denialguard-ai" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/denialguard-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            <p class="eyebrow"><span>01</span> Healthcare analytics</p>
+            <h3><a href="portfolio-details.html?project=denialguard-ai">DenialGuard AI</a></h3>
+            <p>Healthcare claim denial risk predictor with ML scoring, model drivers, and Streamlit dashboard.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=denialguard-ai" aria-label="Case study for DenialGuard AI">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/healthcare-denial-risk-ai" aria-label="DenialGuard AI on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
-          <div class="col-lg-6">
-            <ul>
-              <li><i class="bi bi-mortarboard"></i> <strong>Degree:</strong> <span>Master's in Data Analytics</span></li>
-              <li><i class="bi bi-envelope"></i> <strong>Email:</strong> <span>shrutd.prajapati@gmail.com</span></li>
-              <li><i class="bi bi-star"></i> <strong>Interests:</strong> <span>Reading, Hiking, MMA, Skateboarding</span></li>
-            </ul>
+        </article>
+        <article class="project-card featured-card" data-tags="ml viz quant">
+          <a class="project-image" href="finshield-details.html" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/finshield-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            <p class="eyebrow"><span>02</span> Financial risk</p>
+            <h3><a href="finshield-details.html">FinShield</a></h3>
+            <p>Real-time financial fraud detection platform with ML scoring, SHAP explanations, drift monitoring, and risk analytics.</p>
+            <div class="project-links"><a href="finshield-details.html" aria-label="Case study for FinShield">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/finshield" aria-label="FinShield on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
           </div>
-        </div>
-        <p class="py-3">
-          Currently pursuing my Master's in Data Analytics at Johnson & Wales University with a 3.92 GPA, I am focused on business intelligence, predictive modeling, and practical analytics solutions that create measurable impact.
-        </p>
+        </article>
+        <article class="project-card featured-card" data-tags="app viz">
+          <a class="project-image" href="portfolio-details.html?project=modern-data-pipeline" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/data-pipeline-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            <p class="eyebrow"><span>03</span> Data engineering</p>
+            <h3><a href="portfolio-details.html?project=modern-data-pipeline">Modern Data Pipeline Analytics Warehouse</a></h3>
+            <p>ETL, data quality checks, SQLite warehouse, KPI marts, reports, charts, tests, and CI.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=modern-data-pipeline" aria-label="Case study for Modern Data Pipeline Analytics Warehouse">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/modern-data-pipeline-analytics-warehouse" aria-label="Modern Data Pipeline Analytics Warehouse on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
       </div>
-    </div>
-
-  </div>
-
-</section>
-    
-<!-- /About Section -->
-
-
-<!-- Stats Section -->
-<section id="stats" class="stats section">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row gy-4">
-
-      <!-- Projects Completed -->
-      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-        <i class="bi bi-folder"></i>
-        <div class="stats-item">
-          <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Projects Completed</p>
+      <details class="archive">
+        <summary>Browse all 16 projects</summary>
+        <div class="archive-body">
+          <div class="filters" role="group" aria-label="Filter projects by topic" hidden>
+            <button type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
+            <button type="button" data-filter="viz" aria-pressed="false">BI &amp; visualization</button>
+            <button type="button" data-filter="nlp" aria-pressed="false">NLP</button>
+            <button type="button" data-filter="time-series" aria-pressed="false">Forecasting</button>
+            <button type="button" data-filter="agentic" aria-pressed="false">Agentic AI</button>
+            <button type="button" data-filter="quant" aria-pressed="false">Quant finance</button>
+            <button type="button" data-filter="operations" aria-pressed="false">Operations</button>
+            <button type="button" data-filter="eda" aria-pressed="false">Statistical analysis</button>
+          </div>
+          <p class="project-count" aria-live="polite" hidden></p>
+          <div class="project-grid">
+            <article class="project-card" data-tags="agentic ml">
+          <a class="project-image" href="portfolio-details.html?project=jobpilot-agent" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/jobpilot-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=jobpilot-agent">JobPilot</a></h3>
+            <p>Autonomous job-application agent built on Google ADK and Gemini: parses a posting, scores fit, drafts tailored materials, and persists the application end-to-end from one goal.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=jobpilot-agent" aria-label="Case study for JobPilot">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/jobpilot-agent" aria-label="JobPilot on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="ml viz time-series quant">
+          <a class="project-image" href="alphasignal-details.html" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/alphasignal-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="alphasignal-details.html">AlphaSignal</a></h3>
+            <p>Algorithmic trading intelligence platform with market data, sentiment, ML signals, portfolio optimization, and backtesting.</p>
+            <div class="project-links"><a href="alphasignal-details.html" aria-label="Case study for AlphaSignal">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/alphasignal-market-intelligence" aria-label="AlphaSignal on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="ml viz quant">
+          <a class="project-image" href="finshield-details.html" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/finshield-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="finshield-details.html">FinShield</a></h3>
+            <p>Real-time financial fraud detection platform with ML scoring, SHAP explanations, drift monitoring, and risk analytics.</p>
+            <div class="project-links"><a href="finshield-details.html" aria-label="Case study for FinShield">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/finshield" aria-label="FinShield on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="ml viz">
+          <a class="project-image" href="portfolio-details.html?project=denialguard-ai" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/denialguard-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=denialguard-ai">DenialGuard AI</a></h3>
+            <p>Healthcare claim denial risk predictor with ML scoring, model drivers, and Streamlit dashboard.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=denialguard-ai" aria-label="Case study for DenialGuard AI">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/healthcare-denial-risk-ai" aria-label="DenialGuard AI on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="ml viz time-series operations">
+          <a class="project-image" href="portfolio-details.html?project=retail-demand" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/retail-demand-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=retail-demand">Retail Demand Forecasting</a></h3>
+            <p>Supply-chain analytics platform for SKU demand forecasting, stockout risk, and reorder optimization.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=retail-demand" aria-label="Case study for Retail Demand Forecasting">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/retail-demand-forecasting-inventory-optimization" aria-label="Retail Demand Forecasting on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="app viz">
+          <a class="project-image" href="portfolio-details.html?project=modern-data-pipeline" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/data-pipeline-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=modern-data-pipeline">Modern Data Pipeline Analytics Warehouse</a></h3>
+            <p>ETL, data quality checks, SQLite warehouse, KPI marts, reports, charts, tests, and CI.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=modern-data-pipeline" aria-label="Case study for Modern Data Pipeline Analytics Warehouse">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/modern-data-pipeline-analytics-warehouse" aria-label="Modern Data Pipeline Analytics Warehouse on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="app nlp">
+          <a class="project-image" href="portfolio-details.html?project=nasa-metadata" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/nasa-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=nasa-metadata">NASA Metadata Text Mining</a></h3>
+            <p>Mars-focused public metadata mining with TF-IDF, topics, and keyword networks.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=nasa-metadata" aria-label="Case study for NASA Metadata Text Mining">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/nasa-metadata-text-mining" aria-label="NASA Metadata Text Mining on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="ml eda">
+          <a class="project-image" href="portfolio-details.html?project=alumni-giving" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/alumni-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=alumni-giving">Alumni Giving Rate Regression Analysis</a></h3>
+            <p>Regression analysis in R to identify university factors that influence alumni donation rates.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=alumni-giving" aria-label="Case study for Alumni Giving Rate Regression Analysis">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/alumni-giving-rate-regression-analysis" aria-label="Alumni Giving Rate Regression Analysis on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="social nlp">
+          <a class="project-image" href="portfolio-details.html?project=twitter-analysis" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/twitter-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=twitter-analysis">Twitter Engagement Text Analytics</a></h3>
+            <p>Gender-based language, engagement, and tweet trend analytics.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=twitter-analysis" aria-label="Case study for Twitter Engagement Text Analytics">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/twitter-engagement-text-analytics" aria-label="Twitter Engagement Text Analytics on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="ml nlp">
+          <a class="project-image" href="portfolio-details.html?project=orange-analysis" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/orange-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=orange-analysis">Orange Text Mining Workflows</a></h3>
+            <p>Visual NLP workflows for preprocessing, classification, and topic modeling.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=orange-analysis" aria-label="Case study for Orange Text Mining Workflows">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/orange-text-mining-workflows" aria-label="Orange Text Mining Workflows on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="viz">
+          <a class="project-image" href="portfolio-details.html?project=tableau-dashboard" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/tableau-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=tableau-dashboard">ICPC World Finals Tableau Dashboard</a></h3>
+            <p>Interactive BI analysis of global programming contest performance.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=tableau-dashboard" aria-label="Case study for ICPC World Finals Tableau Dashboard">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/icpc-world-finals-tableau-dashboard" aria-label="ICPC World Finals Tableau Dashboard on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="nlp">
+          <a class="project-image" href="portfolio-details.html?project=newsgroups" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/newsgroups-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=newsgroups">Newsgroups Text Classification NLP</a></h3>
+            <p>Reproducible NLP pipeline with TF-IDF, topics, sentiment, and model benchmarks.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=newsgroups" aria-label="Case study for Newsgroups Text Classification NLP">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/newsgroups-text-classification-nlp" aria-label="Newsgroups Text Classification NLP on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="eda">
+          <a class="project-image" href="portfolio-details.html?project=behavior-analysis" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/behavior-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=behavior-analysis">E-commerce Customer Behavior Analysis</a></h3>
+            <p>Customer browsing, page-depth, day-of-week, and spending analysis.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=behavior-analysis" aria-label="Case study for E-commerce Customer Behavior Analysis">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/ecommerce-customer-behavior-analysis" aria-label="E-commerce Customer Behavior Analysis on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="ml time-series">
+          <a class="project-image" href="portfolio-details.html?project=credit-card-churn" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/churn-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=credit-card-churn">Banking Customer Churn Prediction</a></h3>
+            <p>Financial-services ML workflow for churn risk and retention prioritization.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=credit-card-churn" aria-label="Case study for Banking Customer Churn Prediction">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/banking-customer-churn-prediction" aria-label="Banking Customer Churn Prediction on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="time-series quant">
+          <a class="project-image" href="portfolio-details.html?project=crypto-forecasting" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/crypto-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=crypto-forecasting">Crypto Price Forecasting and Portfolio Risk</a></h3>
+            <p>Time-series forecasting, volatility, correlations, and portfolio risk analytics.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=crypto-forecasting" aria-label="Case study for Crypto Price Forecasting and Portfolio Risk">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/crypto-price-forecasting-portfolio-risk" aria-label="Crypto Price Forecasting and Portfolio Risk on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+            <article class="project-card" data-tags="social eda">
+          <a class="project-image" href="portfolio-details.html?project=instagram-power-analysis" tabindex="-1" aria-hidden="true"><img src="assets/img/masonry-portfolio/instagram-preview.svg" width="1200" height="720" alt="" loading="lazy" decoding="async"></a>
+          <div class="project-body">
+            
+            <h3><a href="portfolio-details.html?project=instagram-power-analysis">Instagram Engagement Power Analysis</a></h3>
+            <p>Sample-size planning for social-media engagement studies.</p>
+            <div class="project-links"><a href="portfolio-details.html?project=instagram-power-analysis" aria-label="Case study for Instagram Engagement Power Analysis">Case study <span aria-hidden="true">↗</span></a><a href="https://github.com/Shrut1261/instagram-engagement-power-analysis" aria-label="Instagram Engagement Power Analysis on GitHub">GitHub <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+          </div>
         </div>
-      </div><!-- End Stats Item -->
+      </details>
+    </section>
 
-      <!-- Internship/Job -->
-      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-        <i class="bi bi-person"></i>
-        <div class="stats-item">
-          <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Internship/Job</p>
+    <section id="resume" class="section experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <div class="section-intro">
+          <div><p class="eyebrow"><span>02 /</span> Résumé</p><h2 id="experience-title">Experience</h2></div>
+          <p>Healthcare revenue cycle analytics, enterprise BI, and data engineering across operations and reporting teams.</p>
         </div>
-      </div><!-- End Stats Item -->
-
-      <!-- Coding Hours -->
-<div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-  <i class="bi bi-code-slash"></i>
-  <div class="stats-item">
-    <span style="white-space: nowrap;">
-      <span class="purecounter" data-purecounter-start="0" data-purecounter-end="10000" data-purecounter-duration="1"></span>
-    <p>Coding Hours</p>
-  </div>
-</div>
-
-<!-- End Stats Item -->
-
-      <!-- Certifications -->
-      <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-        <i class="bi bi-award"></i>
-        <div class="stats-item">
-          <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
-          <p>Certifications</p>
-        </div>
-      </div><!-- End Stats Item -->
-
-    </div><!-- End Row -->
-
-  </div><!-- End Container -->
-</section><!-- End Stats Section -->
-<!-- End Stats Section -->
-<!-- /Stats Section -->
-
-
-<!-- Skills Section -->
-<!-- Skills Section -->
-<section id="skills" class="skills section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Skills</h2>
-    <p>The ability to analyze data and derive meaningful insights is essential for making informed decisions and driving success.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row skills-content skills-animation">
-
-      <!-- Left Column (Skills Progress Bars) -->
-      <div class="col-lg-6">
-        <!-- Python Skill -->
-        <div class="progress">
-          <span class="skill"><span>Python</span> <i class="val">90%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End Skills Item -->
-
-        <!-- R Programming Skill -->
-        <div class="progress">
-          <span class="skill"><span>R Programming</span> <i class="val">95%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End Skills Item -->
-
-        <!-- SQL Skill -->
-        <div class="progress">
-          <span class="skill"><span>SQL</span> <i class="val">90%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End Skills Item -->
-
-        <!-- Data Visualization (Tableau, Power BI) Skill -->
-        <div class="progress">
-          <span class="skill"><span>Data Visualization (Tableau, Power BI)</span> <i class="val">95%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End Skills Item -->
-      </div>
-
-      <!-- Right Column (Other Skills) -->
-      <div class="col-lg-6">
-        <!-- Machine Learning Skill -->
-        <div class="progress">
-          <span class="skill"><span>Machine Learning</span> <i class="val">97%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End Skills Item -->
-
-        <!-- Statistical Analysis Skill -->
-        <div class="progress">
-          <span class="skill"><span>Statistical Analysis</span> <i class="val">96%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End Skills Item -->
-
-        <!-- Big Data Technologies (Spark, Hadoop) Skill -->
-        <div class="progress">
-          <span class="skill"><span>Big Data Technologies (Spark, Hadoop)</span> <i class="val">90%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End Skills Item -->
-
-        <!-- Data Wrangling & Cleaning Skill -->
-        <div class="progress">
-          <span class="skill"><span>Data Wrangling & Cleaning</span> <i class="val">94%</i></span>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-        </div><!-- End Skills Item -->
-      </div>
-
-    </div>
-
-  </div>
-
-</section><!-- End Skills Section -->
-
-     <!-- Skill Section -->
-
-<!-- Resume Section -->
-<section id="resume" class="resume section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Resume</h2>
-    <p><em>
-      Data & Business Analytics professional with 4+ years of experience in healthcare revenue cycle management, financial services, and enterprise analytics. Expert in Python, SQL, Power BI, Tableau, Microsoft Fabric, and Snowflake — specializing in ETL pipelines, predictive modeling, data visualization, and KPI-driven reporting.
-    </em></p>
-    <p><em>
-      Passionate about transforming complex, high-volume data into actionable strategies that drive revenue growth, reduce risk, and improve operational efficiency. Proven track record across healthcare, fintech, higher education, and enterprise software environments.
-    </em></p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-    <div class="row">
-
-      <!-- Left Column: Summary, Education, Internships, Volunteering -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-        <!-- Summary -->
-        <h3 class="resume-title">Summary</h3>
-        <div class="resume-item pb-0">
-          <h4>Shrut D. Prajapati</h4>
-          <p><em>
-            Data Analytics professional with hands-on experience in healthcare revenue cycle analytics, financial fraud detection, and enterprise BI solutions. Currently performing advanced quantitative analysis on revenue cycle data using Microsoft Fabric, SQL, Python, and Power BI at KabaFusion Holdings.
-          </em></p>
-          <p><em>
-            Skilled in relational data modeling, statistical analysis, machine learning, and data visualization to extract actionable insights from large-scale datasets. Experienced in building automated ETL pipelines, KPI dashboards, and predictive models that have delivered measurable results — from 28% faster queries to 18% reduction in payroll errors across 200K+ records.
-          </em></p>
-          <p><em>
-            Proficient in Power BI, Tableau, Snowflake, AWS, Airflow, and DAX for interactive reporting and complex data querying. Demonstrated success in fraud analytics (15M+ transactions), customer segmentation (100K+ records), and compliance-driven reporting across multiple industries.
-          </em></p>
-          <p><em>
-            Well-versed in Agile development, cross-functional collaboration, and stakeholder communication. Google, McKinsey, and IBM certified. Known for strong problem-solving skills, technical adaptability, and a continuous learning mindset in data and cloud platforms.
-          </em></p>
-        </div><!-- End Summary -->
-
-        <!-- Education -->
-        <h3 class="resume-title">Education</h3>
-
-        <div class="resume-item">
-          <h4>Master of Science in Management Science (Data Analytics)</h4>
-          <h5>2023 - 2025</h5>
-          <p><em>Johnson & Wales University, Providence, RI</em></p>
-          <p>GPA: 3.92</p>
-          <ul>
-            <li>Key Courses: Statistical Analysis, Predictive Modeling, Data Mining, Big Data Analytics, Data Visualization, Optimization Simulation, Text & Web Mining.</li>
-            <li>Tools Used: Python (Pandas, Scikit-learn), SQL, Power BI, Tableau, R, Snowflake.</li>
-            <li>Capstone Projects: Customer Attrition Prediction, Cyber Attack Forecasting, KPI Dashboard Design.</li>
-          </ul>
-        </div><!-- End Master -->
-
-        <div class="resume-item">
-          <h4>Bachelor of Engineering in Computer Engineering</h4>
-          <h5>2018 - 2022</h5>
-          <p><em>Gujarat Technological University (GTU), India</em></p>
-          <p>Graduated with First Class Distinction</p>
-          <ul>
-            <li>Core Topics: Data Structures, Algorithms, Operating Systems, Database Management Systems (DBMS), Networking, Web Development.</li>
-            <li>Tech Stack: Java, C++, SQL, PHP, JavaScript, MySQL, Git.</li>
-            <li>Activities: Participated in hackathons, coding contests, and AI/ML seminars; served in tech event committees.</li>
-          </ul>
-        </div><!-- End Bachelor -->
-
-        <!-- Internships -->
-        <h3 class="resume-title">Internships</h3>
-
-        <div class="resume-item">
-          <h4>Data Analyst Intern</h4>
-          <h5>Oct 2025 – Dec 2025</h5>
-          <p><em>KATBOTZ®, Remote (United States)</em></p>
-          <ul>
-            <li>Supported a <strong>SAP S/4HANA data migration proof-of-concept</strong> (prototype feasibility, not production).</li>
-            <li>Executed ETL runs and performed <strong>SQL/Python validation</strong> to reconcile migrated datasets for accuracy and consistency.</li>
-            <li>Documented data mappings, transformation rules, and validation steps to enable repeatable testing and future reference.</li>
-          </ul>
-        </div><!-- End KATBOTZ -->
-
-        <div class="resume-item">
-          <h4>Software & Data Engineer Intern</h4>
-          <h5>Jan 2022 – Apr 2022</h5>
-          <p><em>TechnoGuide Infosoft Pvt. Ltd., India</em></p>
-          <ul>
-            <li>Built a <strong>Django-based CRM</strong> system, reducing manual data entry by <strong>40%</strong>.</li>
-            <li>Optimized <strong>SQL queries</strong> and indexing, improving reporting performance by <strong>60%</strong>.</li>
-            <li>Designed database schemas and ETL workflows to support reliable data operations and UAT readiness.</li>
-            <li>Contributed to Agile releases, including <a href="https://neejanand.com/" target="_blank">Neejanand</a>, ensuring backend quality.</li>
-          </ul>
-        </div><!-- End TechnoGuide -->
-
-      </div><!-- End Left Column -->
-
-      <!-- Right Column: Professional Experience -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="resume-title">Professional Experience</h3>
-
-        <!-- KabaFusion -->
-        <div class="resume-item">
-          <h4>Revenue Cycle Management Quality Assurance Specialist</h4>
-          <h5>Dec 2025 – Present</h5>
-          <p><em>KabaFusion Holdings LLC, Lexington, MA</em></p>
-          <ul>
+        <div class="timeline-grid">
+          <div><h3>Professional experience</h3><details class="timeline-item">
+            <summary><span><span class="timeline-role">Revenue Cycle Management Quality Assurance Specialist</span><span class="timeline-org">KabaFusion Holdings LLC, Lexington, MA</span></span><span class="timeline-date">Dec 2025 – Present</span></summary>
+            <div class="timeline-detail"><ul>
             <li>Perform advanced quantitative analysis on healthcare revenue cycle data extracted from the company's <strong>EHR and Practice Management system</strong>, integrated into <strong>Microsoft Fabric</strong> Lakehouse and Warehouse environments.</li>
             <li>Design and manage structured datasets using <strong>SQL</strong>-based querying, building views, stored procedures, and validation logic to identify billing discrepancies and operational inefficiencies.</li>
             <li>Develop relational data models and interactive dashboards in <strong>Power BI</strong>, including <strong>DAX</strong> calculated measures and KPI visualizations to evaluate departmental productivity and financial performance.</li>
             <li>Apply <strong>Python</strong>-based validation techniques for anomaly detection and data quality control across large-scale billing and claims datasets.</li>
-          </ul>
-        </div><!-- End KabaFusion -->
-
-        <!-- Johnson & Wales -->
-        <div class="resume-item">
-          <h4>IT Analyst</h4>
-          <h5>Oct 2023 – May 2025</h5>
-          <p><em>Johnson & Wales University, Providence, RI</em></p>
-          <ul>
+          </ul></div>
+          </details>
+          <details class="timeline-item">
+            <summary><span><span class="timeline-role">IT Analyst</span><span class="timeline-org">Johnson & Wales University, Providence, RI</span></span><span class="timeline-date">Oct 2023 – May 2025</span></summary>
+            <div class="timeline-detail"><ul>
             <li>Integrated HRIS + payroll datasets using <strong>SQL</strong> and <strong>Excel VBA</strong>, reducing payroll errors by <strong>18%</strong>.</li>
             <li>Built and maintained <strong>Power BI dashboards</strong> for workload, overtime, and budget tracking to support staffing decisions.</li>
             <li>Audited and reconciled <strong>200K+ records</strong> across Oracle and SQL Server, improving reporting accuracy by <strong>22%</strong>.</li>
             <li>Led <strong>UAT</strong> for HR system enhancements (60+ test scripts) and trained users on new reporting workflows.</li>
-          </ul>
-        </div><!-- End Johnson & Wales -->
-
-        <!-- Microsys Softtech -->
-        <div class="resume-item">
-          <h4>Data Analyst & Business Intelligence Associate</h4>
-          <h5>Aug 2021 – Aug 2023</h5>
-          <p><em>Microsys Softtech, Surat, Gujarat, India</em></p>
-          <ul>
+          </ul></div>
+          </details>
+          <details class="timeline-item">
+            <summary><span><span class="timeline-role">Data Analyst & Business Intelligence Associate</span><span class="timeline-org">Microsys Softtech, Surat, Gujarat, India</span></span><span class="timeline-date">Aug 2021 – Aug 2023</span></summary>
+            <div class="timeline-detail"><ul>
             <li>Analyzed <strong>CRM and operational datasets</strong> to identify customer trends, high-value segments, and revenue opportunities, improving client retention by <strong>18%</strong> and recurring revenue by <strong>12%</strong>.</li>
             <li>Optimized complex <strong>SQL</strong> queries using joins, CTEs, window functions, and indexing, reducing query runtime by <strong>22%</strong> while maintaining <strong>99.8%</strong> data accuracy.</li>
             <li>Designed relational schemas and data models for customer segmentation, trend analysis, and operational KPIs, improving analytics workflow efficiency by <strong>20%</strong> across <strong>100,000+</strong> records.</li>
             <li>Built <strong>Python</strong> workflows (Pandas, NumPy, scikit-learn) for data cleaning, feature engineering, and predictive modeling, automating ETL pipelines and reducing manual prep time by <strong>18%</strong>.</li>
             <li>Conducted regression analysis, hypothesis testing, and <strong>A/B experiments</strong> on customer behavior, increasing conversion and retention rates by <strong>15%</strong> across 50K+ interactions.</li>
             <li>Developed interactive <strong>Tableau</strong> dashboards tracking revenue trends, retention metrics, and operational KPIs, reducing reporting turnaround by <strong>20%</strong>.</li>
-          </ul>
-        </div><!-- End Microsys Softtech -->
-               <!-- Volunteering -->
-        <h3 class="resume-title">Volunteering</h3>
-
-        <div class="resume-item">
-          <h4>Volunteer Data Analyst</h4>
-          <h5>Jul 2025 – Present</h5>
-          <p><em>Bright Mind Enrichment &amp; Schooling</em></p>
-          <ul>
+          </ul></div>
+          </details>
+          <details class="timeline-item">
+            <summary><span><span class="timeline-role">Data Analyst Intern</span><span class="timeline-org">KATBOTZ®, Remote (United States)</span></span><span class="timeline-date">Oct 2025 – Dec 2025</span></summary>
+            <div class="timeline-detail"><ul>
+            <li>Supported a <strong>SAP S/4HANA data migration proof-of-concept</strong> (prototype feasibility, not production).</li>
+            <li>Executed ETL runs and performed <strong>SQL/Python validation</strong> to reconcile migrated datasets for accuracy and consistency.</li>
+            <li>Documented data mappings, transformation rules, and validation steps to enable repeatable testing and future reference.</li>
+          </ul></div>
+          </details>
+          <details class="timeline-item">
+            <summary><span><span class="timeline-role">Software & Data Engineer Intern</span><span class="timeline-org">TechnoGuide Infosoft Pvt. Ltd., India</span></span><span class="timeline-date">Jan 2022 – Apr 2022</span></summary>
+            <div class="timeline-detail"><ul>
+            <li>Built a <strong>Django-based CRM</strong> system, reducing manual data entry by <strong>40%</strong>.</li>
+            <li>Optimized <strong>SQL queries</strong> and indexing, improving reporting performance by <strong>60%</strong>.</li>
+            <li>Designed database schemas and ETL workflows to support reliable data operations and UAT readiness.</li>
+            <li>Contributed to Agile releases, including <a href="https://neejanand.com/" target="_blank" rel="noopener">Neejanand</a>, ensuring backend quality.</li>
+          </ul></div>
+          </details>
+          <details class="timeline-item">
+            <summary><span><span class="timeline-role">Volunteer Data Analyst</span><span class="timeline-org">Bright Mind Enrichment &amp; Schooling</span></span><span class="timeline-date">Jul 2025 – Present</span></summary>
+            <div class="timeline-detail"><ul>
             <li>Collaborate with program coordinators and leadership to understand outreach goals and translate vague requirements into measurable KPIs and reporting metrics.</li>
             <li>Built <strong>Power BI dashboards</strong> to track student outreach, engagement, and program effectiveness using cleaned and structured program data.</li>
             <li>Automated recurring monthly reporting pipelines, reducing manual effort and ensuring consistent, timely insights for stakeholders.</li>
             <li>Worked closely with cross-functional volunteers to resolve data quality issues, reconcile mismatched records, and standardize reporting processes.</li>
             <li>Provided data-driven recommendations to improve resource allocation and program planning based on trend and performance analysis.</li>
-          </ul>
-        </div><!-- End Volunteering -->
-      </div><!-- End Right Column -->
-
-    </div>
-  </div>
-
-</section><!-- /Resume Section -->
-    <!-- Services Section -->
-  <section id="portfolio" class="portfolio section">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Portfolio</h2>
-    <p>Explore applied analytics, machine learning, BI, NLP, and data engineering projects built around practical business problems, reproducible workflows, and decision-ready insights.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-
-    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-        <li data-filter="*" class="filter-active">All</li>
-        <li data-filter=".filter-agentic">Agentic AI</li>
-        <li data-filter=".filter-ml">Machine Learning</li>
-        <li data-filter=".filter-viz">Data Visualization</li>
-        <li data-filter=".filter-nlp">NLP & Text Analysis</li>
-        <li data-filter=".filter-time-series">Time Series & Forecasting</li>
-        <li data-filter=".filter-quant">Quant Finance</li>
-        <li data-filter=".filter-operations">Operations</li>
-        <li data-filter=".filter-eda">EDA & Statistical Analysis</li>
-      </ul><!-- End Portfolio Filters -->
-
-      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-        <!-- JobPilot -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-agentic filter-ml">
-          <img src="assets/img/masonry-portfolio/jobpilot-preview.svg" class="img-fluid" alt="JobPilot autonomous job-application agent" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.7); color: #fff;">
-            <h4 style="color: #fff;">JobPilot</h4>
-            <p style="color: #fff;">Autonomous job-application agent built on Google ADK and Gemini: parses a posting, scores fit, drafts tailored materials, and persists the application end-to-end from one goal.</p>
-            <a href="https://github.com/Shrut1261/jobpilot-agent" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=jobpilot-agent" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
+          </ul></div>
+          </details></div>
+          <div><h3>Education</h3><details class="timeline-item">
+            <summary><span><span class="timeline-role">Master of Science in Management Science (Data Analytics)</span><span class="timeline-org">Johnson & Wales University, Providence, RI</span></span><span class="timeline-date">2023 - 2025</span></summary>
+            <div class="timeline-detail"><p>GPA: 3.92</p>
+          <ul>
+            <li>Key Courses: Statistical Analysis, Predictive Modeling, Data Mining, Big Data Analytics, Data Visualization, Optimization Simulation, Text & Web Mining.</li>
+            <li>Tools Used: Python (Pandas, Scikit-learn), SQL, Power BI, Tableau, R, Snowflake.</li>
+            <li>Capstone Projects: Customer Attrition Prediction, Cyber Attack Forecasting, KPI Dashboard Design.</li>
+          </ul></div>
+          </details>
+          <details class="timeline-item">
+            <summary><span><span class="timeline-role">Bachelor of Engineering in Computer Engineering</span><span class="timeline-org">Gujarat Technological University (GTU), India</span></span><span class="timeline-date">2018 - 2022</span></summary>
+            <div class="timeline-detail"><p>Graduated with First Class Distinction</p>
+          <ul>
+            <li>Core Topics: Data Structures, Algorithms, Operating Systems, Database Management Systems (DBMS), Networking, Web Development.</li>
+            <li>Tech Stack: Java, C++, SQL, PHP, JavaScript, MySQL, Git.</li>
+            <li>Activities: Participated in hackathons, coding contests, and AI/ML seminars; served in tech event committees.</li>
+          </ul></div>
+          </details></div>
         </div>
-
-        <!-- AlphaSignal -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml filter-viz filter-time-series filter-quant">
-          <img src="assets/img/masonry-portfolio/alphasignal-preview.svg" class="img-fluid" alt="AlphaSignal algorithmic trading intelligence dashboard" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.7); color: #fff;">
-            <h4 style="color: #fff;">AlphaSignal</h4>
-            <p style="color: #fff;">Algorithmic trading intelligence platform with market data, sentiment, ML signals, portfolio optimization, and backtesting.</p>
-            <a href="https://github.com/Shrut1261/alphasignal-market-intelligence" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="alphasignal-details.html" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- FinShield -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml filter-viz filter-quant">
-          <img src="assets/img/masonry-portfolio/finshield-preview.svg" class="img-fluid" alt="FinShield fraud detection risk analytics dashboard" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.7); color: #fff;">
-            <h4 style="color: #fff;">FinShield</h4>
-            <p style="color: #fff;">Real-time financial fraud detection platform with ML scoring, SHAP explanations, drift monitoring, and risk analytics.</p>
-            <a href="https://github.com/Shrut1261/finshield" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="finshield-details.html" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- DenialGuard AI -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml filter-viz">
-          <img src="assets/img/masonry-portfolio/denialguard-preview.svg" class="img-fluid" alt="DenialGuard AI healthcare claim denial risk dashboard" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">DenialGuard AI</h4>
-            <p style="color: #fff;">Healthcare claim denial risk predictor with ML scoring, model drivers, and Streamlit dashboard.</p>
-            <a href="https://github.com/Shrut1261/healthcare-denial-risk-ai" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=denialguard-ai" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Retail Demand Forecasting and Inventory Optimization -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml filter-viz filter-time-series filter-operations">
-          <img src="assets/img/masonry-portfolio/retail-demand-preview.svg" class="img-fluid" alt="Retail demand forecasting inventory optimization dashboard" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.7); color: #fff;">
-            <h4 style="color: #fff;">Retail Demand Forecasting</h4>
-            <p style="color: #fff;">Supply-chain analytics platform for SKU demand forecasting, stockout risk, and reorder optimization.</p>
-            <a href="https://github.com/Shrut1261/retail-demand-forecasting-inventory-optimization" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=retail-demand" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Modern Data Pipeline Analytics Warehouse -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app filter-viz">
-          <img src="assets/img/masonry-portfolio/data-pipeline-preview.svg" class="img-fluid" alt="Modern Data Pipeline Analytics Warehouse" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">Modern Data Pipeline Analytics Warehouse</h4>
-            <p style="color: #fff;">ETL, data quality checks, SQLite warehouse, KPI marts, reports, charts, tests, and CI.</p>
-            <a href="https://github.com/Shrut1261/modern-data-pipeline-analytics-warehouse" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=modern-data-pipeline" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- NASA Metadata Text Mining -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-          <img src="assets/img/masonry-portfolio/nasa-preview.svg" class="img-fluid" alt="NASA Metadata Text Mining" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">NASA Metadata Text Mining</h4>
-            <p style="color: #fff;">Mars-focused public metadata mining with TF-IDF, topics, and keyword networks.</p>
-            <a href="https://github.com/Shrut1261/nasa-metadata-text-mining" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=nasa-metadata" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Alumni Giving Rate Regression Analysis -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml filter-eda">
-          <img src="assets/img/masonry-portfolio/alumni-preview.svg" class="img-fluid" alt="Alumni Giving Rate Regression Analysis" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">Alumni Giving Rate Regression Analysis</h4>
-            <p style="color: #fff;">Regression analysis in R to identify university factors that influence alumni donation rates.</p>
-            <a href="https://github.com/Shrut1261/alumni-giving-rate-regression-analysis" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=alumni-giving" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Twitter Engagement Text Analytics -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-social">
-          <img src="assets/img/masonry-portfolio/twitter-preview.svg" class="img-fluid" alt="Twitter Engagement Text Analytics" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">Twitter Engagement Text Analytics</h4>
-            <p style="color: #fff;">Gender-based language, engagement, and tweet trend analytics.</p>
-            <a href="https://github.com/Shrut1261/twitter-engagement-text-analytics" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=twitter-analysis" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Orange Text Mining Workflows -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
-          <img src="assets/img/masonry-portfolio/orange-preview.svg" class="img-fluid" alt="Orange Text Mining Workflows" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">Orange Text Mining Workflows</h4>
-            <p style="color: #fff;">Visual NLP workflows for preprocessing, classification, and topic modeling.</p>
-            <a href="https://github.com/Shrut1261/orange-text-mining-workflows" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=orange-analysis" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- ICPC World Finals Tableau Dashboard -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-viz">
-          <img src="assets/img/masonry-portfolio/tableau-preview.svg" class="img-fluid" alt="ICPC World Finals Tableau Dashboard" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">ICPC World Finals Tableau Dashboard</h4>
-            <p style="color: #fff;">Interactive BI analysis of global programming contest performance.</p>
-            <a href="https://github.com/Shrut1261/icpc-world-finals-tableau-dashboard" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=tableau-dashboard" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Newsgroups Text Classification NLP -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-nlp">
-          <img src="assets/img/masonry-portfolio/newsgroups-preview.svg" class="img-fluid" alt="Newsgroups Text Classification NLP" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">Newsgroups Text Classification NLP</h4>
-            <p style="color: #fff;">Reproducible NLP pipeline with TF-IDF, topics, sentiment, and model benchmarks.</p>
-            <a href="https://github.com/Shrut1261/newsgroups-text-classification-nlp" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=newsgroups" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- E-commerce Customer Behavior Analysis -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-eda">
-          <img src="assets/img/masonry-portfolio/behavior-preview.svg" class="img-fluid" alt="E-commerce Customer Behavior Analysis" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">E-commerce Customer Behavior Analysis</h4>
-            <p style="color: #fff;">Customer browsing, page-depth, day-of-week, and spending analysis.</p>
-            <a href="https://github.com/Shrut1261/ecommerce-customer-behavior-analysis" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=behavior-analysis" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-        
-        <!-- Banking Customer Churn Prediction -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml filter-time-series">
-          <img src="assets/img/masonry-portfolio/churn-preview.svg" class="img-fluid" alt="Banking Customer Churn Prediction" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">Banking Customer Churn Prediction</h4>
-            <p style="color: #fff;">Financial-services ML workflow for churn risk and retention prioritization.</p>
-            <a href="https://github.com/Shrut1261/banking-customer-churn-prediction" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=credit-card-churn" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Crypto Price Forecasting and Portfolio Risk -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-time-series">
-          <img src="assets/img/masonry-portfolio/crypto-preview.svg" class="img-fluid" alt="Crypto Price Forecasting and Portfolio Risk" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">Crypto Price Forecasting and Portfolio Risk</h4>
-            <p style="color: #fff;">Time-series forecasting, volatility, correlations, and portfolio risk analytics.</p>
-            <a href="https://github.com/Shrut1261/crypto-price-forecasting-portfolio-risk" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=crypto-forecasting" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Instagram Engagement Power Analysis -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-social filter-eda">
-          <img src="assets/img/masonry-portfolio/instagram-preview.svg" class="img-fluid" alt="Instagram Engagement Power Analysis" loading="lazy" decoding="async">
-          <div class="portfolio-info" style="background: rgba(0,0,0,0.6); color: #fff;">
-            <h4 style="color: #fff;">Instagram Engagement Power Analysis</h4>
-            <p style="color: #fff;">Sample-size planning for social-media engagement studies.</p>
-            <a href="https://github.com/Shrut1261/instagram-engagement-power-analysis" title="Go to Repository" class="preview-link">
-              <i class="bi bi-github" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-            <a href="portfolio-details.html?project=instagram-power-analysis" title="Project Details" class="details-link">
-              <i class="bi bi-arrow-right-circle" style="font-size: 1rem; color: #fff;"></i>
-            </a>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </div>
-
-</section>
-<!-- /Services Section -->
-     <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <!-- Section Title --> 
-<div class="container section-title" data-aos="fade-up">
-  <h2>Certifications</h2>
-  <p>Selected credentials that support my work across analytics, Python, business strategy, and data-driven communication.</p>
-  <div class="certification-link-row">
-    <a href="https://www.linkedin.com/in/shrutp/details/certifications/" class="credential-link" target="_blank" rel="noopener">
-      <i class="bi bi-box-arrow-up-right"></i>
-      View certificates on LinkedIn
-    </a>
-  </div>
-</div><!-- End Section Title -->
-<div class="container">
-  <div class="row gy-4">
-
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-      <div class="service-item item-cyan position-relative">
-        <div class="icon">
-          <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-            <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
-          </svg>
-          <i class="bi bi-award"></i>
-        </div>
-        <a href="https://www.linkedin.com/in/shrutp/" class="stretched-link">
-          <h3>McKinsey.org Forward Program</h3>
-        </a>
-        <p>McKinsey &amp; Company credential focused on structured problem solving, communication, adaptability, and business impact.</p>
-      </div>
-    </div><!-- End Service Item -->
-
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-      <div class="service-item item-orange position-relative">
-        <div class="icon">
-          <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-            <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
-          </svg>
-          <i class="bi bi-bar-chart-line"></i>
-        </div>
-        <a href="https://www.linkedin.com/in/shrutp/" class="stretched-link">
-          <h3>Google Data Analytics</h3>
-        </a>
-        <p>Google professional credential covering data cleaning, analysis, visualization, SQL, spreadsheets, and stakeholder reporting.</p>
-      </div>
-    </div><!-- End Service Item -->
-
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-      <div class="service-item item-teal position-relative">
-        <div class="icon">
-          <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-            <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
-          </svg>
-          <i class="bi bi-database-check"></i>
-        </div>
-        <a href="https://www.linkedin.com/in/shrutp/" class="stretched-link">
-          <h3>Foundations: Data, Data, Everywhere</h3>
-        </a>
-        <p>Google certification in the analytics lifecycle, data ethics, business questions, and evidence-based decision making.</p>
-      </div>
-    </div><!-- End Service Item -->
-
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-      <div class="service-item item-red position-relative">
-        <div class="icon">
-          <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-            <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
-          </svg>
-          <i class="bi bi-code-slash"></i>
-        </div>
-        <a href="https://www.linkedin.com/in/shrutp/" class="stretched-link">
-          <h3>Problem Solving Python</h3>
-        </a>
-        <p>HackerRank credential validating Python logic, algorithms, data structures, and practical coding problem solving.</p>
-      </div>
-    </div><!-- End Service Item -->
-
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-      <div class="service-item item-indigo position-relative">
-        <div class="icon">
-          <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-            <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
-          </svg>
-          <i class="bi bi-megaphone"></i>
-        </div>
-        <a href="https://www.linkedin.com/in/shrutp/" class="stretched-link">
-          <h3>LinkedIn Advertising Fundamentals</h3>
-        </a>
-        <p>LinkedIn certification supporting campaign analytics, audience targeting, performance measurement, and marketing insights.</p>
-      </div>
-    </div><!-- End Service Item -->
-
-    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-      <div class="service-item item-pink position-relative">
-        <div class="icon">
-          <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-            <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
-          </svg>
-          <i class="bi bi-file-earmark-spreadsheet"></i>
-        </div>
-        <a href="https://www.linkedin.com/in/shrutp/" class="stretched-link">
-          <h3>Excel Data Analysis</h3>
-        </a>
-        <p>LinkedIn Learning and McGraw Hill Excel credentials for analysis workflows, reporting, formulas, and spreadsheet modeling.</p>
-      </div>
-    </div><!-- End Service Item -->
-
-  </div>
-</div>
-
-
-    </section><!-- /Services Section -->
-
-
-    <!-- Contact Section -->
-     <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Driven by passion, overcoming obstacles, and relentlessly pursuing excellence with purpose.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>United States of America</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-linkedin flex-shrink-0"></i>
-              <div>
-                <h3>LinkedIn</h3>
-                <p><a href="https://www.linkedin.com/in/shrutp/" target="_blank">linkedin.com/in/shrutp</a></p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
-                <p>shrutd.prajapati@gmail.com</p>
-              </div>
-            </div><!-- End Info Item -->
-
-          </div>
-          <div class="col-lg-8">
-<form action="https://formspree.io/f/xrbejprr" 
-      method="POST" 
-      class="php-email-form" 
-      data-aos="fade-up" 
-      data-aos-delay="200"
-      novalidate>
-  <input type="hidden" name="_next" value="https://shrut1261.github.io/analyst/thanks.html">
-  <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                 <div class="col-md-12 text-center">
-      <div class="loading" style="display: none;">Sending...</div>
-      <div class="error-message" style="display: none;"></div>
-      <div class="sent-message" style="display: none;">Your message has been sent. Thank you!</div>
-      <button type="submit">Send Message</button>
-    </div>
-  </div>
-</form>
-
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
     </section>
 
+    <section id="about" class="section shell" aria-labelledby="about-title">
+      <div class="section-intro">
+        <div><p class="eyebrow"><span>03 /</span> About</p><h2 id="about-title">How I work</h2></div>
+        <p>I start with the decision a team needs to make, then work back to the data, analysis, and reporting they’ll need.</p>
+      </div>
+      <div class="capability-grid" id="skills">
+        <article><span class="eyebrow">01 /</span><h3>Business intelligence</h3><p>Build KPI dashboards and reporting models in Power BI and Tableau, with DAX measures that make performance easier to track.</p></article>
+        <article><span class="eyebrow">02 /</span><h3>Data engineering</h3><p>Use SQL, Python, Microsoft Fabric, and Snowflake to transform data and validate it before it reaches a report.</p></article>
+        <article><span class="eyebrow">03 /</span><h3>Applied modeling</h3><p>Use classification, forecasting, and text mining to investigate risk and surface patterns that teams can act on.</p></article>
+      </div>
+      <details class="archive" id="services"><summary>Certifications</summary>
+        <div class="archive-body">
+          <ul class="credentials"><li><strong>McKinsey.org Forward Program</strong><p>McKinsey &amp; Company credential focused on structured problem solving, communication, adaptability, and business impact.</p></li><li><strong>Google Data Analytics</strong><p>Google professional credential covering data cleaning, analysis, visualization, SQL, spreadsheets, and stakeholder reporting.</p></li><li><strong>Foundations: Data, Data, Everywhere</strong><p>Google certification in the analytics lifecycle, data ethics, business questions, and evidence-based decision making.</p></li><li><strong>Problem Solving Python</strong><p>HackerRank credential validating Python logic, algorithms, data structures, and practical coding problem solving.</p></li><li><strong>LinkedIn Advertising Fundamentals</strong><p>LinkedIn certification supporting campaign analytics, audience targeting, performance measurement, and marketing insights.</p></li><li><strong>Excel Data Analysis</strong><p>LinkedIn Learning and McGraw Hill Excel credentials for analysis workflows, reporting, formulas, and spreadsheet modeling.</p></li></ul>
+          <a class="text-link" href="https://www.linkedin.com/in/shrutp/details/certifications/">View credentials on LinkedIn ↗</a>
+        </div>
+      </details>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="shell contact-grid">
+        <div>
+          <p class="eyebrow"><span>04 /</span> Contact</p>
+          <h2 id="contact-title">Let’s connect.</h2>
+          <p>Reach out about analytics roles, project collaborations, or questions about my work.</p>
+          <div class="contact-links">
+            <a href="mailto:shrutd.prajapati@gmail.com">shrutd.prajapati@gmail.com</a>
+            <a href="https://www.linkedin.com/in/shrutp/">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <form action="https://formspree.io/f/xrbejprr" method="post">
+          <input type="hidden" name="_next" value="https://shrut1261.github.io/analyst/thanks.html">
+          <div class="form-pair">
+            <label>Name<input name="name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          </div>
+          <label>Subject<input name="subject" required></label>
+          <label>Message<textarea name="message" rows="4" required></textarea></label>
+          <button class="button primary" type="submit">Send message <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <h3 class="sitename">Shrut Prajapati</h3>
-      <p>Always evolving, seeking new horizons, embracing challenges, and finding peace in the process.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://github.com/Shrut1261"><i class="bi bi-git hub-x"></i></a>
-        <a href="https://www.facebook.com/share/1ApUyrnH1a/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/_shrut_prajapati_/"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/shrutp/"><i class="bi bi-linkedin"></i></a>
-      
-      </div>
-  
-        <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">Shrut Prajapati</a>
-        </div>
-      </div>
-    </div>
+  <footer class="shell footer">
+    <span>Shrut Prajapati</span>
+    <div><a href="https://github.com/Shrut1261">GitHub</a><a href="https://www.kaggle.com/shrutprajapati">Kaggle</a><a href="https://leetcode.com/u/Shrut_Prajapati/">LeetCode</a><a href="#hero">Back to top ↑</a></div>
   </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

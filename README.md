@@ -17,8 +17,7 @@ Visitors can quickly review:
 ## Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript
-- **Frameworks and libraries:** Bootstrap, Bootstrap Icons, AOS, Typed.js, PureCounter, GLightbox, Isotope, Swiper
-- **Design foundation:** BootstrapMade-style static portfolio template customized for an analytics profile
+- **Portfolio and case studies:** Responsive layout and project filters built with CSS and vanilla JavaScript
 - **Hosting target:** GitHub Pages or any static web host
 - **Forms:** Formspree-powered contact form
 
@@ -61,20 +60,10 @@ You can also open `index.html` directly in a browser, but a local server more cl
 - **Instagram Engagement Power Analysis:** Uses statistical power analysis to plan social-media engagement studies.
 - **Modern Data Pipeline Analytics Warehouse:** Builds an ETL pipeline with data quality checks, SQLite warehouse tables, KPI marts, charts, tests, and CI.
 
-## Upgrade Roadmap
-
-- Improve SEO metadata, Open Graph tags, and structured profile descriptions.
-- Refine portfolio filters so each project maps cleanly to visible filter categories.
-- Expand project cards with stronger business context, tools used, and measurable outcomes.
-- Normalize image filenames and asset paths to reduce case-sensitivity issues on static hosts.
-- Add accessibility improvements such as descriptive image alt text and clearer social-link labels.
-- Add a lightweight validation workflow for HTML, broken links, and static asset availability.
-- Consider moving repeated inline styles into CSS for easier long-term maintenance.
-
 ## Repository Notes
 
 - Primary page: `index.html`
-- Main stylesheet: `assets/css/main.css`
-- Main script: `assets/js/main.js`
+- Portfolio and case study stylesheet: `assets/css/portfolio.css`
+- Homepage project filters: `assets/js/portfolio.js`
 - Portfolio images: `assets/img/masonry-portfolio/`
 

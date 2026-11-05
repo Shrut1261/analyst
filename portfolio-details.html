@@ -1,109 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Project Details - Shrut Prajapati</title>
-  <meta content="Portfolio project details for Shrut Prajapati" name="description">
-
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:wght@600;700;800&display=swap" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project case study | Shrut Prajapati</title>
+  <link rel="icon" href="assets/img/icon13.png">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
 </head>
-
-<body class="portfolio-details-page">
-  <header id="header" class="header d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="hero">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html#hero"><span class="monogram" aria-hidden="true">SP</span><span>Shrut Prajapati</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#portfolio">Work</a>
+        <a href="index.html#resume">Experience</a>
+        <a href="index.html#about">About</a>
+        <a class="nav-contact" href="index.html#contact">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
   </header>
-
-  <main class="main">
-    <div class="page-title" data-aos="fade">
-      <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li class="current" id="breadcrumb-title">Project</li>
-          </ol>
-        </nav>
-        <h1 id="project-title">Project Details</h1>
+  <main id="main">
+    <div class="case-banner">
+      <div class="shell">
+        <a class="breadcrumbs" href="index.html#portfolio">← All work</a>
+        <h1 id="project-title">Project case study</h1>
       </div>
     </div>
-
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
-        <div class="row justify-content-between gy-4 align-items-start">
-          <div class="col-lg-8" data-aos="fade-up">
-            <img id="project-image" src="assets/img/masonry-portfolio/denialguard-preview.svg" class="img-fluid rounded shadow-sm mb-4" alt="Project preview">
-            <div class="portfolio-description">
+    <noscript><p class="shell">Enable JavaScript to read this case study, or explore the project repositories from the portfolio.</p></noscript>
+    <section id="portfolio-details" class="case-section">
+      <div class="shell">
+        <div class="case-grid">
+          <div>
+            <img id="project-image" src="assets/img/masonry-portfolio/denialguard-preview.svg" class="case-preview" alt="Project preview">
+            <div class="case-description">
               <h2 id="project-heading">Project Overview</h2>
               <p id="project-summary"></p>
               <p id="project-impact"></p>
 
-              <div class="row gy-3 mt-3">
-                <div class="col-md-6">
-                  <div class="p-3 border rounded h-100">
-                    <h4>Business Problem</h4>
-                    <p class="mb-0" id="project-problem"></p>
+              <div class="case-facets">
+                <div>
+                  <div class="case-facet">
+                    <h3>Business Problem</h3>
+                    <p id="project-problem"></p>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="p-3 border rounded h-100">
-                    <h4>Technical Work</h4>
-                    <p class="mb-0" id="project-technical"></p>
+                <div>
+                  <div class="case-facet">
+                    <h3>Technical Work</h3>
+                    <p id="project-technical"></p>
                   </div>
                 </div>
               </div>
 
-              <h3 class="mt-4">Highlights</h3>
+              <h3>Highlights</h3>
               <ul id="project-highlights"></ul>
             </div>
           </div>
 
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="portfolio-info">
-              <h3>Project Information</h3>
+          <div>
+            <aside class="case-info" aria-labelledby="case-info-title">
+              <h2 id="case-info-title">Project information</h2>
               <ul>
                 <li><strong>Category</strong> <span id="project-category"></span></li>
                 <li><strong>Stack</strong> <span id="project-stack"></span></li>
                 <li><strong>Focus</strong> <span id="project-focus"></span></li>
                 <li><strong>Repository</strong> <a id="project-repo-link" href="#">GitHub</a></li>
-                <li><a id="project-button" href="#" class="btn-visit align-self-start">View Repository</a></li>
+                <li><a id="project-button" href="#" class="button primary">View Repository</a></li>
               </ul>
-            </div>
+            </aside>
           </div>
         </div>
       </div>
     </section>
   </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <h3 class="sitename">Shrut Prajapati</h3>
-      <p>Data Analytics, BI, and applied machine learning portfolio.</p>
-    </div>
+  <footer class="shell footer">
+    <span>Shrut Prajapati</span>
+    <div><a href="https://github.com/Shrut1261">GitHub</a><a href="https://www.kaggle.com/shrutprajapati">Kaggle</a><a href="https://leetcode.com/u/Shrut_Prajapati/">LeetCode</a><a href="#top">Back to top ↑</a></div>
   </footer>
-
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
-
   <script>
     const projects = {
       "jobpilot-agent": {
@@ -362,10 +336,10 @@
 
     const params = new URLSearchParams(window.location.search);
     const projectKey = params.get("project") || "denialguard-ai";
-    const project = projects[projectKey] || projects["denialguard-ai"];
+    const project = Object.hasOwn(projects, projectKey) ? projects[projectKey] : projects["denialguard-ai"];
 
     document.title = `${project.title} - Project Details`;
-    document.getElementById("breadcrumb-title").textContent = project.title;
+
     document.getElementById("project-title").textContent = project.title;
     document.getElementById("project-image").src = project.image;
     document.getElementById("project-image").alt = `${project.title} preview`;
@@ -383,12 +357,5 @@
       .map((highlight) => `<li>${highlight}</li>`)
       .join("");
   </script>
-
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
