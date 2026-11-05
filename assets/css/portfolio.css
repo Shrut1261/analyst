@@ -80,13 +80,16 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
 .secondary { color: var(--ink); background: transparent; border-color: #ae9bb3; }
 .secondary:hover { background: #eadfee; border-color: #846099; }
 .portrait {
+  --portrait-base: clamp(.65rem, 1.6vw, 1.15rem);
   position: relative;
   align-self: center;
   aspect-ratio: 1.03;
   overflow: hidden;
   isolation: isolate;
-  border-radius: .85rem;
+  border: 1px solid #d8ccdf;
+  border-radius: 1rem;
   background: radial-gradient(ellipse at 52% 35%, #fffdfa 0%, #e8e4ea 82%);
+  box-shadow: 0 1rem 2.75rem #0e0b1870;
 }
 .portrait::before {
   position: absolute;
@@ -107,11 +110,19 @@ h2 { font-size: clamp(2.65rem, 6vw, 5.6rem); font-weight: 400; letter-spacing: -
   letter-spacing: .12em;
   text-transform: uppercase;
 }
+.portrait::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: var(--portrait-base);
+  content: "";
+  background: linear-gradient(90deg, #d4c8dd, #eee7ef 52%, #d4c8dd);
+  pointer-events: none;
+}
 .portrait img {
   position: absolute;
-  inset: 0;
+  inset: 0 0 var(--portrait-base);
   width: 100%;
-  height: 100%;
+  height: calc(100% - var(--portrait-base));
   object-fit: contain;
   object-position: center bottom;
   mix-blend-mode: multiply;
