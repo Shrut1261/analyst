@@ -163,16 +163,3 @@ function revealToolkitExperience() {
 
 window.addEventListener('hashchange', revealToolkitExperience);
 revealToolkitExperience();
-
-const discordCopy = document.querySelector('.discord-copy');
-const discordStatus = document.querySelector('.discord-status');
-
-discordCopy?.addEventListener('click', async () => {
-  const username = discordCopy.querySelector('small').textContent.trim();
-  try {
-    await navigator.clipboard.writeText(username);
-    discordStatus.textContent = 'Username copied. Paste it into Add Friend on Discord.';
-  } catch {
-    discordStatus.textContent = 'Enter ' + username + ' under Add Friend on Discord.';
-  }
-});
