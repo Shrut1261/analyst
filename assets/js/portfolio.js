@@ -93,6 +93,7 @@ const monthTitle = document.querySelector('#meeting-month');
 const meetingDays = document.querySelector('.meeting-days');
 const selection = document.querySelector('.meeting-selection');
 const meetingEmail = document.querySelector('.meeting-email');
+const meetingPhone = document.querySelector('.meeting-phone-link');
 const previousMonth = meetingCalendar.querySelector('[data-month-step="-1"]');
 const nextMonth = meetingCalendar.querySelector('[data-month-step="1"]');
 const monthFormat = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -158,6 +159,11 @@ meetingDays.addEventListener('click', event => {
     'Preferred date: ' + label, 'Preferred time and time zone:', '', 'Thanks!'
   ].join('\r\n');
   meetingEmail.href = meetingAddress + '?subject=Meeting%20request&body=' + encodeURIComponent(body);
+  const phoneBody = [
+    'Hi Shrut,', '', 'I’d like to set up a phone call about:', '',
+    'Preferred date: ' + label, 'Preferred time and time zone:', 'Best number to reach me:', '', 'Thanks!'
+  ].join('\r\n');
+  meetingPhone.href = meetingAddress + '?subject=Phone%20call%20request&body=' + encodeURIComponent(phoneBody);
 });
 
 renderMeetingMonth();
