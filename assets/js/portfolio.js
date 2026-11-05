@@ -151,3 +151,11 @@ meetingDays.addEventListener('click', event => {
 
 renderMeetingMonth();
 meetingCalendar.hidden = false;
+
+function revealToolkitExperience() {
+  const section = document.getElementById(location.hash.slice(1));
+  if (section?.matches('details.timeline-item')) section.open = true;
+}
+
+window.addEventListener('hashchange', revealToolkitExperience);
+revealToolkitExperience();
