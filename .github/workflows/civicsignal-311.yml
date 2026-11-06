@@ -1,0 +1,50 @@
+name: Refresh CivicSignal 311 data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - projects/civicsignal-311/core.mjs
+      - projects/civicsignal-311/pipeline.mjs
+      - .github/workflows/civicsignal-311.yml
+  schedule:
+    - cron: '37 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: civicsignal-311-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate source and generate reporting tables
+        run: node projects/civicsignal-311/pipeline.mjs
+      - name: Publish reporting tables
+        shell: bash
+        run: |
+          set -euo pipefail
+          branch=civicsignal-data
+          data_worktree="$RUNNER_TEMP/civic-data"
+          git worktree add --detach "$data_worktree"
+          if git ls-remote --exit-code --heads origin "$branch" > /dev/null; then
+            git fetch origin "$branch"
+            git -C "$data_worktree" switch -c "$branch" FETCH_HEAD
+          else
+            git -C "$data_worktree" switch --orphan "$branch"
+          fi
+          cp public-data/{snapshot.json,demand.csv,backtest.csv,model-metrics.csv} "$data_worktree/"
+          git -C "$data_worktree" add snapshot.json demand.csv backtest.csv model-metrics.csv
+          if ! git -C "$data_worktree" diff --cached --quiet; then
+            git -C "$data_worktree" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh NYC 311 reporting tables'
+            git -C "$data_worktree" push origin "HEAD:refs/heads/$branch"
+          fi

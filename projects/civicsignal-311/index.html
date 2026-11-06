@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CivicSignal 311: public data, demand forecasting, and capacity planning for NYC service requests.">
+  <title>CivicSignal 311 | Shrut D. Prajapati</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="dashboard.mjs"></script>
+</head>
+<body>
+  <header class="wrap top"><a href="../../#portfolio">← Portfolio</a><span>OPERATIONS ANALYTICS / CASE STUDY</span><a href="#power-bi">Power BI ↓</a></header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">New York City · Service operations</p>
+      <h1 id="title">CivicSignal <em>311</em></h1>
+      <p>Where could incoming service requests exceed next week’s capacity? Compare borough forecasts, test a capacity assumption, and review the evidence behind the numbers.</p>
+      <div class="actions"><a class="primary" href="#console">Explore the dashboard ↓</a><a href="https://data.cityofnewyork.us/d/erm2-nwe9">NYC Open Data ↗</a></div>
+    </section>
+    <section id="console" aria-labelledby="console-title">
+      <div class="section-head"><div><p class="eyebrow">Demand planning</p><h2 id="console-title">Borough dashboard</h2></div><button id="refresh" type="button">Refresh live data</button></div>
+      <p id="status" role="status">Connecting to NYC Open Data…</p>
+      <div id="sample-controls" hidden><button type="button" id="sample">Open simulated demo</button></div>
+      <div id="dashboard" hidden>
+        <div class="controls"><label>Borough <select id="borough"></select></label><label>Assumed daily capacity <input id="capacity" type="number" min="0" max="1000000" step="1" required></label><button id="export" type="button">Export Power BI CSV</button></div>
+        <dl class="metrics" id="metrics"></dl>
+        <div class="workspace">
+          <article class="panel"><p class="eyebrow">Requests per day</p><h3>Demand outlook</h3><p class="muted">Last 21 observed days and the next seven forecast days</p><div id="chart"></div><details><summary>View forecast as a table</summary><div id="forecast-table"></div></details></article>
+          <article class="panel"><p class="eyebrow">Planning brief</p><h3 id="brief-title">Evidence summary</h3><p id="brief-text"></p><ul id="facts"></ul><p class="muted" id="action"></p><button id="genai" type="button" hidden>Draft with local GenAI</button><p id="ai-status" role="status"></p></article>
+        </div>
+        <article class="panel model"><h3>Model validation</h3><p id="model"></p><p class="muted">Four rolling seven-day backtests compare ridge regression with the previous week’s daily pattern. The lower-error method is selected for each borough. This is backtest error used for selection, so it can be optimistic.</p><a id="backtest" href="#">Download backtest predictions</a></article>
+      </div>
+    </section>
+    <section class="case" aria-labelledby="case-title"><p class="eyebrow">Business analysis & data engineering</p><h2 id="case-title">From request counts to a planning decision</h2>
+      <div class="steps"><article><span>01</span><h3>Define demand</h3><p>Count requests created per borough and day. A planner can enter a daily handling capacity and see the forecast days and volume above it.</p></article><article><span>02</span><h3>Build the data feed</h3><p>Aggregate at source, exclude the latest observed day as a precaution, validate all 700 borough-day rows, and export a reporting table.</p></article><article><span>03</span><h3>Forecast and explain</h3><p>Train on earlier dates, compare against a weekly baseline, then draft a planning brief from the same evidence shown on the dashboard.</p></article></div>
+      <p class="muted">The feed measures requests reported to 311. It does not measure all incidents, staff productivity, or confirmed staffing needs. Recent source dates may be revised.</p>
+    </section>
+    <section id="power-bi" class="case" aria-labelledby="bi-title"><p class="eyebrow">Power BI Desktop</p><h2 id="bi-title">Build the companion report</h2><p>Import the dashboard export or connect directly to the published reporting table. Use the supplied Power Query, DAX, and report layout to recreate the capacity scenario in Power BI.</p><div class="actions"><a class="primary" href="power-bi/guide.html">Open Power BI setup →</a><a href="README.md">Source and run instructions ↗</a></div></section>
+  </main>
+  <footer class="wrap top"><span>Independent portfolio project by Shrut D. Prajapati</span><a href="https://data.cityofnewyork.us/d/erm2-nwe9">Data source ↗</a></footer>
+</body>
+</html>

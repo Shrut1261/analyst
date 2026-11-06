@@ -1,0 +1,31 @@
+// Create these calculated tables separately (Modeling > New table).
+Dates = CALENDAR(MIN(Demand[day]), MAX(Demand[day]))
+
+Boroughs = DISTINCT(Demand[borough])
+
+Capacity = GENERATESERIES(0, 10000, 25)
+
+// Create each measure separately (Modeling > New measure).
+Requests = SUM(Demand[requests])
+
+Observed Requests = CALCULATE([Requests], Demand[scenario] = "Actual")
+
+Forecast Requests = CALCULATE([Requests], Demand[scenario] = "Forecast")
+
+Capacity Per Borough = SELECTEDVALUE(Capacity[Value], 1000)
+
+Days Over Capacity =
+IF(
+    HASONEVALUE(Boroughs[borough]),
+    COUNTROWS(FILTER(VALUES(Dates[Date]), [Forecast Requests] > [Capacity Per Borough])) + 0
+)
+
+Volume Above Capacity =
+IF(
+    HASONEVALUE(Boroughs[borough]),
+    SUMX(VALUES(Dates[Date]), MAX(0, [Forecast Requests] - [Capacity Per Borough]))
+)
+
+Capacity Line = IF(HASONEVALUE(Boroughs[borough]), [Capacity Per Borough])
+
+Last Observed Day = CALCULATE(MAX(Demand[day]), REMOVEFILTERS(Dates), Demand[scenario] = "Actual")
