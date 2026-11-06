@@ -36,7 +36,7 @@ def read_month(month):
     frame = frame[has_outcome].copy()
     frame['Hour'] = (frame.CRSDepTime // 100) % 24
     frame['Disrupted'] = (frame.Cancelled.eq(1) | frame.Diverted.eq(1) | frame.ArrDel15.eq(1)).astype(int)
-    assert frame[INPUTS].notna().all().all(), month
+    assert frame[INPUTS].notna().all().all(), (month, frame[INPUTS].isna().sum().to_dict())
     assert frame.Disrupted.nunique() == 2
     print(f'{YEAR}-{month:02d}: {len(frame):,} usable departures; {excluded:,} missing outcomes', flush=True)
     return frame, excluded, url

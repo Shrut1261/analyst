@@ -90,7 +90,7 @@ def resized_mask(blobs, row):
     return F.adaptive_max_pool2d(values, (GRID, GRID))[0, 0].numpy().astype(bool)
 
 
-def save_example(output, blobs, row, heatmap, mask, ceiling, index):
+def save_example(output, blobs, row, heatmap, ceiling, index):
     image = image_from(blobs[row['image']]).resize((448, 448), Image.Resampling.BILINEAR)
     image.save(output / f'example-{index}.jpg', quality=86)
     normalized = np.clip(heatmap / ceiling, 0, 1)
@@ -150,7 +150,7 @@ def build(output):
     examples = []
     for index, test_index in enumerate(choices):
         row = official_test[test_index]
-        save_example(output, blobs, row, maps[40 + test_index], masks[test_index], ceiling, index)
+        save_example(output, blobs, row, maps[40 + test_index], ceiling, index)
         examples.append({'id': index, 'sample': Path(row['image']).name, 'defect': bool(labels[test_index]),
                          'score': float(scores[40 + test_index]), 'flagged': bool(decisions[test_index])})
     result = {'training': len(training), 'calibration': len(validation), 'test': len(official_test),

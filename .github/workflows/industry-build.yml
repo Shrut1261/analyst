@@ -65,7 +65,7 @@ jobs:
           git worktree add --detach "$data"
           if git ls-remote --exit-code --heads origin "$branch" >/dev/null; then
             git fetch origin "$branch"
-            git -C "$data" switch -c "$branch" FETCH_HEAD
+            git -C "$data" switch -c "$branch" "refs/remotes/origin/$branch"
           else
             git -C "$data" switch --orphan "$branch"
           fi
