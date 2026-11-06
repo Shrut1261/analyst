@@ -72,7 +72,7 @@ function show(next,kind) {
   render(true);
 }
 
-async function refresh() {
+async function refresh(checkLive=false) {
   const request=++refreshRevision;
   get('refresh').disabled=true;
   get('status').textContent='Connecting to NYC Open Data…';
@@ -83,8 +83,12 @@ async function refresh() {
       const published=await response.json();
       if(request!==refreshRevision) return;
       show(published,'published');
-      get('status').textContent=`Published NYC snapshot · observed through ${published.asOf} · checking for newer data…`;
+      get('status').textContent=`Published NYC snapshot · observed through ${published.asOf} · refreshed ${new Date(published.refreshedAt).toLocaleString()}.`;
       get('sample-controls').hidden=true;
+      if(!checkLive) {
+        get('refresh').disabled=false;
+        return;
+      }
     } catch { /* Try the upstream feed directly. */ }
   }
   if(request!==refreshRevision) return;
@@ -105,7 +109,7 @@ async function refresh() {
   }
 }
 
-get('refresh').addEventListener('click',refresh);
+get('refresh').addEventListener('click',()=>refresh(true));
 get('sample').addEventListener('click',()=>{
   refreshRevision++;
   get('refresh').disabled=false;

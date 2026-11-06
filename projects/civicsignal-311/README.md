@@ -8,15 +8,16 @@ Requires Node.js 22 or newer. Run these commands from this directory.
 
 ```powershell
 node pipeline.mjs          # NYC Open Data, no API key required
+node pipeline.mjs --raw    # optional record-level ingestion and local aggregation
 node pipeline.mjs --sample # separate, clearly simulated output
 node serve.mjs             # http://127.0.0.1:4174/
 ```
 
-Use the public dashboard to select a borough, enter an assumed daily capacity, inspect the model comparison, and export Power BI data. The dashboard queries NYC Open Data directly and can fall back to the published snapshot. The GitHub Actions workflow refreshes the public data branch daily. If the source is unavailable or incomplete, the refresh fails before publishing, and the last valid snapshot remains available. Simulated data is available for a disconnected walkthrough.
+Use the public dashboard to select a borough, enter an assumed daily capacity, inspect the model comparison, and export Power BI data. The dashboard opens the latest published snapshot. The refresh button queries NYC Open Data directly. A daily GitHub Actions workflow updates the public data branch. If the source is unavailable or incomplete, the refresh fails before publishing, and the last valid snapshot remains available. Simulated data is available for a disconnected walkthrough.
 
 ## Data contract and validation
 
-[NYC Open Data’s 311 Service Requests from 2020 to Present](https://data.cityofnewyork.us/d/erm2-nwe9) is updated daily. The pipeline requests only `created_date` and `borough`, aggregates in memory, and publishes only totals. The browser can also request aggregates from SoQL. The model uses 140 calendar days before the latest observed source date, excluding that date as a precaution against partial data. It covers the five named boroughs and excludes unknown boroughs. Each borough-day must occur exactly once with a nonnegative integer count. Missing rows fail validation. Historical totals may change after city revisions.
+[NYC Open Data’s 311 Service Requests from 2020 to Present](https://data.cityofnewyork.us/d/erm2-nwe9) is updated daily. The pipeline normally uses SoQL to aggregate by `created_date` and `borough` at source. Its optional raw mode requests only those two fields, aggregates in memory, and publishes only totals. The model uses 140 calendar days before the latest observed source date, excluding that date as a precaution against partial data. It covers the five named boroughs and excludes unknown boroughs. Each borough-day must occur exactly once with a nonnegative integer count. Missing rows fail validation. Historical totals may change after city revisions.
 
 The reporting fact table is `demand.csv`, at one row per date, borough, and actual/forecast scenario. `model-metrics.csv` holds borough-level model selection and MAE. `backtest.csv` records dated predictions from both candidate models. `snapshot.json` packages the same output for the browser. All forecasts use New York calendar days.
 

@@ -23,8 +23,8 @@ async function query(parameters) {
 
 export async function loadSource({aggregateLocally=false}={}) {
   const date = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date());
-  const [latest] = await query({$select:'created_date', $where:`created_date >= '${shift(date,-30)}T00:00:00' AND created_date < '${shift(date,1)}T00:00:00'`, $order:'created_date DESC', $limit:'1'});
-  const end = latest?.created_date?.slice(0,10);
+  const [latest] = await query({$select:'max(created_date) as latest', $where:`created_date >= '${shift(date,-30)}T00:00:00' AND created_date < '${shift(date,1)}T00:00:00'`});
+  const end = latest?.latest?.slice(0,10);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(end ?? '')) throw new Error('Source has no observations in the last 30 days');
   const start = shift(end, -140);
   const daysPerWindow = aggregateLocally?7:35;
