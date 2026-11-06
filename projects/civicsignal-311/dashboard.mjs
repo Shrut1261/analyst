@@ -77,6 +77,18 @@ async function refresh() {
   const request=++refreshRevision;
   get('refresh').disabled=true;
   get('status').textContent='Connecting to NYC Open Data…';
+  if(!snapshot) {
+    try {
+      const response=await fetch('https://raw.githubusercontent.com/Shrut1261/analyst/civicsignal-data/snapshot.json',{signal:AbortSignal.timeout(5000)});
+      if(!response.ok) throw new Error('No published snapshot');
+      const published=await response.json();
+      if(request!==refreshRevision) return;
+      show(published,'published');
+      get('status').textContent=`Published NYC snapshot · observed through ${published.asOf} · checking for newer data…`;
+      get('sample-controls').hidden=true;
+    } catch { /* Try the upstream feed directly. */ }
+  }
+  if(request!==refreshRevision) return;
   try {
     const next=build(await loadSource());
     if(request!==refreshRevision) return;
@@ -84,16 +96,6 @@ async function refresh() {
     get('status').textContent=`NYC Open Data · observed through ${next.asOf} · source queried ${new Date(next.refreshedAt).toLocaleString()}.`;
     get('sample-controls').hidden=true;
   } catch(error) {
-    if(request!==refreshRevision) return;
-    if(!snapshot||mode==='simulated') {
-      try {
-        const response=await fetch('https://raw.githubusercontent.com/Shrut1261/analyst/civicsignal-data/snapshot.json',{signal:AbortSignal.timeout(10000)});
-        if(!response.ok) throw new Error('No published snapshot');
-        const published=await response.json();
-        if(request!==refreshRevision) return;
-        show(published,'published');
-      } catch { /* Keep the last available view. */ }
-    }
     if(request!==refreshRevision) return;
     get('status').textContent=mode==='published'
       ? `Published NYC snapshot · observed through ${snapshot.asOf}. The live connection is unavailable.`
