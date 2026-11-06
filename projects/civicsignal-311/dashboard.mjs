@@ -23,7 +23,7 @@ function download(rows,name) {
 }
 
 function chart(rows,capacity) {
-  const width=640,height=250,left=54,right=620,top=14,bottom=212;
+  const width=640,height=250,left=74,right=620,top=14,bottom=212;
   const maximum=Math.max(1,capacity,...rows.map(row=>row.requests));
   const x=i=>left+(right-left)*i/(rows.length-1);
   const y=v=>bottom-(bottom-top)*v/maximum;
@@ -44,7 +44,6 @@ function render(resetCapacity=false) {
   if(resetCapacity) get('capacity').value=Math.round(actual.slice(-7).reduce((sum,row)=>sum+row.requests,0)/7);
   const capacity=get('capacity').valueAsNumber;
   if(!get('capacity').validity.valid||!Number.isInteger(capacity)) {
-    get('capacity').reportValidity();
     get('genai').disabled=true;
     renderedPlan=null;
     get('ai-status').textContent='Enter a whole number from 0 to 1,000,000 to update the scenario.';
@@ -115,7 +114,7 @@ get('sample').addEventListener('click',()=>{
   get('sample-controls').hidden=true;
 });
 get('borough').addEventListener('change',()=>render(true));
-get('capacity').addEventListener('change',()=>render());
+get('capacity').addEventListener('input',()=>render());
 get('export').addEventListener('click',()=>download(snapshot.records,'civicsignal-demand'));
 get('backtest').addEventListener('click',event=>{
   event.preventDefault();
