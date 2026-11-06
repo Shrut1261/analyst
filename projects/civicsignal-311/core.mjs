@@ -17,11 +17,16 @@ export async function loadSource() {
   const end = latest?.latest?.slice(0,10);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(end ?? '')) throw new Error('Source has no observations in the last 30 days');
   const start = shift(end, -140);
-  const rows = await query({
-    $select:'date_trunc_ymd(created_date) as day, borough, count(*) as requests',
-    $where:`created_date >= '${start}T00:00:00' AND created_date < '${end}T00:00:00' AND borough in (${boroughs.map(b => `'${b}'`).join(',')})`,
-    $group:'date_trunc_ymd(created_date), borough', $order:'day, borough', $limit:'1000'
-  });
+  const windows = Array.from({length:10}, (_, i)=>[shift(start, i*14), shift(start,(i+1)*14)]);
+  const rows = [];
+  for (let i=0;i<windows.length;i+=4) {
+    const batches = await Promise.all(windows.slice(i,i+4).map(([first,last])=>query({
+      $select:'date_trunc_ymd(created_date) as day, borough, count(*) as requests',
+      $where:`created_date >= '${first}T00:00:00' AND created_date < '${last}T00:00:00' AND borough in (${boroughs.map(b => `'${b}'`).join(',')})`,
+      $group:'date_trunc_ymd(created_date), borough', $order:'day, borough', $limit:'100'
+    })));
+    for(const batch of batches) rows.push(...batch);
+  }
   return {rows, start, end};
 }
 
