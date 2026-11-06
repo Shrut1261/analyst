@@ -1,0 +1,6 @@
+borough,model,ridge_mae,seasonal_mae
+"BRONX","Ridge regression","236.64285714285714","236.75"
+"BROOKLYN","Ridge regression","252.07142857142858","302.9642857142857"
+"MANHATTAN","Ridge regression","232.28571428571428","265.2857142857143"
+"QUEENS","Ridge regression","165.92857142857142","202.85714285714286"
+"STATEN ISLAND","Weekly seasonal baseline","45.892857142857146","38.285714285714285"
