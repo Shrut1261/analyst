@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs><linearGradient id="bg"><stop stop-color="#111c29"/><stop offset="1" stop-color="#213743"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffab41"/><stop offset="1" stop-color="#ffab41" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="560" fill="url(#bg)"/><rect x="48" y="49" width="864" height="462" rx="28" fill="#172530" stroke="#516573"/>
+  <text x="82" y="115" fill="#ffcf88" font-family="monospace" font-size="20" letter-spacing="3">MANUFACTURING / COMPUTER VISION</text>
+  <text x="79" y="196" fill="#f4f8fa" font-family="system-ui,sans-serif" font-weight="760" font-size="67">DefectLens</text>
+  <path d="M80 270H880M80 321H880M80 372H880M80 423H880" stroke="#354958"/>
+  <rect x="326" y="270" width="312" height="158" rx="12" fill="#224940" stroke="#73c3a0" stroke-width="3"/><path d="M350 298H455V337H580M350 383H435V356H592M390 400H471V302H604" fill="none" stroke="#73c3a0" stroke-width="3"/><rect x="472" y="307" width="78" height="71" rx="7" fill="#13232c" stroke="#ffcf88"/><circle cx="553" cy="335" r="45" fill="url(#glow)"/><path d="M529 315h42v42h-42z" stroke="#ffcf88" stroke-width="2" stroke-dasharray="6 5" fill="none"/>
+  <text x="82" y="474" fill="#91f3cf" font-family="monospace" font-size="18" letter-spacing="2">IMAGE SCORING + LOCALIZATION</text>
+</svg>

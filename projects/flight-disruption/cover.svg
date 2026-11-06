@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <defs><linearGradient id="bg"><stop stop-color="#111c29"/><stop offset="1" stop-color="#213743"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffab41"/><stop offset="1" stop-color="#ffab41" stop-opacity="0"/></radialGradient></defs>
+  <rect width="960" height="560" fill="url(#bg)"/><rect x="48" y="49" width="864" height="462" rx="28" fill="#172530" stroke="#516573"/>
+  <text x="82" y="115" fill="#abc3ff" font-family="monospace" font-size="20" letter-spacing="3">AIRLINE OPERATIONS / PREDICTIVE ML</text>
+  <text x="79" y="196" fill="#f4f8fa" font-family="system-ui,sans-serif" font-weight="760" font-size="67">Flight Disruption</text>
+  <path d="M80 270H880M80 321H880M80 372H880M80 423H880" stroke="#354958"/>
+  <path d="M105 386Q312 238 530 332T855 349M105 386Q352 402 530 332T779 280M283 307Q416 406 690 419" stroke="#abc3ff" fill="none" stroke-width="3" stroke-dasharray="7 6"/><g fill="#91f3cf"><circle cx="105" cy="386" r="8"/><circle cx="283" cy="307" r="8"/><circle cx="530" cy="332" r="10"/><circle cx="690" cy="419" r="8"/><circle cx="779" cy="280" r="8"/><circle cx="855" cy="349" r="8"/></g>
+  <text x="82" y="474" fill="#91f3cf" font-family="monospace" font-size="18" letter-spacing="2">AIRPORT AND ROUTE RISK</text>
+</svg>

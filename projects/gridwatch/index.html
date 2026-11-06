@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore hourly wholesale electricity price spreads across New England in 2025.">
+  <title>GridWatch New England | Shrut D. Prajapati</title>
+  <link rel="stylesheet" href="../industry.css"><script type="module" src="dashboard.mjs"></script>
+</head>
+<body>
+  <header class="shell"><a href="../../#project-index">← Portfolio</a><span class="eyebrow">Energy market analytics</span><a href="#report">Power BI setup ↓</a></header>
+  <main class="shell">
+    <div class="hero"><p class="eyebrow">01 / Energy &amp; utilities</p><h1>GridWatch <span>New England</span></h1><p class="summary">Which zones and hours saw the biggest gaps between day-ahead and real-time electricity prices? Explore the 2025 market archive and investigate the hours behind the annual averages.</p><div class="links"><a class="button" href="#analysis">Explore the data ↓</a><a href="https://www.iso-ne.com/isoexpress/web/reports/load-and-demand/-/tree/zone-info">ISO New England archive ↗</a></div></div>
+    <section id="analysis" aria-labelledby="analysis-title">
+      <div class="section-heading"><h2 id="analysis-title">Price spread explorer</h2><label for="zone">Load zone or system series <select id="zone" disabled></select></label></div>
+      <p class="status" id="status" role="status">Loading validated hourly results…</p>
+      <div id="dashboard" hidden>
+        <dl class="metrics" id="metrics"></dl>
+        <article class="panel"><h3>Monthly price spread</h3><p class="muted">Signed spread is real-time LMP minus day-ahead LMP. The absolute spread measures the size of the gap in either direction.</p><div class="plot" id="chart"></div><details><summary>Monthly values</summary><div class="table"><table id="monthly"></table></div></details></article>
+        <article class="panel"><h3>Largest hourly moves</h3><p class="muted" id="grid-note"></p><div class="table"><table id="top"></table></div></article>
+        <div class="links"><a id="csv" href="#analysis">Download hourly CSV ↗</a></div>
+      </div>
+    </section>
+    <section id="report" aria-labelledby="report-title">
+      <div class="section-heading"><h2 id="report-title">From workbook to Power BI</h2></div>
+      <div class="method"><article><h3>Normalize</h3><p>Read each load-zone worksheet, validate daily coverage and numeric fields, and retain the source’s local hour labels.</p></article><article><h3>Investigate</h3><p>Compare spread size and direction by zone and month. Use demand deviations to prioritize hours for follow-up. Correlation alone cannot explain a price move.</p></article><article><h3>Report</h3><p>Use the supplied Power Query and DAX to build a zone and hour explorer. The Fabric SQL provides a view over the same hourly data.</p></article></div>
+      <div class="links"><a class="button" href="report.html">Power BI and Fabric setup →</a><a href="https://github.com/Shrut1261/analyst/tree/main/projects/gridwatch">Project source ↗</a></div>
+    </section>
+  </main>
+  <footer class="shell">Independent portfolio project · Shrut D. Prajapati</footer>
+</body>
+</html>

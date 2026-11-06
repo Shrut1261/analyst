@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare flight disruption risk across eight Northeast airports using U.S. BTS on-time records.">
+  <title>Flight Disruption Monitor | Shrut D. Prajapati</title>
+  <link rel="stylesheet" href="../industry.css"><script type="module" src="dashboard.mjs"></script>
+</head>
+<body class="aviation">
+  <header class="shell"><a href="../../#project-index">← Portfolio</a><span class="eyebrow">Airline operations analytics</span><a href="#evaluation">Model evaluation ↓</a></header>
+  <main class="shell">
+    <div class="hero"><p class="eyebrow">03 / Transportation &amp; logistics</p><h1>Flight <span>Disruption</span> Monitor</h1><p class="summary">Where should an airline operations team focus its attention before departure? Explore recurring delays, cancellations, and diversions across eight origin airports, then compare schedule-based model scores with observed outcomes.</p><div class="links"><a class="button" href="#monitor">Explore the monitor ↓</a><a href="https://www.transtats.bts.gov/ot_delay/">Bureau of Transportation Statistics ↗</a></div></div>
+    <section id="monitor" aria-labelledby="monitor-title">
+      <div class="section-heading"><h2 id="monitor-title">Airport monitor</h2><label for="airport">Origin airport <select id="airport" disabled></select></label></div>
+      <p class="status" id="status" role="status">Loading held-out flight results…</p>
+      <div id="dashboard" hidden>
+        <dl class="metrics" id="metrics"></dl>
+        <article class="panel"><h3>Disruption by scheduled departure hour</h3><p class="muted">August holdout, local departure time. Chart lines omit hours with fewer than 30 flights.</p><div class="plot" id="chart"></div><details><summary>Hourly values</summary><div class="table"><table id="hours"></table></div></details></article>
+        <article class="panel"><h3>Routes with the highest observed disruption rate</h3><p class="muted">August holdout only. Routes need at least 100 departures to qualify.</p><div class="table"><table id="routes"></table></div></article>
+        <div class="links"><a id="route-csv" href="#monitor">Route CSV ↗</a><a id="daily-csv" href="#monitor">Airport and date CSV ↗</a></div>
+      </div>
+    </section>
+    <section id="evaluation" aria-labelledby="evaluation-title">
+      <div class="section-heading"><h2 id="evaluation-title">Can a schedule predict disruption?</h2></div>
+      <article class="panel"><h3>Baseline versus gradient boosting</h3><p class="muted" id="test-note"></p><div class="table"><table id="comparison"></table></div></article>
+      <div class="method"><article><h3>Define the outcome</h3><p>A disruption is a cancellation, a diversion, or an arrival at least 15 minutes late. Denominators include all departures with a usable outcome.</p></article><article><h3>Split by month</h3><p>Train on June, set an alert cutoff on July, and evaluate on August. Use only airport, carrier, weekday, scheduled departure hour, distance, and scheduled duration.</p></article><article><h3>Plan a review queue</h3><p>Use the 80th percentile of July scores as an alert cutoff. Ties and changes in traffic can shift the share of August flights flagged. This is an offline benchmark.</p></article></div>
+      <div class="links"><a href="https://github.com/Shrut1261/analyst/tree/main/projects/flight-disruption">Project source ↗</a><a href="https://transtats.bts.gov/PREZIP/">BTS monthly source archives ↗</a></div>
+    </section>
+  </main>
+  <footer class="shell">Independent portfolio project · Shrut D. Prajapati</footer>
+</body>
+</html>

@@ -145,8 +145,9 @@ def build(output):
                         'falseAlarmRate': float(decisions[~labels].mean())})
     ceiling = float(np.quantile(maps[:40], .995))
     assert ceiling > 0 and np.isfinite(maps).all()
-    # Sample examples by index within each class, independent of predictions.
-    choices = np.r_[np.flatnonzero(~labels)[:3], np.flatnonzero(labels)[:5]]
+    # Show typical decisions and failure cases. All official test images contribute to the metrics.
+    choices = np.r_[np.flatnonzero(~labels & ~decisions)[:2], np.flatnonzero(~labels & decisions)[:1],
+                    np.flatnonzero(labels & decisions)[:3], np.flatnonzero(labels & ~decisions)[:2]]
     examples = []
     for index, test_index in enumerate(choices):
         row = official_test[test_index]

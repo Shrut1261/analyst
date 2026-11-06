@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DefectLens benchmarks visual anomaly detection on industrial circuit-board images.">
+  <title>DefectLens | Shrut D. Prajapati</title>
+  <link rel="stylesheet" href="../industry.css"><script type="module" src="dashboard.mjs"></script>
+</head>
+<body class="vision">
+  <header class="shell"><a href="../../#project-index">← Portfolio</a><span class="eyebrow">Computer vision benchmark</span><a href="#method">Method ↓</a></header>
+  <main class="shell">
+    <div class="hero"><p class="eyebrow">02 / Manufacturing &amp; visual inspection</p><h1>Defect<span>Lens</span></h1><p class="summary">Can a system learn what a normal circuit board looks like and flag unfamiliar regions? Compare a color-and-texture baseline with pretrained vision features, then inspect the model’s predictions alongside the labeled defects.</p><div class="links"><a class="button" href="#inspection">Inspect test examples ↓</a><a href="https://github.com/amazon-science/spot-diff">VisA dataset ↗</a></div></div>
+    <section id="inspection" aria-labelledby="inspection-title">
+      <div class="section-heading"><h2 id="inspection-title">Inspection bench</h2><label for="sample">Held-out test image <select id="sample" disabled></select></label></div>
+      <p class="status" id="status" role="status">Loading benchmark results…</p>
+      <div id="dashboard" hidden>
+        <dl class="metrics" id="metrics"></dl>
+        <article class="panel"><h3 id="sample-title">Test example</h3><p class="muted" id="sample-result" aria-live="polite"></p>
+          <div class="image-grid"><figure><figcaption>Original test image</figcaption><img id="original" width="448" height="448" alt="Circuit board from the held-out test set"></figure><figure><figcaption>ResNet-18 anomaly heatmap</figcaption><img id="heatmap" width="448" height="448" alt="Warm colors mark regions with higher anomaly scores"></figure><figure><figcaption>Dataset annotation</figcaption><img id="mask" width="448" height="448" alt="Green regions indicate annotated defects" hidden><div class="image-empty" id="no-mask" hidden>No defect annotated</div></figure></div>
+        </article>
+        <article class="panel"><h3>Baseline versus pretrained features</h3><p class="muted">Image AUROC measures how well scores separate defective and normal boards. Patch AP measures localization on the model’s 14 × 14 grid.</p><div class="table"><table id="benchmark"></table></div></article>
+      </div>
+    </section>
+    <section id="method" aria-labelledby="method-title">
+      <div class="section-heading"><h2 id="method-title">How the benchmark works</h2></div>
+      <div class="method"><article><h3>Fit on normal boards</h3><p>Build a reference bank from normal VisA PCB1 images. Compare handcrafted color and texture patches with frozen ResNet-18 embeddings.</p></article><article><h3>Calibrate separately</h3><p>Set each method’s cutoff at the 95th percentile of scores on separate normal calibration images. The official test set stays outside fitting and calibration.</p></article><article><h3>Measure and inspect</h3><p>Compare image ranking, false alarms, and defect recall. Score localization against the original annotations reduced to the model grid.</p></article></div>
+      <p class="status">The benchmark covers one board category. The gallery includes precomputed examples of correct decisions, missed defects, and false alarms. All 200 test images contribute to the reported metrics.</p>
+      <div class="links"><a href="https://github.com/Shrut1261/analyst/tree/main/projects/defectlens">Project source ↗</a><a href="https://registry.opendata.aws/visa/">Dataset and license ↗</a></div>
+    </section>
+  </main>
+  <footer class="shell">Independent portfolio project · Images adapted from VisA (Zou et al., CC BY 4.0)</footer>
+</body>
+</html>

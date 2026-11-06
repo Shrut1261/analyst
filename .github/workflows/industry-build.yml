@@ -44,7 +44,7 @@ jobs:
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/industry-results"
           changed=$(git diff --name-only HEAD^ HEAD)
-          python -m pip install pandas openpyxl scikit-learn pillow requests
+          python -m pip install pandas openpyxl scikit-learn pillow requests jsonschema
           for project in gridwatch defectlens flight-disruption; do
             if [[ "$REQUESTED" != "$project" ]] && ! grep -Fxq "projects/$project/build.py" <<< "$changed"; then
               continue
