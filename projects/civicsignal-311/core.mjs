@@ -4,11 +4,21 @@ export const shift = (date, days) => new Date(Date.parse(date + 'T00:00:00Z') + 
 const average = values => values.reduce((total, value) => total + value, 0) / values.length;
 
 async function query(parameters) {
-  const response = await fetch(`${source}?${new URLSearchParams(parameters)}`, {signal: AbortSignal.timeout(45000)});
-  if (!response.ok) throw new Error(`NYC Open Data returned HTTP ${response.status}`);
-  const rows = await response.json();
-  if (!Array.isArray(rows)) throw new Error('NYC Open Data returned an unexpected response');
-  return rows;
+  const url = `${source}?${new URLSearchParams(parameters)}`;
+  for (let attempt=0;attempt<3;attempt++) {
+    try {
+      const response = await fetch(url, {signal: AbortSignal.timeout(30000)});
+      if (response.ok) {
+        const rows = await response.json();
+        if (!Array.isArray(rows)) throw new Error('NYC Open Data returned an unexpected response');
+        return rows;
+      }
+      if (![429,502,503,504].includes(response.status)||attempt===2) throw new Error(`NYC Open Data returned HTTP ${response.status}`);
+    } catch(error) {
+      if (attempt===2||!['TimeoutError','TypeError'].includes(error.name)) throw error;
+    }
+    await new Promise(resolve=>setTimeout(resolve,1000*(attempt+1)+Math.random()*600));
+  }
 }
 
 export async function loadSource() {
