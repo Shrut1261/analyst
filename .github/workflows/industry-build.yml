@@ -1,0 +1,77 @@
+name: Build industry portfolio datasets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'projects/gridwatch/build.py'
+      - 'projects/defectlens/build.py'
+      - 'projects/flight-disruption/build.py'
+  workflow_dispatch:
+    inputs:
+      project:
+        description: Dataset to rebuild
+        required: true
+        type: choice
+        options: [gridwatch, defectlens, flight-disruption]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: industry-portfolio-datasets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build and validate in project order
+        shell: bash
+        env:
+          REQUESTED: ${{ inputs.project }}
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+          MKL_NUM_THREADS: '2'
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/industry-results"
+          changed=$(git diff --name-only HEAD^ HEAD)
+          python -m pip install pandas openpyxl scikit-learn pillow requests
+          for project in gridwatch defectlens flight-disruption; do
+            if [[ "$REQUESTED" != "$project" ]] && ! grep -Fxq "projects/$project/build.py" <<< "$changed"; then
+              continue
+            fi
+            if [[ "$project" == defectlens ]]; then
+              python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+            fi
+            python "projects/$project/build.py" "$RUNNER_TEMP/industry-results/$project"
+          done
+      - name: Publish validated outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          branch=industry-project-data
+          output="$RUNNER_TEMP/industry-results"
+          [[ -n $(ls -A "$output") ]]
+          data="$RUNNER_TEMP/industry-data"
+          git worktree add --detach "$data"
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null; then
+            git fetch origin "$branch"
+            git -C "$data" switch -c "$branch" FETCH_HEAD
+          else
+            git -C "$data" switch --orphan "$branch"
+          fi
+          cp -a "$output/." "$data/"
+          git -C "$data" add --all
+          if ! git -C "$data" diff --cached --quiet; then
+            git -C "$data" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish validated industry project results'
+            git -C "$data" push origin "HEAD:refs/heads/$branch"
+          fi
