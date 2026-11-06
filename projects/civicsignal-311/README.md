@@ -16,7 +16,7 @@ Use the public dashboard to select a borough, enter an assumed daily capacity, i
 
 ## Data contract and validation
 
-[NYC Open Data’s 311 Service Requests from 2020 to Present](https://data.cityofnewyork.us/d/erm2-nwe9) is updated daily. SoQL aggregates `created_date` and `borough` at source. The model uses 140 calendar days before the latest observed source date, excluding that date as a precaution against partial data. It covers the five named boroughs and excludes unknown boroughs. Each borough-day must occur exactly once with a nonnegative integer count. Missing rows fail validation. The pipeline never downloads addresses or individual requests. Historical totals may change after city revisions.
+[NYC Open Data’s 311 Service Requests from 2020 to Present](https://data.cityofnewyork.us/d/erm2-nwe9) is updated daily. The pipeline requests only `created_date` and `borough`, aggregates in memory, and publishes only totals. The browser can also request aggregates from SoQL. The model uses 140 calendar days before the latest observed source date, excluding that date as a precaution against partial data. It covers the five named boroughs and excludes unknown boroughs. Each borough-day must occur exactly once with a nonnegative integer count. Missing rows fail validation. Historical totals may change after city revisions.
 
 The reporting fact table is `demand.csv`, at one row per date, borough, and actual/forecast scenario. `model-metrics.csv` holds borough-level model selection and MAE. `backtest.csv` records dated predictions from both candidate models. `snapshot.json` packages the same output for the browser. All forecasts use New York calendar days.
 

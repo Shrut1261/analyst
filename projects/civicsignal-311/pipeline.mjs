@@ -5,7 +5,7 @@ import {sampleSource} from './sample.mjs';
 
 const simulated=process.argv.includes('--sample');
 const dir=resolve(simulated?'sample-output':'public-data');
-const snapshot=build(simulated?sampleSource():await loadSource());
+const snapshot=build(simulated?sampleSource():await loadSource({aggregateLocally:true}));
 await mkdir(dir,{recursive:true});
 const tables={
   'snapshot.json':JSON.stringify(snapshot),

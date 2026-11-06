@@ -21,20 +21,34 @@ async function query(parameters) {
   }
 }
 
-export async function loadSource() {
+export async function loadSource({aggregateLocally=false}={}) {
   const date = new Intl.DateTimeFormat('en-CA', {timeZone:'America/New_York', year:'numeric', month:'2-digit', day:'2-digit'}).format(new Date());
-  const [latest] = await query({$select:'max(created_date) as latest', $where:`created_date >= '${shift(date,-30)}T00:00:00' AND created_date < '${shift(date,1)}T00:00:00'`});
-  const end = latest?.latest?.slice(0,10);
+  const [latest] = await query({$select:'created_date', $where:`created_date >= '${shift(date,-30)}T00:00:00' AND created_date < '${shift(date,1)}T00:00:00'`, $order:'created_date DESC', $limit:'1'});
+  const end = latest?.created_date?.slice(0,10);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(end ?? '')) throw new Error('Source has no observations in the last 30 days');
   const start = shift(end, -140);
-  const windows = Array.from({length:4}, (_, i)=>[shift(start, i*35), shift(start,(i+1)*35)]);
+  const daysPerWindow = aggregateLocally?7:35;
+  const windows = Array.from({length:140/daysPerWindow}, (_, i)=>[shift(start, i*daysPerWindow), shift(start,(i+1)*daysPerWindow)]);
   const rows = [];
   for (let i=0;i<windows.length;i+=2) {
-    const batches = await Promise.all(windows.slice(i,i+2).map(([first,last])=>query({
-      $select:'date_trunc_ymd(created_date) as day, borough, count(*) as requests',
-      $where:`created_date >= '${first}T00:00:00' AND created_date < '${last}T00:00:00' AND borough in (${boroughs.map(b => `'${b}'`).join(',')})`,
-      $group:'date_trunc_ymd(created_date), borough', $limit:'200'
-    })));
+    const batches = await Promise.all(windows.slice(i,i+2).map(async ([first,last])=>{
+      const where=`created_date >= '${first}T00:00:00' AND created_date < '${last}T00:00:00' AND borough in (${boroughs.map(b => `'${b}'`).join(',')})`;
+      if(!aggregateLocally) return query({$select:'date_trunc_ymd(created_date) as day, borough, count(*) as requests',
+        $where:where,$group:'date_trunc_ymd(created_date), borough',$limit:'200'});
+      const records=await query({$select:'created_date, borough',$where:where,$limit:'100000'});
+      if(records.length===100000) throw new Error(`Source response reached its row limit for ${first} through ${last}`);
+      const totals=new Map();
+      for(const record of records) {
+        const day=record.created_date?.slice(0,10);
+        const borough=record.borough;
+        if(!day||day<first||day>=last||!boroughs.includes(borough)) throw new Error(`Invalid source record for ${first} through ${last}`);
+        const key=`${day}|${borough}`;
+        const total=totals.get(key)??{day,borough,requests:0};
+        total.requests++;
+        totals.set(key,total);
+      }
+      return [...totals.values()];
+    }));
     for(const batch of batches) rows.push(...batch);
   }
   return {rows, start, end};
